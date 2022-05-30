@@ -57,7 +57,7 @@
     "eslint": "8.16.0",
     "eslint-config-prettier": "7.2.0",
     "eslint-plugin-prettier": "3.4.1",
-    "husky": "6.0.0",
+    "husky": "8.0.1",
     "jest": "28.1.0",
     "pod-install": "0.1.36",
     "prettier": "2.6.2",
