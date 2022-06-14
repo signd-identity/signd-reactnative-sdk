@@ -1,6 +1,6 @@
 {
   "name": "signd-reactnative-sdk",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "SignD SDK for React Native",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
@@ -36,13 +36,13 @@
     "ios",
     "android"
   ],
-  "repository": "https://github.com/moodup/signd-reactnative-sdk",
-  "author": "Rusnarczyk, Adrian <a.rusnarczyk@moodup.team> (https://moodup.team)",
+  "repository": "https://github.com/signd-identity/signd-reactnative-sdk.git",
+  "author": "Rusnarczyk, Adrian <adrian@signd.id> (https://signd.id/)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/moodup/signd-reactnative-sdk/issues"
+    "url": "https://github.com/signd-identity/signd-reactnative-sdk/issues"
   },
-  "homepage": "https://github.com/moodup/signd-reactnative-sdk#readme",
+  "homepage": "https://github.com/signd-identity/signd-reactnative-sdk#readme",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
