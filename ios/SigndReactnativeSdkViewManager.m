@@ -1,7 +1,13 @@
-#import "React/RCTViewManager.h"
+// SigndReactnativeSdkViewManager.m
+#import <React/RCTBridgeModule.h>
 
-@interface RCT_EXTERN_MODULE(SigndReactnativeSdkViewManager, RCTViewManager)
+@interface RCT_EXTERN_MODULE(SigndReactnativeSdkViewManager, NSObject)
 
-RCT_EXPORT_VIEW_PROPERTY(color, NSString)
+RCT_EXTERN_METHOD(initialize:(NSDictionary)*data
+                resolver:(RCTPromiseResolveBlock)resolve
+                rejecter:(RCTPromiseRejectBlock)reject)
+RCT_EXTERN_METHOD(start:(NSString *)sessionToken
+                resolver:(RCTPromiseResolveBlock)resolve
+                rejecter:(RCTPromiseRejectBlock)reject)
 
 @end

@@ -1,1 +1,2 @@
-#import <React/RCTViewManager.h>
+// SigndReactnativeSdk-Bridging-Header.h
+#import <React/RCTBridgeModule.h>
