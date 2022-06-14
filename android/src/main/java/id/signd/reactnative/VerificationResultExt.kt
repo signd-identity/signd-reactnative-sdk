@@ -1,4 +1,4 @@
-package id.signd
+package id.signd.reactnative
 
 import id.signd.core.feature.procesexecution.domain.*
 import org.json.JSONObject

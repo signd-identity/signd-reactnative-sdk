@@ -1,6 +1,12 @@
-import React from 'react';
-import { View } from 'react-native';
+import { NativeModules } from 'react-native';
+import { SigndOptions, SigndResult, VerificationResult } from './types';
+const { SigndModule } = NativeModules;
 
-const SigndProvider = () => <View />;
+interface SigndInterface {
+  initialize(config: SigndOptions): Promise<void>;
+  start(sessionToken: string): Promise<SigndResult>;
+}
 
-export default SigndProvider;
+export default SigndModule as SigndInterface;
+
+export { VerificationResult, SigndResult };

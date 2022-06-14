@@ -1,12 +1,12 @@
 import * as React from 'react';
 
 import { StyleSheet, View } from 'react-native';
-import SigndProvider from 'signd-reactnative-sdk';
+import Home from './pages/Home';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <SigndProvider />
+      <Home />
     </View>
   );
 }
@@ -18,7 +18,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   box: {
-    width: 60,
+    width: 100,
     height: 60,
     marginVertical: 20,
   },

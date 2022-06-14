@@ -1,6 +1,6 @@
 buildscript {
   // Buildscript is evaluated before everything else so we can't use getExtOrDefault
-  def kotlin_version = rootProject.ext.has('kotlinVersion') ? rootProject.ext.get('kotlinVersion') : project.properties['SigndReactnativeSdk_kotlinVersion']
+  def kotlinVersion = rootProject.ext.has('kotlinVersion') ? rootProject.ext.get('kotlinVersion') : project.properties['SigndReactnativeSdk_kotlinVersion']
 
   repositories {
     google()
@@ -11,7 +11,7 @@ buildscript {
   dependencies {
     classpath 'com.android.tools.build:gradle:7.2.1'
     // noinspection DifferentKotlinGradleVersion
-    classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion"
   }
 }
 
@@ -54,7 +54,9 @@ repositories {
   mavenCentral()
   jcenter()
   google()
-
+  maven { url 'https://maven.google.com' }
+  maven { url 'https://raw.githubusercontent.com/Acuant/AndroidSdkMaven/main/maven/' }
+  maven { url 'https://raw.githubusercontent.com/iProov/android/master/maven/' }
   maven {
     url "https://jitpack.io"
     credentials { username authToken }
@@ -127,16 +129,15 @@ repositories {
 
 }
 
-def kotlin_version = getExtOrDefault('kotlinVersion')
+def kotlinVersion = getExtOrDefault('kotlinVersion')
+def signdSdkVersion = getExtOrDefault('signdSdkVersion')
 
 dependencies {
   // noinspection GradleDynamicVersion
   api 'com.facebook.react:react-native:+'
-  implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+  implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion"
 
   // MARK SIGND
-
-  def signdSdkVersion = "0.14.6"
 
   // Core part of the library.
   api "com.github.signd-identity.signd-android:core:$signdSdkVersion"

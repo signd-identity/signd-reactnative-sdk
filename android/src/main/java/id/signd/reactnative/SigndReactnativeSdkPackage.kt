@@ -1,4 +1,4 @@
-package id.signd
+package id.signd.reactnative
 
 import com.facebook.react.ReactPackage
 import com.facebook.react.bridge.NativeModule
