@@ -6,7 +6,7 @@ import { SigndReactnativeSdkView } from 'signd-reactnative-sdk';
 export default function App() {
   return (
     <View style={styles.container}>
-      <SigndReactnativeSdkViewManager color="#32a852" style={styles.box} />
+      <SigndReactnativeSdkView color="#32a852" style={styles.box} />
     </View>
   );
 }
