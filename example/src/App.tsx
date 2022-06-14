@@ -1,12 +1,12 @@
 import * as React from 'react';
 
 import { StyleSheet, View } from 'react-native';
-import { SigndReactnativeSdkView } from 'signd-reactnative-sdk';
+import SigndProvider from 'signd-reactnative-sdk';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <SigndReactnativeSdkView color="#32a852" style={styles.box} />
+      <SigndProvider />
     </View>
   );
 }
