@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="signd_colorAccent">#3E6FEC</color>
+
+    <color name="signd_colorTextPrimary">#272C2D</color>
+    <color name="signd_colorTextGray">#747f8B</color>
+    <color name="signd_white">#FFFFFF</color>
+    <color name="signd_gray">#F1F3F6</color>
+    <color name="signd_gray2">#535C5F</color>
+    <color name="signd_gray3">#5D676A</color>
+    <color name="signd_gray4">#B9C1CA</color>
+    <color name="signd_red">#FF0000</color>
+    <color name="signd_yellow">#FFC748</color>
+    <color name="signd_background">@color/signd_white</color>
+
+    <color name="signd_gray_opacity_40">#66F1F3F6</color>
+
+    <color name="signd_darkBlue">#263861</color>
+
+    <color name="signd_span_background_color">#D7F1E8</color>
+
+    <color name="signd_colorEdgeEffect">@color/signd_colorAccent</color>
+    <color name="signd_colorControlActivated">@color/signd_colorTextGray</color>
+    <color name="signd_buttonTextColor">@color/signd_white</color>
+    <color name="signd_textButtonTextColor">@color/signd_colorAccent</color>
+
+</resources>

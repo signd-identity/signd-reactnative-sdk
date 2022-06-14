@@ -8,7 +8,11 @@ import {
   TextInput,
   View,
 } from 'react-native';
-import SigndModule, { VerificationResult } from 'signd-reactnative-sdk';
+import SigndModule, {
+  SigndResult,
+  VerificationResult,
+} from 'signd-reactnative-sdk';
+import { ProgressBarStyle } from 'src/types';
 
 const Home: React.FC = () => {
   const [sessionTokenText, onSessionTokenTextChange] = useState('');
@@ -19,9 +23,11 @@ const Home: React.FC = () => {
       scheme: 'signd',
       host: 'session',
       apiUrl: 'https://api.dev.signd.io',
+      progressBarStyle: ProgressBarStyle.Linear,
     });
-    const { result, sessionToken }: { result: string; sessionToken: string } =
-      await SigndModule.start(token);
+    const { result, sessionToken }: SigndResult = await SigndModule.start(
+      token
+    );
 
     switch (result) {
       case VerificationResult.ProcessCancelled: {

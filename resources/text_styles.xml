@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="H1" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@color/signd_colorAccent</item>
+        <item name="android:fontFamily">@font/roboto_bold</item>
+        <item name="android:textSize">32sp</item>
+    </style>
+
+    <style name="H2" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@color/signd_darkBlue</item>
+        <item name="android:fontFamily">@font/roboto_bold</item>
+        <item name="android:textSize">28sp</item>
+        <item name="android:gravity">center_horizontal</item>
+    </style>
+
+    <style name="H3" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@color/signd_colorTextPrimary</item>
+        <item name="android:fontFamily">@font/roboto_medium</item>
+        <item name="android:textSize">19sp</item>
+    </style>
+
+    <style name="H4" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@color/signd_gray3</item>
+        <item name="android:fontFamily">@font/roboto_medium</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:gravity">center_horizontal</item>
+    </style>
+
+    <style name="Regular" parent="TextAppearance.AppCompat">
+        <item name="android:fontFamily">@font/roboto_regular</item>
+        <item name="android:textColor">@color/signd_colorTextPrimary</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="Regular.Big">
+        <item name="android:textSize">21sp</item>
+    </style>
+
+    <style name="Regular.Small">
+        <item name="android:textColor">@color/signd_gray2</item>
+        <item name="android:fontFamily">@font/roboto_regular</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="Regular.Description">
+        <item name="android:fontFamily">@font/roboto_regular</item>
+        <item name="android:textColor">@color/signd_gray2</item>
+    </style>
+
+    <style name="Body" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@color/signd_colorTextPrimary</item>
+        <item name="android:fontFamily">@font/roboto_regular</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="ToolBarTitle" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@color/signd_colorTextGray</item>
+        <item name="android:fontFamily">@font/roboto_regular</item>
+        <item name="android:textSize">17sp</item>
+    </style>
+
+    <style name="Footer" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@color/signd_gray4</item>
+        <item name="android:fontFamily">@font/roboto_regular</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="FaqTitle" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@color/signd_colorTextPrimary</item>
+        <item name="android:fontFamily">@font/roboto_medium</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:maxLines">2</item>
+    </style>
+
+    <style name="CardButtonText" parent="Regular">
+        <item name="android:textColor">@color/signd_colorTextPrimary</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+
+</resources>
