@@ -42,7 +42,7 @@ npm install signd-reactnative-sdk
 
 2. Add the following dependency in your app level gradle.
     ```groovy
-   implementation "com.github.signd-identity.signd-reactnative-sdk:signdreactnativesdk:0.1.1"
+   implementation ('com.github.signd-identity:signd-reactnative-sdk:1.0.0')
     ```
 
 3. In android/variables.gradle file change versions:
