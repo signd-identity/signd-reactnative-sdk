@@ -1,17 +1,19 @@
 package id.signd.reactnative
 
 import id.signd.core.feature.procesexecution.domain.*
-import org.json.JSONObject
+import com.facebook.react.bridge.*
 
-internal fun VerificationResult.toJson(): JSONObject {
-    val json = JSONObject()
-    val result = when (this) {
-        is ProcessCanceled -> "ProcessCanceled"
-        is ProcessFailed -> "ProcessFailed"
-        is ProcessFinished -> "ProcessFinished"
-        is ProcessInProgress -> "ProcessInProgress"
-    }
-    json.put("sessionToken", this.sessionToken)
-    json.put("result", result)
-    return json
+internal fun VerificationResult.toJson(): WritableMap {
+  val resultData = WritableNativeMap()
+
+  val result = when (this) {
+    is ProcessCanceled -> "ProcessCanceled"
+    is ProcessFailed -> "ProcessFailed"
+    is ProcessFinished -> "ProcessFinished"
+    is ProcessInProgress -> "ProcessInProgress"
+  }
+
+  resultData.putString("sessionToken", this.sessionToken);
+  resultData.putString("result", result);
+  return resultData
 }
