@@ -26,6 +26,7 @@ npm install signd-reactnative-sdk
                 credentials { username authToken }
             }
             maven { url "https://maven.regulaforensics.com/RegulaDocumentReader" }
+            jcenter()
         }
     }
     ```
@@ -42,7 +43,7 @@ npm install signd-reactnative-sdk
 
 2. Add the following dependency in your app level gradle.
     ```groovy
-   implementation ('com.github.signd-identity:signd-reactnative-sdk:1.0.0')
+   implementation project(':signd-reactnative-sdk')
     ```
 
 3. In android/variables.gradle file change versions:
@@ -111,7 +112,7 @@ npm install signd-reactnative-sdk
     await SigndModule.initialize({
         scheme: 'signd',
         host: 'session',
-        apiUrl: 'https://api.dev.signd.io',
+        apiUrl: 'https://api.integration.signd.io',
     });
     ```		
 
