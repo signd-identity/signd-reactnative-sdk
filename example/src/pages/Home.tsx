@@ -11,8 +11,8 @@ import {
 import SigndModule, {
   SigndResult,
   VerificationResult,
+  ProgressBarStyle
 } from 'signd-reactnative-sdk';
-import { ProgressBarStyle } from 'src/types';
 
 const Home: React.FC = () => {
   const [sessionTokenText, onSessionTokenTextChange] = useState('');

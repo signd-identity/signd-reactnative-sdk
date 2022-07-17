@@ -1,0 +1,105 @@
+PODS:
+  - AcuantiOSSDKV11/AcuantCommon (11.5.1)
+  - AcuantiOSSDKV11/AcuantDocumentProcessing (11.5.1):
+    - AcuantiOSSDKV11/AcuantCommon
+  - AcuantiOSSDKV11/AcuantFaceCapture (11.5.1):
+    - AcuantiOSSDKV11/AcuantCommon
+    - AcuantiOSSDKV11/AcuantImagePreparation
+  - AcuantiOSSDKV11/AcuantHGLiveness (11.5.1):
+    - AcuantiOSSDKV11/AcuantCommon
+  - AcuantiOSSDKV11/AcuantImagePreparation (11.5.1):
+    - AcuantiOSSDKV11/AcuantCommon
+  - AcuantiOSSDKV11/AcuantIPLiveness (11.5.1):
+    - AcuantiOSSDKV11/AcuantCommon
+    - iProov (~> 8.4.0)
+    - KeychainAccess (~> 4.2)
+    - SwiftyJSON (~> 5.0)
+  - AcuantiOSSDKV11/AcuantPassiveLiveness (11.5.1):
+    - AcuantiOSSDKV11/AcuantCommon
+  - DocumentReader (6.2.2441):
+    - RegulaCommon (= 6.2.110)
+  - DocumentReaderFull (6.2.6012)
+  - FaceSDK (3.2.1078):
+    - RegulaCommon (= 6.2.110)
+  - iProov (8.4.0):
+    - Socket.IO-Client-Swift (~> 15.2)
+  - KeychainAccess (4.2.2)
+  - RegulaCommon (6.2.110)
+  - SigndCore (0.15.0)
+  - SigndScanId (0.15.0):
+    - SigndCore (= 0.15.0)
+  - SigndScanIdAcuant (0.15.0):
+    - AcuantiOSSDKV11/AcuantDocumentProcessing (= 11.5.1)
+    - AcuantiOSSDKV11/AcuantFaceCapture (= 11.5.1)
+    - AcuantiOSSDKV11/AcuantHGLiveness (= 11.5.1)
+    - AcuantiOSSDKV11/AcuantImagePreparation (= 11.5.1)
+    - AcuantiOSSDKV11/AcuantIPLiveness (= 11.5.1)
+    - AcuantiOSSDKV11/AcuantPassiveLiveness (= 11.5.1)
+    - SigndCore (= 0.15.0)
+    - SigndScanId (= 0.15.0)
+  - SigndScanIdRegula (0.15.0):
+    - SigndCore (= 0.15.0)
+    - SigndScanId (= 0.15.0)
+  - SigndScanIdRegulaNative (0.15.0):
+    - DocumentReader (= 6.2.2441)
+    - DocumentReaderFull (= 6.2.6012)
+    - FaceSDK (= 3.2.1078)
+    - SigndCore (= 0.15.0)
+    - SigndScanId (= 0.15.0)
+  - Socket.IO-Client-Swift (15.2.0):
+    - Starscream (~> 3.1)
+  - Starscream (3.1.1)
+  - SwiftyJSON (5.0.1)
+
+DEPENDENCIES:
+  - SigndCore (from `.`)
+  - SigndScanId (from `.`)
+  - SigndScanIdAcuant (from `.`)
+  - SigndScanIdRegula (from `.`)
+  - SigndScanIdRegulaNative (from `.`)
+
+SPEC REPOS:
+  trunk:
+    - AcuantiOSSDKV11
+    - DocumentReader
+    - DocumentReaderFull
+    - FaceSDK
+    - iProov
+    - KeychainAccess
+    - RegulaCommon
+    - Socket.IO-Client-Swift
+    - Starscream
+    - SwiftyJSON
+
+EXTERNAL SOURCES:
+  SigndCore:
+    :path: "."
+  SigndScanId:
+    :path: "."
+  SigndScanIdAcuant:
+    :path: "."
+  SigndScanIdRegula:
+    :path: "."
+  SigndScanIdRegulaNative:
+    :path: "."
+
+SPEC CHECKSUMS:
+  AcuantiOSSDKV11: e7d9b96346929d2a9566d3a50dd781a93a31bc8f
+  DocumentReader: 1257f49851a92b9e61d33f5389f6dee7071d6a2b
+  DocumentReaderFull: ac5bdacb4bae57d603b36e680f03889a4a77a5ad
+  FaceSDK: 20845d343694efc72b63175396f870c8fad5b337
+  iProov: 94dc03f2fa0e29426dd915fe33678ec7666d8505
+  KeychainAccess: c0c4f7f38f6fc7bbe58f5702e25f7bd2f65abf51
+  RegulaCommon: 79746fe0128f058bb8aad97cea81ea1eca9d6c41
+  SigndCore: 60adbd1ff90339fe378bb661feaa923e8290bd37
+  SigndScanId: bc3eea11dbf7f556f952c36d135d85516bd441ab
+  SigndScanIdAcuant: d0dd4aef34ce7363a3b37c92d313d6c65a63e562
+  SigndScanIdRegula: d02ad7f0e5c8427d778776e31cf96f484866dfa2
+  SigndScanIdRegulaNative: b23c1e4e57cbcc18b7b21234ce3e0ac168616526
+  Socket.IO-Client-Swift: 1e3e3a1f09f3312a167f0d781eb2f383d477357c
+  Starscream: 4bb2f9942274833f7b4d296a55504dcfc7edb7b0
+  SwiftyJSON: 2f33a42c6fbc52764d96f13368585094bfd8aa5e
+
+PODFILE CHECKSUM: 99d8d8d09b6d96dc0d9f89ced70914eb6170eb2b
+
+COCOAPODS: 1.11.3

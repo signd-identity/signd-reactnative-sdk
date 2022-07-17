@@ -1,0 +1,452 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.6 (swiftlang-5.6.0.323.62 clang-1316.0.20.8)
+// swift-module-flags: -target arm64-apple-ios11.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name SigndCore
+import AVFoundation
+import Foundation
+@_exported import SigndCore
+import Swift
+import SystemConfiguration
+import UIKit
+import WebKit
+import _Concurrency
+public enum SGDEvent {
+  case processStarted
+  case processEnded
+  case processAborted
+  case screen(name: Swift.String)
+  case idImageCaptured(side: Swift.String)
+  case idImageCroped(originalWidth: CoreGraphics.CGFloat, originalHeight: CoreGraphics.CGFloat, croppedWidth: CoreGraphics.CGFloat, croppedHeight: CoreGraphics.CGFloat)
+  case livenesAttempt(match: Swift.Bool, implementation: Swift.String)
+  case sessionTokenReceived(token: Swift.String)
+  case deviceTokenCreated(token: Swift.String)
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class SGDBaseViewController : UIKit.UIViewController {
+  @_Concurrency.MainActor(unsafe) public var globalStyle: SigndCore.SGDStyle {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) public var globalFontPack: SigndCore.SGDFontPack {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewDidLoad()
+  @_Concurrency.MainActor(unsafe) public func zeroFooterConstraintHeight(view: UIKit.UIView)
+  @_Concurrency.MainActor(unsafe) public func zeroHeightForView(view: UIKit.UIView)
+  @_Concurrency.MainActor(unsafe) open func addProgress(multiplier: CoreGraphics.CGFloat, text: Swift.String)
+  @_Concurrency.MainActor(unsafe) open func style()
+  @_Concurrency.MainActor(unsafe) open func localize()
+  @objc deinit
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+}
+open class BaseApiService {
+  public enum Paths : Swift.String {
+    case handshake
+    case loginDevice
+    case getVerificationProccess
+    case executeVerificationProccess
+    case results
+    case pluginResult
+    case personalizationFromLogin
+    case personalizationFromSession
+    case selfieImage
+    case liveness
+    case scanIdInstance
+    case scanIdInstanceInfo
+    case faceMatchFromSession
+    case faceImage
+    case scanIdFrontImage
+    case scanIdBackImage
+    case regulaImages
+    case regulaStatus
+    case regulaDocumentType
+    case regulaFaceMatch
+    case regulaFaceImage
+    case regulaValidate
+    case anylinePage
+    case anylineLicense
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public init(network: SigndCore.SGDNetwork)
+  public func url(path: SigndCore.BaseApiService.Paths) -> Foundation.URL
+  public func url(path: SigndCore.BaseApiService.Paths, appending string: Swift.String) -> Foundation.URL
+  public func get(url: Foundation.URL, params: Swift.Encodable? = nil, headers: [Swift.String : Swift.String]? = nil, retryCounter: Swift.Int = 0, completionHandler: @escaping SigndCore.SGDNetworkCompletion)
+  public func post(url: Foundation.URL, params: Swift.Encodable? = nil, headers: [Swift.String : Swift.String]? = nil, retryCounter: Swift.Int = 0, completionHandler: @escaping SigndCore.SGDNetworkCompletion)
+  public func authorizedGet(url: Foundation.URL, params: Swift.Encodable? = nil, headers: [Swift.String : Swift.String]? = nil, customAuthToken: Swift.String? = nil, completionHandler: @escaping SigndCore.SGDNetworkCompletion)
+  public func authorizedPost(url: Foundation.URL, params: Swift.Encodable? = nil, headers: [Swift.String : Swift.String]? = nil, completionHandler: @escaping SigndCore.SGDNetworkCompletion)
+  public func authorizedPut(url: Foundation.URL, params: Swift.Encodable? = nil, headers: [Swift.String : Swift.String]? = nil, completionHandler: @escaping SigndCore.SGDNetworkCompletion)
+  public func authorizedDelete(url: Foundation.URL, params: Swift.Encodable? = nil, headers: [Swift.String : Swift.String]? = nil, completionHandler: @escaping SigndCore.SGDNetworkCompletion)
+  public func authorizedUploadImage(url: Foundation.URL, paramName: Swift.String, fileName: Swift.String, imageData: Foundation.Data, completionHandler: @escaping SigndCore.SGDNetworkCompletion)
+  public func parse<T>(response: Foundation.URLResponse?, error: Swift.Error?, data: Foundation.Data?, completion: (T?, Swift.String?) -> Swift.Void) where T : Swift.Decodable
+  public func getErrorMessage(response: Foundation.URLResponse?, error: Swift.Error?, data: Foundation.Data?) -> Swift.String?
+  @objc deinit
+}
+public enum SGDThirdPartyName : Swift.String, SigndCore.CaseIterableDefaultsLast {
+  case acuant
+  case payCards
+  case regula
+  case anyline
+  case unknown
+  public init?(rawValue: Swift.String)
+  public typealias AllCases = [SigndCore.SGDThirdPartyName]
+  public typealias RawValue = Swift.String
+  public static var allCases: [SigndCore.SGDThirdPartyName] {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum SGDPlugins : Swift.String, SigndCore.CaseIterableDefaultsLast {
+  case scanID
+  case scanCard
+  case offlineScanID
+  case addressVerification
+  case bankAccountIdentity
+  case correction
+  case amlCheck
+  case unknown
+  public init?(rawValue: Swift.String)
+  public typealias AllCases = [SigndCore.SGDPlugins]
+  public typealias RawValue = Swift.String
+  public static var allCases: [SigndCore.SGDPlugins] {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum SGDPluginState : Swift.String, Swift.Codable {
+  case done
+  case error
+  case inProgress
+  case errorInProgress
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public struct SGDStyle {
+  public let primaryColor: UIKit.UIColor
+  public let secondaryColor: UIKit.UIColor
+  public let textPrimary: UIKit.UIColor
+  public let textSecondary: UIKit.UIColor
+  public let textHint: UIKit.UIColor
+  public let primaryBackgroundColor: UIKit.UIColor
+  public let secondaryBackgroundColor: UIKit.UIColor
+  public init(primaryColor: UIKit.UIColor, secondaryColor: UIKit.UIColor, textPrimary: UIKit.UIColor, textSecondary: UIKit.UIColor, textHint: UIKit.UIColor, primaryBackgroundColor: UIKit.UIColor, secondaryBackgroundColor: UIKit.UIColor)
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class SGDDots : SigndCore.NibView {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func layoutSubviews()
+  @_Concurrency.MainActor(unsafe) public func setup(currentStep: Swift.Int, progress: Swift.Float = 0.5, stepName: Swift.String? = nil, numberOfSteps: Swift.Int? = nil, enabledColor: UIKit.UIColor? = nil, disabledColor: UIKit.UIColor? = nil)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc deinit
+}
+public typealias SGDNetworkCompletion = (Foundation.Data?, Foundation.URLResponse?, Swift.Error?) -> Swift.Void
+public protocol SGDNetwork {
+  func authorizedGet(url: Foundation.URL, params: Swift.Encodable?, headers: [Swift.String : Swift.String]?, customAuthToken: Swift.String?, completionHandler: @escaping SigndCore.SGDNetworkCompletion)
+  func authorizedPost(url: Foundation.URL, params: Swift.Encodable?, headers: [Swift.String : Swift.String]?, completionHandler: @escaping SigndCore.SGDNetworkCompletion)
+  func authorizedDelete(url: Foundation.URL, params: Swift.Encodable?, headers: [Swift.String : Swift.String]?, completionHandler: @escaping SigndCore.SGDNetworkCompletion)
+  func authorizedPut(url: Foundation.URL, params: Swift.Encodable?, headers: [Swift.String : Swift.String]?, completionHandler: @escaping SigndCore.SGDNetworkCompletion)
+  func post(url: Foundation.URL, params: Swift.Encodable?, headers: [Swift.String : Swift.String]?, retryCounter: Swift.Int, completionHandler: @escaping SigndCore.SGDNetworkCompletion)
+  func get(url: Foundation.URL, params: Swift.Encodable?, headers: [Swift.String : Swift.String]?, retryCounter: Swift.Int, completionHandler: @escaping SigndCore.SGDNetworkCompletion)
+  func authorizedUploadImage(url: Foundation.URL, paramName: Swift.String, fileName: Swift.String, imageData: Foundation.Data, completionHandler: @escaping SigndCore.SGDNetworkCompletion)
+}
+public struct SGDPersonalizationResponse : Swift.Codable, Swift.Equatable {
+  public static func == (a: SigndCore.SGDPersonalizationResponse, b: SigndCore.SGDPersonalizationResponse) -> Swift.Bool
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public class SGDResultItem : Swift.Encodable {
+  public enum ResultOperation : Swift.String, Swift.Encodable {
+    case idScan
+    case liveness
+    case faceMatch
+    case scanCard
+    case passive_liveness
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  final public let score: Swift.Int
+  final public let operation: SigndCore.SGDResultItem.ResultOperation
+  final public let success: Swift.Bool
+  final public let result: [Swift.String : Swift.String]
+  public init(score: Swift.Int, operation: SigndCore.SGDResultItem.ResultOperation, success: Swift.Bool, result: [Swift.String : Swift.String])
+  @objc deinit
+  public func encode(to encoder: Swift.Encoder) throws
+}
+public struct SGDPluginResultData : Swift.Encodable {
+  public let score: Swift.Int
+  public let success: Swift.Bool
+  public let pluginSymbol: SigndCore.SGDPlugins
+  public let resultItems: [SigndCore.SGDResultItem]
+  public let state: SigndCore.SGDPluginState
+  public let thirdPartyName: SigndCore.SGDThirdPartyName
+  public func encode(to encoder: Swift.Encoder) throws
+}
+@_hasMissingDesignatedInitializers public class SGDPersonalizationService {
+  public static let shared: SigndCore.SGDPersonalizationService
+  public var style: SigndCore.SGDStyle {
+    get
+    set
+  }
+  public var fontPack: SigndCore.SGDFontPack {
+    get
+    set
+  }
+  @objc deinit
+}
+public enum ExecutionResponseCode : Swift.String, Swift.Decodable {
+  case OK
+  case EXECUTION_LOCKED
+  case EXECUTION_LOCKED_WAIT
+  case EXECUTION_LOCKED_WAIT_AND_LISTEN
+  case PROCESS_DONE
+  case PROCESS_DONE_ON_DEVICE
+  case PROCESS_DONE_ON_DEVICE_REDIRECT
+  case REDIRECT_TO_DEVICE
+  case PROCESS_FAILED
+  case unknown
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public struct SGDExecuteVerificationConfigCustom : Swift.Decodable {
+  public let livenessImpl: SigndCore.SGDExecuteVerificationConfigCustom.SGDLivenessImpl
+  public let skipLiveness: Swift.Bool
+  public let skipFaceMatch: Swift.Bool
+  public enum SGDLivenessImpl : Swift.String, SigndCore.CaseIterableDefaultsLast {
+    case IP
+    case HG
+    case AC
+    public init?(rawValue: Swift.String)
+    public typealias AllCases = [SigndCore.SGDExecuteVerificationConfigCustom.SGDLivenessImpl]
+    public typealias RawValue = Swift.String
+    public static var allCases: [SigndCore.SGDExecuteVerificationConfigCustom.SGDLivenessImpl] {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct SGDLoginResponse : Swift.Decodable {
+  public let token: Swift.String
+  public let uuid: Swift.String?
+  public init(from decoder: Swift.Decoder) throws
+}
+public protocol AnalyticsDelegate : AnyObject {
+  func on(event: SigndCore.SGDEvent)
+}
+@_hasMissingDesignatedInitializers public class Analytics {
+  public static let shared: SigndCore.Analytics
+  public func trackEvent(event: SigndCore.SGDEvent)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class MainNavigatViewController : UIKit.UINavigationController {
+  @_Concurrency.MainActor(unsafe) public var options: SigndCore.SGDOptions?
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidLoad()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public var supportedInterfaceOrientations: UIKit.UIInterfaceOrientationMask {
+    @_Concurrency.MainActor(unsafe) @objc get
+  }
+  @_Concurrency.MainActor(unsafe) public func queueMessageForNextController(title: Swift.String?, message: Swift.String?)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewWillAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewWillDisappear(_ animated: Swift.Bool)
+  @objc deinit
+  @available(iOS 5.0, *)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(navigationBarClass: Swift.AnyClass?, toolbarClass: Swift.AnyClass?)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(rootViewController: UIKit.UIViewController)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+}
+extension SigndCore.MainNavigatViewController : UIKit.UINavigationControllerDelegate {
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func navigationController(_ navigationController: UIKit.UINavigationController, willShow viewController: UIKit.UIViewController, animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func navigationController(_ navigationController: UIKit.UINavigationController, didShow viewController: UIKit.UIViewController, animated: Swift.Bool)
+}
+public struct SGDFont {
+  public let name: Swift.String
+  public let fileName: Swift.String
+  public let bundle: Foundation.Bundle
+  public init(name: Swift.String, fileName: Swift.String, bundle: Foundation.Bundle)
+  public func sized(size: Swift.Float) -> UIKit.UIFont?
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class ActionButton : UIKit.UIButton {
+  @_Concurrency.MainActor(unsafe) public var style: SigndCore.SGDActionButtonStyle?
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func layoutSubviews()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+public struct SGDFontPack {
+  public let primaryRegular: SigndCore.SGDFont
+  public let primaryBold: SigndCore.SGDFont
+  public let secondaryRegular: SigndCore.SGDFont
+  public let secondaryBold: SigndCore.SGDFont
+  public init(primaryRegular: SigndCore.SGDFont, primarySemiBold: SigndCore.SGDFont, secondaryRegular: SigndCore.SGDFont, secondaryBold: SigndCore.SGDFont)
+}
+public struct SGDGetVerificationResponse : Swift.Decodable {
+  public init(from decoder: Swift.Decoder) throws
+}
+public enum SGDResultsOperation : Swift.String, SigndCore.CaseIterableDefaultsLast {
+  case faceMatch
+  case scanId
+  case scanCard
+  case unknown
+  public init?(rawValue: Swift.String)
+  public typealias AllCases = [SigndCore.SGDResultsOperation]
+  public typealias RawValue = Swift.String
+  public static var allCases: [SigndCore.SGDResultsOperation] {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public struct SGDResultsErrors : Swift.Decodable {
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct SGDResultsError : Swift.Decodable {
+  public init(from decoder: Swift.Decoder) throws
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class SGDFooterView : SigndCore.NibView {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func layoutSubviews()
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc deinit
+}
+public protocol SigndProcessDelegate : AnyObject {
+  func processFinished(results: [SigndCore.SGDResultItem], for process: SigndCore.SigndProcess, completion: ((Swift.Bool) -> Swift.Void)?)
+  func operationFinished(result: SigndCore.SGDResultItem, for process: SigndCore.SigndProcess, completion: ((Swift.Bool) -> Swift.Void)?)
+  func onError(text: Swift.String, domain: Swift.String?, for process: SigndCore.SigndProcess)
+  func restart()
+}
+public protocol SigndProcess : AnyObject {
+  var delegate: SigndCore.SigndProcessDelegate? { get set }
+  var implementation: SigndCore.SGDThirdPartyName! { get }
+  var plugins: [SigndCore.SGDPlugins] { get }
+  var selectedPlugin: SigndCore.SGDPlugins! { get }
+  func start(implementation: SigndCore.SGDThirdPartyName)
+  func reset()
+  func perform(operation: SigndCore.SGDResultsOperation, redo: Swift.Bool)
+  func canPerform(operation: SigndCore.SGDResultsOperation) -> Swift.Bool
+  func initialize(navigationDelegate: SigndCore.SigndNavigationDelegate, network: SigndCore.SGDNetwork)
+  func configure(config: SigndCore.SGDExecuteVerificationConfigCustom?, plugin: SigndCore.SGDPlugins)
+  func showDocumentExpired()
+}
+public protocol SigndDelegate : AnyObject {
+  func onEvent(event: SigndCore.SGDEvent)
+  func onError(text: Swift.String, domain: Swift.String?, sessionToken: Swift.String?)
+  func onAuthSuccess(response: SigndCore.SGDLoginResponse?, sessionToken: Swift.String?)
+  func onSessionTokenChange(sessionToken: Swift.String?)
+  func onAuthFailed()
+  func onDone(results: [SigndCore.SGDPluginResultData], responseCode: SigndCore.ExecutionResponseCode?)
+}
+public protocol SigndNavigationDelegate : AnyObject {
+  var navigationController: UIKit.UINavigationController { get }
+  func push(controller: UIKit.UIViewController, animated: Swift.Bool)
+  func present(controller: UIKit.UIViewController, animated: Swift.Bool, completion: (() -> Swift.Void)?)
+  func dismiss(controller: UIKit.UIViewController, animated: Swift.Bool, completion: (() -> Swift.Void)?)
+  func showProgress(message: Swift.String?)
+  func hideProgress()
+  func showError(title: Swift.String?, error: Swift.String?, fullScreen: Swift.Bool, onDone: (() -> Swift.Void)?)
+  func showErrorAfterNextTransition(title: Swift.String?, error: Swift.String?)
+}
+public enum SGDProgressBarStyle {
+  case dots
+  case linear
+  public static func == (a: SigndCore.SGDProgressBarStyle, b: SigndCore.SGDProgressBarStyle) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum SGDActionButtonStyle {
+  case round
+  case rounded
+  public static func == (a: SigndCore.SGDActionButtonStyle, b: SigndCore.SGDActionButtonStyle) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public struct SGDOptions {
+  public let style: SigndCore.SGDStyle?
+  public let buttonImage: UIKit.UIImage?
+  public let progressBarStyle: SigndCore.SGDProgressBarStyle?
+  public let actionButtonStyle: SigndCore.SGDActionButtonStyle
+  public let scanExampleAnimationUrl: Foundation.URL?
+  public let doneAnimationUrl: Foundation.URL?
+  public init(style: SigndCore.SGDStyle? = nil, fontPack: SigndCore.SGDFontPack? = nil, showBackButton: Swift.Bool? = nil, hideLastScreen: Swift.Bool? = nil, hideFirstScreen: Swift.Bool? = nil, hideCloseButton: Swift.Bool? = nil, hideFooter: Swift.Bool? = nil, buttonImage: UIKit.UIImage? = nil, progressBarStyle: SigndCore.SGDProgressBarStyle? = nil, actionButtonStyle: SigndCore.SGDActionButtonStyle? = nil, scanExampleAnimationUrl: Foundation.URL? = nil, doneAnimationUrl: Foundation.URL? = nil)
+}
+@_hasMissingDesignatedInitializers public class Signd {
+  public static let shared: SigndCore.Signd
+  weak public var delegate: SigndCore.SigndDelegate?
+  public static var acuantSubscriptionId: Swift.String? {
+    get
+  }
+  public static var sdkVersion: Swift.String {
+    get
+  }
+  public func initialize(processes: [SigndCore.SigndProcess], style: SigndCore.SGDStyle? = nil, fontPack: SigndCore.SGDFontPack? = nil)
+  public func initialize(processes: [SigndCore.SigndProcess], options: SigndCore.SGDOptions? = nil)
+  public func setCredentials(login: Swift.String, token: Swift.String)
+  public func setScheme(scheme: Swift.String)
+  public func setApiUrl(url: Swift.String)
+  public func setSubscriptionId(subscriptionId: Swift.String)
+  public func start(sessionToken: Swift.String)
+  public func openUrl(url: Foundation.URL) -> Swift.Bool
+  public func deleteVerificationProccess()
+  public func finish()
+  public func getResult(session: Swift.String, completion: @escaping (Swift.String?) -> Swift.Void)
+  @objc deinit
+}
+extension SigndCore.Signd : SigndCore.AnalyticsDelegate {
+  public func on(event: SigndCore.SGDEvent)
+}
+extension SigndCore.Signd : SigndCore.SigndProcessDelegate {
+  public func restart()
+  public func operationFinished(result: SigndCore.SGDResultItem, for process: SigndCore.SigndProcess, completion: ((Swift.Bool) -> Swift.Void)?)
+  public func processFinished(results: [SigndCore.SGDResultItem], for process: SigndCore.SigndProcess, completion: ((Swift.Bool) -> Swift.Void)?)
+  public func onError(text: Swift.String, domain: Swift.String?, for process: SigndCore.SigndProcess)
+}
+public protocol CaseIterableDefaultsLast : Swift.CaseIterable, Swift.Decodable, Swift.Encodable, Swift.RawRepresentable where Self.AllCases : Swift.BidirectionalCollection, Self.RawValue == Swift.String {
+}
+extension SigndCore.CaseIterableDefaultsLast {
+  public init(from decoder: Swift.Decoder) throws
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class NibView : UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc deinit
+}
+extension SigndCore.BaseApiService.Paths : Swift.Equatable {}
+extension SigndCore.BaseApiService.Paths : Swift.Hashable {}
+extension SigndCore.BaseApiService.Paths : Swift.RawRepresentable {}
+extension SigndCore.SGDThirdPartyName : Swift.Equatable {}
+extension SigndCore.SGDThirdPartyName : Swift.Hashable {}
+extension SigndCore.SGDPlugins : Swift.Equatable {}
+extension SigndCore.SGDPlugins : Swift.Hashable {}
+extension SigndCore.SGDPluginState : Swift.Equatable {}
+extension SigndCore.SGDPluginState : Swift.Hashable {}
+extension SigndCore.SGDPluginState : Swift.RawRepresentable {}
+extension SigndCore.SGDResultItem.ResultOperation : Swift.Equatable {}
+extension SigndCore.SGDResultItem.ResultOperation : Swift.Hashable {}
+extension SigndCore.SGDResultItem.ResultOperation : Swift.RawRepresentable {}
+extension SigndCore.ExecutionResponseCode : Swift.Equatable {}
+extension SigndCore.ExecutionResponseCode : Swift.Hashable {}
+extension SigndCore.ExecutionResponseCode : Swift.RawRepresentable {}
+extension SigndCore.SGDExecuteVerificationConfigCustom.SGDLivenessImpl : Swift.Equatable {}
+extension SigndCore.SGDExecuteVerificationConfigCustom.SGDLivenessImpl : Swift.Hashable {}
+extension SigndCore.SGDResultsOperation : Swift.Equatable {}
+extension SigndCore.SGDResultsOperation : Swift.Hashable {}
+extension SigndCore.SGDProgressBarStyle : Swift.Equatable {}
+extension SigndCore.SGDProgressBarStyle : Swift.Hashable {}
+extension SigndCore.SGDActionButtonStyle : Swift.Equatable {}
+extension SigndCore.SGDActionButtonStyle : Swift.Hashable {}

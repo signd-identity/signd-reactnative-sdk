@@ -1,0 +1,49 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.6 (swiftlang-5.6.0.323.62 clang-1316.0.20.8)
+// swift-module-flags: -target arm64-apple-ios11.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name SigndScanIdRegulaNative
+import AVFoundation
+import DocumentReader
+import FaceSDK
+import Foundation
+import SigndCore
+import SigndScanId
+@_exported import SigndScanIdRegulaNative
+import Swift
+import SystemConfiguration
+import UIKit
+import _Concurrency
+public struct RegulaScanIdImageData : Swift.Encodable {
+  public init(firstImage: UIKit.UIImage?, secondImage: UIKit.UIImage?)
+  public func encode(to encoder: Swift.Encoder) throws
+}
+@objc public protocol CameraCaptureDelegate {
+  @objc func setCapturedImage(image: UIKit.UIImage)
+  @objc func liveFaceCaptured(image: UIKit.UIImage?)
+  @objc func showScannerError(errorMessage: Swift.String)
+}
+@_hasMissingDesignatedInitializers public class CheckConnection {
+  @objc deinit
+}
+public class RegulaNativeProccess {
+  final public let plugin: SigndCore.SGDThirdPartyName
+  public var executeVerificationConfigCustom: SigndCore.SGDExecuteVerificationConfigCustom?
+  public init()
+  public func initialize(network: SigndCore.SGDNetwork, navigationDelegate: SigndCore.SigndNavigationDelegate, delegate: SigndScanId.ProccessDelegate)
+  @objc deinit
+}
+extension SigndScanIdRegulaNative.RegulaNativeProccess : SigndScanId.ScanIdProccess {
+  public func scanId()
+  public func scanFace(redo: Swift.Bool)
+  public func resetData()
+  public func showOperationFailed(mode: SigndScanId.OperationFailedMode)
+}
+extension SigndScanIdRegulaNative.RegulaNativeProccess : SigndScanId.ScanIdDelegate {
+  public func acceptImage(image: UIKit.UIImage?, side: SigndScanId.Side)
+  public func scanIdFrontSide(retake: Swift.Bool)
+  public func scanSecondSide(retake: Swift.Bool)
+}
+extension SigndScanIdRegulaNative.RegulaNativeProccess : SigndScanId.SelfieDelegate {
+  public func acceptSelfie()
+  public func scanFace()
+  public func restart()
+}

@@ -1,0 +1,11 @@
+framework module SigndScanId {
+  umbrella header "SigndScanId.h"
+
+  export *
+  module * { export * }
+}
+
+module SigndScanId.Swift {
+    header "SigndScanId-Swift.h"
+    requires objc
+}

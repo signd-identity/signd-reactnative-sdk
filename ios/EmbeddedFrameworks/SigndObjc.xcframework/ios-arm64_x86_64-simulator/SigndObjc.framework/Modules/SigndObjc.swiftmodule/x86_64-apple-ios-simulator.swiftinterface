@@ -1,0 +1,68 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.4.2 (swiftlang-1205.0.28.2 clang-1205.0.19.57)
+// swift-module-flags: -target x86_64-apple-ios11.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name SigndObjc
+import Foundation
+import SigndCore
+@_exported import SigndObjc
+import SigndScanId
+import SigndScanIdAcuant
+import SigndScanIdRegula
+import Swift
+import UIKit
+@objc public protocol SigndObjcDelegate {
+  @objc optional func onEvent(event: Swift.String, data: [Swift.String : Any]?)
+  @objc optional func onError(text: Swift.String, domain: Swift.String?, sessionToken: Swift.String?)
+  @objc optional func onAuthSuccess(response: [Swift.String : Any]?, sessionToken: Swift.String?)
+  @objc optional func onSessionTokenChange(sessionToken: Swift.String?)
+  @objc optional func onAuthFailed()
+  @objc optional func onDone(responseCode: Swift.String?)
+}
+@objc(SigndObjcStyle) public class SigndObjcStyle : ObjectiveC.NSObject {
+  final public let primaryColor: UIKit.UIColor
+  final public let secondaryColor: UIKit.UIColor
+  final public let textPrimary: UIKit.UIColor
+  final public let textSecondary: UIKit.UIColor
+  final public let textHint: UIKit.UIColor
+  final public let primaryBackgroundColor: UIKit.UIColor
+  final public let secondaryBackgroundColor: UIKit.UIColor
+  @objc public init(primaryColor: UIKit.UIColor, secondaryColor: UIKit.UIColor, textPrimary: UIKit.UIColor, textSecondary: UIKit.UIColor, textHint: UIKit.UIColor, primaryBackgroundColor: UIKit.UIColor, secondaryBackgroundColor: UIKit.UIColor)
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc(SigndObjcFont) public class SigndObjcFont : ObjectiveC.NSObject {
+  final public let name: Swift.String
+  final public let fileName: Swift.String
+  final public let bundle: Foundation.Bundle
+  @objc public init(name: Swift.String, fileName: Swift.String, bundle: Foundation.Bundle)
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc(SigndObjcFontPack) public class SigndObjcFontPack : ObjectiveC.NSObject {
+  final public let primaryRegular: SigndObjc.SigndObjcFont
+  final public let primaryBold: SigndObjc.SigndObjcFont
+  final public let secondaryRegular: SigndObjc.SigndObjcFont
+  final public let secondaryBold: SigndObjc.SigndObjcFont
+  @objc public init(primaryRegular: SigndObjc.SigndObjcFont, primaryBold: SigndObjc.SigndObjcFont, secondaryRegular: SigndObjc.SigndObjcFont, secondaryBold: SigndObjc.SigndObjcFont)
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc(SigndObjc) public class SigndObjc : ObjectiveC.NSObject {
+  @objc weak public static var delegate: SigndObjc.SigndObjcDelegate? {
+    @objc get
+    @objc set
+  }
+  @objc public static var sdkVersion: Swift.String {
+    @objc get
+  }
+  @objc(initializeWithScheme:andApiUrl:style:fontPack:) public static func initialize(scheme: Swift.String, apiUrl: Swift.String, style: SigndObjc.SigndObjcStyle?, fontPack: SigndObjc.SigndObjcFontPack?)
+  @objc(initializeWithScheme:andApiUrl:style:) public static func initialize(scheme: Swift.String, apiUrl: Swift.String, style: SigndObjc.SigndObjcStyle)
+  @objc(initializeWithScheme:andApiUrl:) public static func initialize(scheme: Swift.String, apiUrl: Swift.String)
+  @objc(initializeWithScheme:) public static func initialize(scheme: Swift.String)
+  @objc(setCredentialsWithLogin:andToken:) public static func setCredentials(login: Swift.String, token: Swift.String)
+  @objc(openUrl:) public static func openUrl(url: Swift.String) -> Swift.Bool
+  @objc(startWithSessionToken:) public static func start(sessionToken: Swift.String)
+  @objc(deleteVerificationProccess) public static func deleteVerificationProccess()
+  @objc(getResultsForSession:andCompletion:) public static func getResults(session: Swift.String, completion: @escaping (Swift.String?) -> Swift.Void)
+  @objc override dynamic public init()
+  @objc deinit
+}

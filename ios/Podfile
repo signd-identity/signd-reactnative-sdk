@@ -1,0 +1,25 @@
+# Uncomment the next line to define a global platform for your project
+platform :ios, '11.0'
+
+target 'SigndReactnativeSdk' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  pod 'SigndCore', :path => '.'
+  pod 'SigndScanId', :path => '.'
+  pod 'SigndScanIdAcuant', :path => '.'
+  pod 'SigndScanIdRegula', :path => '.'
+  pod 'SigndScanIdRegulaNative', :path => '.'
+
+  post_install do |installer|
+    installer.pods_project.targets.each do |installer|
+      installer.build_configurations.each do |config|
+        config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '11.0'
+        config.build_settings['BUILD_LIBRARY_FOR_DISTRIBUTION'] = 'YES'
+        config.build_settings['ONLY_ACTIVE_ARCH'] = 'NO'
+      end
+    end
+  end
+  # Pods for SigndReactnativeSdk
+
+end

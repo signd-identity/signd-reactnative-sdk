@@ -1,0 +1,146 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.6 (swiftlang-5.6.0.323.62 clang-1316.0.20.8)
+// swift-module-flags: -target arm64-apple-ios11.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name SigndScanId
+import AVFoundation
+import Foundation
+import SigndCore
+@_exported import SigndScanId
+import Swift
+import UIKit
+import VideoToolbox
+import Vision
+import _Concurrency
+public struct RingBuffer<T> {
+  public init(count: Swift.Int)
+  @discardableResult
+  public mutating func write(_ element: T) -> Swift.Bool
+  public mutating func read() -> T?
+  public var isEmpty: Swift.Bool {
+    get
+  }
+  public var isFull: Swift.Bool {
+    get
+  }
+}
+extension SigndScanId.RingBuffer : Swift.Sequence {
+  public func makeIterator() -> Swift.AnyIterator<T>
+  public typealias Element = T
+  public typealias Iterator = Swift.AnyIterator<T>
+}
+public enum Side {
+  case front, back
+  public static func == (a: SigndScanId.Side, b: SigndScanId.Side) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum OperationFailedMode {
+  case liveness
+  case documentExpired
+  case documentOther
+  public static func == (a: SigndScanId.OperationFailedMode, b: SigndScanId.OperationFailedMode) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public protocol ScanIdProccess {
+  var plugin: SigndCore.SGDThirdPartyName { get }
+  var executeVerificationConfigCustom: SigndCore.SGDExecuteVerificationConfigCustom? { get set }
+  func initialize(network: SigndCore.SGDNetwork, navigationDelegate: SigndCore.SigndNavigationDelegate, delegate: SigndScanId.ProccessDelegate)
+  func scanId()
+  func scanFace(redo: Swift.Bool)
+  func resetData()
+  func showOperationFailed(mode: SigndScanId.OperationFailedMode)
+}
+public protocol ProccessDelegate : AnyObject {
+  func showImagePreview(image: UIKit.UIImage?, side: SigndScanId.Side, process: SigndScanId.ScanIdDelegate)
+  func showImagePreviewLowImageQualityMessage(message: Swift.String?)
+  func setImagePreviewButtonsVisibility(continueButtonVisible: Swift.Bool, tryAgainButtonVisible: Swift.Bool)
+  func showScanExample(side: SigndScanId.Side, process: SigndScanId.ScanIdDelegate)
+  func showFace(image: UIKit.UIImage?, isMatch: Swift.Bool, process: SigndScanId.SelfieDelegate)
+  func showOperationFailed(process: SigndScanId.SelfieDelegate, canScanId: Swift.Bool, mode: SigndScanId.OperationFailedMode)
+  func proccessFinished(results: [SigndCore.SGDResultItem], process: SigndScanId.ScanIdProccess, completion: ((Swift.Bool) -> Swift.Void)?)
+  func operationFinished(result: SigndCore.SGDResultItem, process: SigndScanId.ScanIdProccess, completion: ((Swift.Bool) -> Swift.Void)?)
+  func onError(text: Swift.String, domain: Swift.String?, process: SigndScanId.ScanIdProccess)
+  func restart()
+}
+@_hasMissingDesignatedInitializers public class SigndScanIdProccess : SigndCore.SigndProcess {
+  public var delegate: SigndCore.SigndProcessDelegate?
+  public var implementation: SigndCore.SGDThirdPartyName! {
+    get
+  }
+  public var plugins: [SigndCore.SGDPlugins] {
+    get
+  }
+  public var selectedPlugin: SigndCore.SGDPlugins! {
+    get
+  }
+  public init(processes: [SigndScanId.ScanIdProccess])
+  public func initialize(navigationDelegate: SigndCore.SigndNavigationDelegate, network: SigndCore.SGDNetwork)
+  public func start(implementation: SigndCore.SGDThirdPartyName)
+  public func canPerform(operation: SigndCore.SGDResultsOperation) -> Swift.Bool
+  public func perform(operation: SigndCore.SGDResultsOperation, redo: Swift.Bool)
+  public func showDocumentExpired()
+  public func reset()
+  public func configure(config: SigndCore.SGDExecuteVerificationConfigCustom?, plugin: SigndCore.SGDPlugins)
+  @objc deinit
+}
+extension SigndScanId.SigndScanIdProccess {
+  public func proccessFinished(results: [SigndCore.SGDResultItem], completion: ((Swift.Bool) -> Swift.Void)?)
+  public func operationFinished(result: SigndCore.SGDResultItem, completion: ((Swift.Bool) -> Swift.Void)?)
+  public func onError(text: Swift.String, domain: Swift.String?)
+  public func restart()
+}
+public protocol IdScanDelegate : AnyObject {
+  func idImageLoaded(image: UIKit.UIImage?, side: SigndScanId.Side)
+  func showError(title: Swift.String?, message: Swift.String)
+}
+public class IdScan {
+  weak public var delegate: SigndScanId.IdScanDelegate?
+  public init(controller: UIKit.UIViewController)
+  public func scanIdFrontSide()
+  public func scanIdBackSide()
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class NibView : UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc deinit
+}
+public class FaceCapture {
+  public init(controller: UIKit.UIViewController)
+  public func getSelfie(completion: @escaping (UIKit.UIImage?) -> Swift.Void)
+  @objc deinit
+}
+extension SigndScanId.FaceCapture : SigndScanId.ImagePickerDelegate {
+  public func didSelect(image: UIKit.UIImage?)
+}
+public protocol ScanIdDelegate : AnyObject {
+  func acceptImage(image: UIKit.UIImage?, side: SigndScanId.Side)
+  func scanIdFrontSide(retake: Swift.Bool)
+  func scanSecondSide(retake: Swift.Bool)
+}
+public protocol SelfieDelegate : AnyObject {
+  func acceptSelfie()
+  func scanFace()
+  func restart()
+}
+public protocol ImagePickerDelegate : AnyObject {
+  func didSelect(image: UIKit.UIImage?)
+}
+@objc open class ImagePicker : ObjectiveC.NSObject {
+  public init(presentationController: UIKit.UIViewController, delegate: SigndScanId.ImagePickerDelegate)
+  public func present()
+  @objc deinit
+}
+extension SigndScanId.ImagePicker : UIKit.UIImagePickerControllerDelegate {
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func imagePickerControllerDidCancel(_ picker: UIKit.UIImagePickerController)
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func imagePickerController(_ picker: UIKit.UIImagePickerController, didFinishPickingMediaWithInfo info: [UIKit.UIImagePickerController.InfoKey : Any])
+}
+extension SigndScanId.ImagePicker : UIKit.UINavigationControllerDelegate {
+}
+extension SigndScanId.Side : Swift.Equatable {}
+extension SigndScanId.Side : Swift.Hashable {}
+extension SigndScanId.OperationFailedMode : Swift.Equatable {}
+extension SigndScanId.OperationFailedMode : Swift.Hashable {}

@@ -1,0 +1,40 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.4.2 (swiftlang-1205.0.28.2 clang-1205.0.19.57)
+// swift-module-flags: -target arm64-apple-ios11.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name SigndScanIdRegula
+import Foundation
+import SigndCore
+import SigndScanId
+@_exported import SigndScanIdRegula
+import Swift
+import UIKit
+public class RegulaProccess {
+  final public let plugin: SigndCore.SGDThirdPartyName
+  public var executeVerificationConfigCustom: SigndCore.SGDExecuteVerificationConfigCustom?
+  public init()
+  public func initialize(network: SigndCore.SGDNetwork, navigationDelegate: SigndCore.SigndNavigationDelegate, delegate: SigndScanId.ProccessDelegate)
+  @objc deinit
+}
+extension RegulaProccess : SigndScanId.ScanIdProccess {
+  public func scanId()
+  public func scanFace(redo: Swift.Bool)
+  public func showOperationFailed(mode: SigndScanId.OperationFailedMode)
+  public func resetData()
+}
+extension RegulaProccess : SigndScanId.ScanIdDelegate {
+  public func acceptImage(image: UIKit.UIImage?, side: SigndScanId.Side)
+  public func scanIdFrontSide(retake: Swift.Bool)
+  public func scanSecondSide(retake: Swift.Bool)
+}
+extension RegulaProccess : SigndScanId.SelfieDelegate {
+  public func restart()
+  public func scanFace()
+  public func acceptSelfie()
+}
+extension RegulaProccess : SigndScanId.IdScanDelegate {
+  public func idImageLoaded(image: UIKit.UIImage?, side: SigndScanId.Side)
+  public func showError(title: Swift.String?, message: Swift.String)
+}
+public struct RegulaScanIdImageData : Swift.Encodable {
+  public init(firstImage: UIKit.UIImage?, secondImage: UIKit.UIImage?)
+  public func encode(to encoder: Swift.Encoder) throws
+}

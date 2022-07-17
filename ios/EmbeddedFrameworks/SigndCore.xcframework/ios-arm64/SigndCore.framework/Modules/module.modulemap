@@ -1,0 +1,11 @@
+framework module SigndCore {
+  umbrella header "SigndCore.h"
+
+  export *
+  module * { export * }
+}
+
+module SigndCore.Swift {
+    header "SigndCore-Swift.h"
+    requires objc
+}

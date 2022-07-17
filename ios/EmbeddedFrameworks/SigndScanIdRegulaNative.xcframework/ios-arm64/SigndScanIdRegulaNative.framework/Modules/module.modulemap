@@ -1,0 +1,11 @@
+framework module SigndScanIdRegulaNative {
+  umbrella header "SigndScanIdRegulaNative.h"
+
+  export *
+  module * { export * }
+}
+
+module SigndScanIdRegulaNative.Swift {
+    header "SigndScanIdRegulaNative-Swift.h"
+    requires objc
+}
