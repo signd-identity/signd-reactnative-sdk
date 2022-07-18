@@ -8,9 +8,10 @@ ENV['RCT_NEW_ARCH_ENABLED'] = '1'
 
 target 'SigndReactnativeSdkExample' do
   config = use_native_modules!
-
-  pod 'glog', :podspec => '../node_modules/react-native/third-party-podspecs/glog.podspec', :modular_headers => false
+  use_frameworks! :linkage => :static 
   
+  pod 'glog', :podspec => '../node_modules/react-native/third-party-podspecs/glog.podspec', :modular_headers => false
+
   # Flags change depending on the env values.
   flags = get_default_flags()
 

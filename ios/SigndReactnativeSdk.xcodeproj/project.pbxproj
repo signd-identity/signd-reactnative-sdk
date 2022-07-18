@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		38F2B52E8491EE4CB2E356D0 /* Pods_SigndReactnativeSdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 810A564C7145A4EFFBB506FA /* Pods_SigndReactnativeSdk.framework */; };
+		B2E75C33E3489DCC04A2D3DD /* Pods_SigndReactnativeSdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F9003DC0F008BF5F9525062 /* Pods_SigndReactnativeSdk.framework */; };
 		D9CA60B62881A4B10028CF19 /* SigndReactnativeSdk.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9CA60B52881A4B10028CF19 /* SigndReactnativeSdk.swift */; };
 		D9CA60BA2881A5A80028CF19 /* SigndReactnativeSdk.m in Sources */ = {isa = PBXBuildFile; fileRef = D9CA60B92881A5A80028CF19 /* SigndReactnativeSdk.m */; };
 		D9DCEFDD28854C00004BAFEC /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9DCEFDC28854C00004BAFEC /* UIColor.swift */; };
@@ -27,7 +27,7 @@
 
 /* Begin PBXFileReference section */
 		134814201AA4EA6300B7C361 /* libSigndReactnativeSdk.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSigndReactnativeSdk.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		810A564C7145A4EFFBB506FA /* Pods_SigndReactnativeSdk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SigndReactnativeSdk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2F9003DC0F008BF5F9525062 /* Pods_SigndReactnativeSdk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SigndReactnativeSdk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D94A145628842C3600EB9EA6 /* RCTBridgeModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = RCTBridgeModule.h; path = "../node_modules/react-native/React/Base/RCTBridgeModule.h"; sourceTree = "<group>"; };
 		D98753258E077C4AA1BBF63D /* Pods-SigndReactnativeSdk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SigndReactnativeSdk.release.xcconfig"; path = "Target Support Files/Pods-SigndReactnativeSdk/Pods-SigndReactnativeSdk.release.xcconfig"; sourceTree = "<group>"; };
 		D9CA60B52881A4B10028CF19 /* SigndReactnativeSdk.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigndReactnativeSdk.swift; sourceTree = "<group>"; };
@@ -42,7 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				38F2B52E8491EE4CB2E356D0 /* Pods_SigndReactnativeSdk.framework in Frameworks */,
+				B2E75C33E3489DCC04A2D3DD /* Pods_SigndReactnativeSdk.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,7 +83,7 @@
 		E918482483F53809DB5AE964 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				810A564C7145A4EFFBB506FA /* Pods_SigndReactnativeSdk.framework */,
+				2F9003DC0F008BF5F9525062 /* Pods_SigndReactnativeSdk.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
