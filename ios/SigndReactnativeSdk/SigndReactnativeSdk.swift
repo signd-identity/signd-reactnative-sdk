@@ -1,6 +1,7 @@
 // SigndReactnativeSdk.swift
 import Foundation
 
+import SigndCore
 import SigndScanId
 import SigndScanIdAcuant
 import SigndScanIdRegula
@@ -15,7 +16,8 @@ class SigndReactnativeSdk: NSObject, SigndDelegate {
     var sessionToken: String?
     var result: String?
 
-    @objc func initialize(_ data:Dictionary<String, String>,
+    @objc(initialize:resolver:rejecter:)
+    func initialize(_ data:Dictionary<String, String>,
                 resolver: @escaping (RCTPromiseResolveBlock),
                 rejecter: RCTPromiseRejectBlock) {
         guard let scheme = data["scheme"] else {
@@ -137,7 +139,8 @@ class SigndReactnativeSdk: NSObject, SigndDelegate {
             resolver(nil)
         }
     }
-    @objc func start(_ sessionToken: String,
+    @objc(start:resolver:rejecter:)
+    func start(_ sessionToken: String,
                 resolver: @escaping (RCTPromiseResolveBlock),
                 rejecter: @escaping (RCTPromiseRejectBlock)) {
         if sessionToken.isEmpty {
