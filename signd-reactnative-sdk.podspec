@@ -15,7 +15,7 @@ Pod::Spec.new do |s|
   s.platforms    = { :ios => "14.0" }
   s.source       = { :git => "https://github.com/signd-identity/signd-reactnative-sdk.git", :tag => "#{s.version}" }
   s.vendored_frameworks = 'ios/EmbeddedFrameworks/**'
-  s.source_files = "ios/**/*.{swift,h,m,c,cc,mm,cpp}"
+  s.source_files = "ios/SigndReactnativeSdk/**/*.{swift,h,m,c,cc,mm,cpp}"
   
   s.dependency "React-Core"
   s.dependency 'AcuantiOSSDKV11/AcuantImagePreparation', '= 11.5.6'
@@ -35,9 +35,10 @@ Pod::Spec.new do |s|
         "HEADER_SEARCH_PATHS" => "\"$(PODS_ROOT)/boost\"",
         "CLANG_CXX_LANGUAGE_STANDARD" => "c++17"
     }
-
-
-    s.dependency "RCTRequired"
-
+    # s.dependency "React-Codegen"
+    # s.dependency "RCT-Folly", folly_version
+    # s.dependency "RCTRequired"
+    # s.dependency "RCTTypeSafety"
+    # s.dependency "ReactCommon/turbomodule/core"
   end
 end
