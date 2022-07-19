@@ -1,7 +1,6 @@
 // SigndReactnativeSdk.swift
 import Foundation
 
-import SigndCore
 import SigndScanId
 import SigndScanIdAcuant
 import SigndScanIdRegula

@@ -12,12 +12,21 @@ Pod::Spec.new do |s|
   s.license      = package["license"]
   s.authors      = package["author"]
 
-  s.platforms    = { :ios => "11.0" }
+  s.platforms    = { :ios => "12.0" }
   s.source       = { :git => "https://github.com/signd-identity/signd-reactnative-sdk.git", :tag => "#{s.version}" }
-
-  s.source_files = "ios/**/*.{h,m,mm,swift}"
+  s.vendored_frameworks = 'ios/EmbeddedFrameworks/**'
+  s.source_files = "ios/**/*.{swift,h,m,c,cc,mm,cpp}"
   
   s.dependency "React-Core"
+  s.dependency 'AcuantiOSSDKV11/AcuantImagePreparation', '= 11.5.6'
+  s.dependency 'AcuantiOSSDKV11/AcuantFaceCapture', '= 11.5.6'
+  s.dependency 'AcuantiOSSDKV11/AcuantHGLiveness', '= 11.5.6'
+  s.dependency 'AcuantiOSSDKV11/AcuantIPLiveness', '= 11.5.6'
+  s.dependency 'AcuantiOSSDKV11/AcuantDocumentProcessing', '= 11.5.6'
+  s.dependency 'AcuantiOSSDKV11/AcuantPassiveLiveness', '= 11.5.6'
+  s.dependency 'FaceSDK', '= 3.2.1078'
+  s.dependency 'DocumentReaderFull', '= 6.2.6012'
+  s.dependency 'DocumentReader', '= 6.2.2441'
 
   # Don't install the dependencies when we run `pod install` in the old architecture.
   if ENV['RCT_NEW_ARCH_ENABLED'] == '1' then
@@ -27,10 +36,8 @@ Pod::Spec.new do |s|
         "CLANG_CXX_LANGUAGE_STANDARD" => "c++17"
     }
 
-    s.dependency "React-Codegen"
-    s.dependency "RCT-Folly", folly_version
+
     s.dependency "RCTRequired"
-    s.dependency "RCTTypeSafety"
-    s.dependency "ReactCommon/turbomodule/core"
+
   end
 end

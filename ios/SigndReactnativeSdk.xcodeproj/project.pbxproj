@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B2E75C33E3489DCC04A2D3DD /* Pods_SigndReactnativeSdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F9003DC0F008BF5F9525062 /* Pods_SigndReactnativeSdk.framework */; };
 		D9CA60B62881A4B10028CF19 /* SigndReactnativeSdk.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9CA60B52881A4B10028CF19 /* SigndReactnativeSdk.swift */; };
 		D9CA60BA2881A5A80028CF19 /* SigndReactnativeSdk.m in Sources */ = {isa = PBXBuildFile; fileRef = D9CA60B92881A5A80028CF19 /* SigndReactnativeSdk.m */; };
 		D9DCEFDD28854C00004BAFEC /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9DCEFDC28854C00004BAFEC /* UIColor.swift */; };
@@ -27,26 +26,12 @@
 
 /* Begin PBXFileReference section */
 		134814201AA4EA6300B7C361 /* libSigndReactnativeSdk.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSigndReactnativeSdk.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		2F9003DC0F008BF5F9525062 /* Pods_SigndReactnativeSdk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SigndReactnativeSdk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D94A145628842C3600EB9EA6 /* RCTBridgeModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = RCTBridgeModule.h; path = "../node_modules/react-native/React/Base/RCTBridgeModule.h"; sourceTree = "<group>"; };
-		D98753258E077C4AA1BBF63D /* Pods-SigndReactnativeSdk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SigndReactnativeSdk.release.xcconfig"; path = "Target Support Files/Pods-SigndReactnativeSdk/Pods-SigndReactnativeSdk.release.xcconfig"; sourceTree = "<group>"; };
 		D9CA60B52881A4B10028CF19 /* SigndReactnativeSdk.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigndReactnativeSdk.swift; sourceTree = "<group>"; };
 		D9CA60B82881A5410028CF19 /* SigndReactnativeSdk-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SigndReactnativeSdk-Bridging-Header.h"; sourceTree = "<group>"; };
 		D9CA60B92881A5A80028CF19 /* SigndReactnativeSdk.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SigndReactnativeSdk.m; sourceTree = "<group>"; };
 		D9DCEFDC28854C00004BAFEC /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
-		F1429D13E5440030346D0E69 /* Pods-SigndReactnativeSdk.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SigndReactnativeSdk.debug.xcconfig"; path = "Target Support Files/Pods-SigndReactnativeSdk/Pods-SigndReactnativeSdk.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFrameworksBuildPhase section */
-		58B511D81A9E6C8500147676 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B2E75C33E3489DCC04A2D3DD /* Pods_SigndReactnativeSdk.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		134814211AA4EA7D00B7C361 /* Products */ = {
@@ -66,26 +51,7 @@
 				D9CA60B82881A5410028CF19 /* SigndReactnativeSdk-Bridging-Header.h */,
 				D9CA60B52881A4B10028CF19 /* SigndReactnativeSdk.swift */,
 				134814211AA4EA7D00B7C361 /* Products */,
-				E918482483F53809DB5AE964 /* Frameworks */,
-				68FEA5A38C7F3D8849F4A0D7 /* Pods */,
 			);
-			sourceTree = "<group>";
-		};
-		68FEA5A38C7F3D8849F4A0D7 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				F1429D13E5440030346D0E69 /* Pods-SigndReactnativeSdk.debug.xcconfig */,
-				D98753258E077C4AA1BBF63D /* Pods-SigndReactnativeSdk.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
-		E918482483F53809DB5AE964 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				2F9003DC0F008BF5F9525062 /* Pods_SigndReactnativeSdk.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -95,9 +61,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 58B511EF1A9E6C8500147676 /* Build configuration list for PBXNativeTarget "SigndReactnativeSdk" */;
 			buildPhases = (
-				1FD5C7F208B39BFD322E5D6B /* [CP] Check Pods Manifest.lock */,
 				58B511D71A9E6C8500147676 /* Sources */,
-				58B511D81A9E6C8500147676 /* Frameworks */,
 				58B511D91A9E6C8500147676 /* CopyFiles */,
 			);
 			buildRules = (
@@ -140,31 +104,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		1FD5C7F208B39BFD322E5D6B /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-SigndReactnativeSdk-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		58B511D71A9E6C8500147676 /* Sources */ = {
@@ -211,6 +150,8 @@
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				EXCLUDED_ARCHS = i386;
+				"EXCLUDED_ARCHS[sdk=*]" = i386;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -227,7 +168,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -265,6 +206,8 @@
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				EXCLUDED_ARCHS = i386;
+				"EXCLUDED_ARCHS[sdk=*]" = i386;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -274,7 +217,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
@@ -285,18 +228,28 @@
 		};
 		58B511F01A9E6C8500147676 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F1429D13E5440030346D0E69 /* Pods-SigndReactnativeSdk.debug.xcconfig */;
 			buildSettings = {
 				BUILD_LIBRARY_FOR_DISTRIBUTION = NO;
-				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				EXCLUDED_ARCHS = "";
+				"EXCLUDED_ARCHS[sdk=*]" = arm64;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/EmbeddedFrameworks/**",
+					"$(SRCROOT)/../example/ios/Pods/**",
+				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"$(SRCROOT)/../example/ios/Pods/Headers/Public/React-Core",
 					"$(SRCROOT)/../../../ios/Pods/Headers/Public/React-Core",
 				);
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks $(FRAMEWORK_SEARCH_PATHS)\n$(FRAMEWORK_SEARCH_PATHS)\n$(FRAMEWORK_SEARCH_PATHS)";
+				ONLY_ACTIVE_ARCH = YES;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../example/ios/Pods/**",
+				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -314,24 +267,35 @@
 		};
 		58B511F11A9E6C8500147676 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D98753258E077C4AA1BBF63D /* Pods-SigndReactnativeSdk.release.xcconfig */;
 			buildSettings = {
 				BUILD_LIBRARY_FOR_DISTRIBUTION = NO;
-				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				EXCLUDED_ARCHS = "";
+				"EXCLUDED_ARCHS[sdk=*]" = arm64;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/EmbeddedFrameworks/**",
+					"$(SRCROOT)/../example/ios/Pods/**",
+				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"$(SRCROOT)/../example/ios/Pods/Headers/Public/React-Core",
 					"$(SRCROOT)/../../../ios/Pods/Headers/Public/React-Core",
 				);
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks $(FRAMEWORK_SEARCH_PATHS)\n$(FRAMEWORK_SEARCH_PATHS)\n$(FRAMEWORK_SEARCH_PATHS)";
+				ONLY_ACTIVE_ARCH = YES;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../example/ios/Pods/**",
+				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 				);
 				OTHER_SWIFT_FLAGS = "$(inherited)";
 				PRODUCT_NAME = SigndReactnativeSdk;
+
 				SKIP_INSTALL = YES;
 				SWIFT_INCLUDE_PATHS = "$(inherited)";
 				SWIFT_OBJC_BRIDGING_HEADER = "SigndReactnativeSdk-Bridging-Header.h";
