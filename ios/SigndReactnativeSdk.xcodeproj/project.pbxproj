@@ -258,7 +258,7 @@
 				PRODUCT_NAME = SigndReactnativeSdk;
 				SKIP_INSTALL = YES;
 				SWIFT_INCLUDE_PATHS = "$(inherited)";
-				SWIFT_OBJC_BRIDGING_HEADER = "SigndReactnativeSdk-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/SigndReactnativeSdk/SigndReactnativeSdk-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -291,7 +291,7 @@
 				PRODUCT_NAME = SigndReactnativeSdk;
 				SKIP_INSTALL = YES;
 				SWIFT_INCLUDE_PATHS = "$(inherited)";
-				SWIFT_OBJC_BRIDGING_HEADER = "SigndReactnativeSdk-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/SigndReactnativeSdk/SigndReactnativeSdk-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;

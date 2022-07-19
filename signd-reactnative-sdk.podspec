@@ -18,12 +18,6 @@ Pod::Spec.new do |s|
   s.source_files = "ios/SigndReactnativeSdk/**/*.{swift,h,m,c,cc,mm,cpp}"
   
   s.dependency "React-Core"
-  s.dependency 'AcuantiOSSDKV11/AcuantImagePreparation', '= 11.5.6'
-  s.dependency 'AcuantiOSSDKV11/AcuantFaceCapture', '= 11.5.6'
-  s.dependency 'AcuantiOSSDKV11/AcuantHGLiveness', '= 11.5.6'
-  s.dependency 'AcuantiOSSDKV11/AcuantIPLiveness', '= 11.5.6'
-  s.dependency 'AcuantiOSSDKV11/AcuantDocumentProcessing', '= 11.5.6'
-  s.dependency 'AcuantiOSSDKV11/AcuantPassiveLiveness', '= 11.5.6'
   s.dependency 'FaceSDK', '= 3.2.1078'
   s.dependency 'DocumentReaderFull', '= 6.2.6012'
   s.dependency 'DocumentReader', '= 6.2.2441'
@@ -35,10 +29,5 @@ Pod::Spec.new do |s|
         "HEADER_SEARCH_PATHS" => "\"$(PODS_ROOT)/boost\"",
         "CLANG_CXX_LANGUAGE_STANDARD" => "c++17"
     }
-    # s.dependency "React-Codegen"
-    # s.dependency "RCT-Folly", folly_version
-    # s.dependency "RCTRequired"
-    # s.dependency "RCTTypeSafety"
-    # s.dependency "ReactCommon/turbomodule/core"
   end
 end
