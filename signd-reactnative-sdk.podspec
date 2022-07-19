@@ -12,7 +12,7 @@ Pod::Spec.new do |s|
   s.license      = package["license"]
   s.authors      = package["author"]
 
-  s.platforms    = { :ios => "12.0" }
+  s.platforms    = { :ios => "14.0" }
   s.source       = { :git => "https://github.com/signd-identity/signd-reactnative-sdk.git", :tag => "#{s.version}" }
   s.vendored_frameworks = 'ios/EmbeddedFrameworks/**'
   s.source_files = "ios/**/*.{swift,h,m,c,cc,mm,cpp}"
