@@ -10,8 +10,8 @@
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		22EF6A9DA02C03C38F2A9FD4 /* Pods_SigndReactnativeSdkExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82A7306CC1781E38C9D92EE7 /* Pods_SigndReactnativeSdkExample.framework */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		F45A13DFBDE43037F460F901 /* Pods_SigndReactnativeSdkExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1744C5229A428CE9DD4661A2 /* Pods_SigndReactnativeSdkExample.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,10 +21,10 @@
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = SigndReactnativeSdkExample/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = SigndReactnativeSdkExample/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = SigndReactnativeSdkExample/main.m; sourceTree = "<group>"; };
-		3D11993741AFC625286FF26E /* Pods-SigndReactnativeSdkExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SigndReactnativeSdkExample.debug.xcconfig"; path = "Target Support Files/Pods-SigndReactnativeSdkExample/Pods-SigndReactnativeSdkExample.debug.xcconfig"; sourceTree = "<group>"; };
+		1744C5229A428CE9DD4661A2 /* Pods_SigndReactnativeSdkExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SigndReactnativeSdkExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		65F4E9C84D5002B7D5CBC47C /* Pods-SigndReactnativeSdkExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SigndReactnativeSdkExample.release.xcconfig"; path = "Target Support Files/Pods-SigndReactnativeSdkExample/Pods-SigndReactnativeSdkExample.release.xcconfig"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = SigndReactnativeSdkExample/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		82A7306CC1781E38C9D92EE7 /* Pods_SigndReactnativeSdkExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SigndReactnativeSdkExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B66ACC7C56EBFCEEE46D9FB3 /* Pods-SigndReactnativeSdkExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SigndReactnativeSdkExample.release.xcconfig"; path = "Target Support Files/Pods-SigndReactnativeSdkExample/Pods-SigndReactnativeSdkExample.release.xcconfig"; sourceTree = "<group>"; };
+		8504F4F90A9D32EA3CEDC7A6 /* Pods-SigndReactnativeSdkExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SigndReactnativeSdkExample.debug.xcconfig"; path = "Target Support Files/Pods-SigndReactnativeSdkExample/Pods-SigndReactnativeSdkExample.debug.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -33,7 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				22EF6A9DA02C03C38F2A9FD4 /* Pods_SigndReactnativeSdkExample.framework in Frameworks */,
+				F45A13DFBDE43037F460F901 /* Pods_SigndReactnativeSdkExample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,7 +57,7 @@
 			isa = PBXGroup;
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				82A7306CC1781E38C9D92EE7 /* Pods_SigndReactnativeSdkExample.framework */,
+				1744C5229A428CE9DD4661A2 /* Pods_SigndReactnativeSdkExample.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -94,8 +94,8 @@
 		BBD78D7AC51CEA395F1C20DB /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				3D11993741AFC625286FF26E /* Pods-SigndReactnativeSdkExample.debug.xcconfig */,
-				B66ACC7C56EBFCEEE46D9FB3 /* Pods-SigndReactnativeSdkExample.release.xcconfig */,
+				8504F4F90A9D32EA3CEDC7A6 /* Pods-SigndReactnativeSdkExample.debug.xcconfig */,
+				65F4E9C84D5002B7D5CBC47C /* Pods-SigndReactnativeSdkExample.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -107,14 +107,14 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "SigndReactnativeSdkExample" */;
 			buildPhases = (
-				DC1BA56B787BA37A9C717BBD /* [CP] Check Pods Manifest.lock */,
+				382465DB15A83A95ECBB0315 /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
-				52853A6958B232F222D0B569 /* [CP] Embed Pods Frameworks */,
-				BCF0988ED31A49A9BB697108 /* [CP] Copy Pods Resources */,
+				B5ACA3705604047E00DB510D /* [CP] Embed Pods Frameworks */,
+				0FB58D3E35CA88EF57FFE530 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -183,24 +183,7 @@
 			shellPath = /bin/sh;
 			shellScript = "set -e\n\nexport NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh\n";
 		};
-		52853A6958B232F222D0B569 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SigndReactnativeSdkExample/Pods-SigndReactnativeSdkExample-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SigndReactnativeSdkExample/Pods-SigndReactnativeSdkExample-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SigndReactnativeSdkExample/Pods-SigndReactnativeSdkExample-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		BCF0988ED31A49A9BB697108 /* [CP] Copy Pods Resources */ = {
+		0FB58D3E35CA88EF57FFE530 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -217,7 +200,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SigndReactnativeSdkExample/Pods-SigndReactnativeSdkExample-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		DC1BA56B787BA37A9C717BBD /* [CP] Check Pods Manifest.lock */ = {
+		382465DB15A83A95ECBB0315 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -237,6 +220,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B5ACA3705604047E00DB510D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SigndReactnativeSdkExample/Pods-SigndReactnativeSdkExample-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SigndReactnativeSdkExample/Pods-SigndReactnativeSdkExample-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SigndReactnativeSdkExample/Pods-SigndReactnativeSdkExample-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FD10A7F022414F080027D42C /* Start Packager */ = {
@@ -275,7 +275,7 @@
 /* Begin XCBuildConfiguration section */
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3D11993741AFC625286FF26E /* Pods-SigndReactnativeSdkExample.debug.xcconfig */;
+			baseConfigurationReference = 8504F4F90A9D32EA3CEDC7A6 /* Pods-SigndReactnativeSdkExample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
@@ -302,7 +302,7 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B66ACC7C56EBFCEEE46D9FB3 /* Pods-SigndReactnativeSdkExample.release.xcconfig */;
+			baseConfigurationReference = 65F4E9C84D5002B7D5CBC47C /* Pods-SigndReactnativeSdkExample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
