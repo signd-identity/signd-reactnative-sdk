@@ -1,0 +1,214 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.3.2 (swiftlang-1200.0.45 clang-1200.0.32.28)
+// swift-module-flags: -target arm64-apple-ios11.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name AcuantiOSSDKV11
+import AVFoundation
+import AcuantCommon
+import AcuantImagePreparation
+@_exported import AcuantiOSSDKV11
+import Foundation
+import Swift
+import UIKit
+@objc @objcMembers public class AcuantFaceCaptureSession : AVFoundation.AVCaptureSession, AVFoundation.AVCaptureVideoDataOutputSampleBufferDelegate {
+  @objc public init(captureDevice: AVFoundation.AVCaptureDevice, callback: @escaping ((AcuantiOSSDKV11.AcuantFaceDetails) -> ()))
+  @objc public func start()
+  @objc public func captureOutput(_ output: AVFoundation.AVCaptureOutput, didOutput sampleBuffer: CoreMedia.CMSampleBuffer, from connection: AVFoundation.AVCaptureConnection)
+  @objc deinit
+  @objc override dynamic public init()
+}
+@objc @objcMembers public class AcuantFaceDetails : ObjectiveC.NSObject {
+  @objc final public let image: UIKit.UIImage?
+  @objc final public let state: AcuantiOSSDKV11.AcuantFaceState
+  final public let faceRect: CoreGraphics.CGRect?
+  final public let cleanAperture: CoreGraphics.CGRect?
+  public init(state: AcuantiOSSDKV11.AcuantFaceState, image: UIKit.UIImage? = nil, cleanAperture: CoreGraphics.CGRect? = nil, faceRect: CoreGraphics.CGRect? = nil)
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc public enum AcuantFaceState : Swift.Int {
+  case NONE
+  case FACE_TOO_CLOSE
+  case FACE_MOVED
+  case FACE_TOO_FAR
+  case FACE_GOOD_DISTANCE
+  case FACE_NOT_IN_FRAME
+  case FACE_HAS_ANGLE
+  public typealias RawValue = Swift.Int
+  public init?(rawValue: Swift.Int)
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public protocol AutoCaptureDelegate {
+  @objc func getAutoCapture() -> Swift.Bool
+  @objc func setAutoCapture(autoCapture: Swift.Bool)
+}
+@objc public protocol CameraCaptureDelegate {
+  @objc func setCapturedImage(image: AcuantCommon.Image, barcodeString: Swift.String?)
+}
+@objc @_hasMissingDesignatedInitializers public class CameraCornerOverlayView : QuartzCore.CALayer {
+  public var bracketWidth: Swift.Int?
+  public var bracketHeight: Swift.Int?
+  public var defaultBracketMarginWidth: CoreGraphics.CGFloat?
+  public var defaultBracketMarginHeight: CoreGraphics.CGFloat?
+  public init(options: AcuantiOSSDKV11.CameraOptions)
+  public func setColor(color: CoreGraphics.CGColor?)
+  public func setDefaultCorners(frame: CoreGraphics.CGRect)
+  @objc deinit
+  @objc override dynamic public init()
+  @objc override dynamic public init(layer: Any)
+}
+@objc @_hasMissingDesignatedInitializers public class CameraDocumentOverlayView : QuartzCore.CAShapeLayer {
+  public var alwaysHideBox: Swift.Bool
+  public func showBorder(color: CoreGraphics.CGColor?)
+  public func hideBorder()
+  @objc deinit
+  @objc override dynamic public init()
+}
+@objc @objcMembers public class CameraOptions : ObjectiveC.NSObject {
+  @objc final public let timeInMsPerDigit: Swift.Int
+  @objc final public let digitsToShow: Swift.Int
+  @objc final public let allowBox: Swift.Bool
+  @objc final public let autoCapture: Swift.Bool
+  @objc final public let hideNavigationBar: Swift.Bool
+  @objc final public let bracketLengthInHorizontal: Swift.Int
+  @objc final public let bracketLengthInVertical: Swift.Int
+  @objc final public let defaultBracketMarginWidth: CoreGraphics.CGFloat
+  @objc final public let defaultBracketMarginHeight: CoreGraphics.CGFloat
+  @objc final public let colorHold: CoreGraphics.CGColor
+  @objc final public let colorCapturing: CoreGraphics.CGColor
+  @objc final public let colorBracketAlign: CoreGraphics.CGColor
+  @objc final public let colorBracketCloser: CoreGraphics.CGColor
+  @objc final public let colorBracketHold: CoreGraphics.CGColor
+  @objc final public let colorBracketCapture: CoreGraphics.CGColor
+  @objc final public let defaultImageUrl: Swift.String
+  @objc final public let showBackButton: Swift.Bool
+  @objc public init(timeInMsPerDigit: Swift.Int = 900, digitsToShow: Swift.Int = 2, allowBox: Swift.Bool = true, autoCapture: Swift.Bool = true, hideNavigationBar: Swift.Bool = true, bracketLengthInHorizontal: Swift.Int = 80, bracketLengthInVertical: Swift.Int = 50, defaultBracketMarginWidth: CoreGraphics.CGFloat = 0.5, defaultBracketMarginHeight: CoreGraphics.CGFloat = 0.6, colorHold: CoreGraphics.CGColor = UIColor.yellow.cgColor, colorCapturing: CoreGraphics.CGColor = UIColor.green.cgColor, colorBracketAlign: CoreGraphics.CGColor = UIColor.black.cgColor, colorBracketCloser: CoreGraphics.CGColor = UIColor.red.cgColor, colorBracketHold: CoreGraphics.CGColor = UIColor.yellow.cgColor, colorBracketCapture: CoreGraphics.CGColor = UIColor.green.cgColor, defaultImageUrl: Swift.String = "", showBackButton: Swift.Bool = true)
+  @objc deinit
+  @objc override dynamic public init()
+}
+@objc @_hasMissingDesignatedInitializers public class CameraTextView : QuartzCore.CATextLayer {
+  public var textSizeDefault: CoreGraphics.CGFloat
+  public var textSizeCapture: CoreGraphics.CGFloat
+  public var backgroundColorDefault: CoreGraphics.CGColor?
+  public var backgroundColorCapture: CoreGraphics.CGColor?
+  public var foregroundColorDefault: CoreGraphics.CGColor?
+  public var foregroundColorCapture: CoreGraphics.CGColor?
+  public func setDefaultSettings(frame: CoreGraphics.CGRect)
+  public func setCaptureSettings(frame: CoreGraphics.CGRect)
+  @objc deinit
+  @objc override dynamic public init()
+}
+@objc @_inheritsConvenienceInitializers @objcMembers public class CaptureConstants : ObjectiveC.NSObject {
+  @objc public static let CAMERA_PREVIEW_LONGER_SIDE_STANDARD: Swift.Int
+  @objc public static let CAMERA_PRIVEW_LARGER_DOCUMENT_DPI_RATIO: Swift.Double
+  @objc public static let CAMERA_PRIVEW_SMALLER_DOCUMENT_DPI_RATIO: Swift.Double
+  @objc public static let ASPECT_RATIO_ID1: Swift.Double
+  @objc public static let ASPECT_RATIO_ID3: Swift.Double
+  @objc public static let ASPECT_RATIO_THRESHOLD: Swift.Double
+  @objc public static let MANDATORY_RESOLUTION_THRESHOLD_DEFAULT: Swift.Int
+  @objc public static let MANDATORY_RESOLUTION_THRESHOLD_SMALL: Swift.Int
+  @objc public static let MANDATORY_RESOLUTION_THRESHOLD_DEFAULT_OLD_PHONES: Swift.Int
+  @objc public static let MANDATORY_RESOLUTION_THRESHOLD_SMALL_OLD_PHONES: Swift.Int
+  @objc public static let NO_DOCUMENT_DPI_THRESHOLD: Swift.Int
+  @objc public static let SMALL_DOCUMENT_DPI_THRESHOLD: Swift.Int
+  @objc public static let SHARPNESS_THRESHOLD: Swift.Int
+  @objc public static let GLARE_THRESHOLD: Swift.Int
+  @objc deinit
+  @objc override dynamic public init()
+}
+@objc @_inheritsConvenienceInitializers @objcMembers public class DocumentCameraController : UIKit.UIViewController, AcuantiOSSDKV11.DocumentCaptureDelegate, AcuantiOSSDKV11.FrameAnalysisDelegate, AcuantiOSSDKV11.AutoCaptureDelegate {
+  @objc public enum CameraState : Swift.Int {
+    case Align = 0, MoveCloser = 1, Steady = 2, Hold = 3, Capture = 4
+    public typealias RawValue = Swift.Int
+    public init?(rawValue: Swift.Int)
+    public var rawValue: Swift.Int {
+      get
+    }
+  }
+  @objc public class func getCameraController(delegate: AcuantiOSSDKV11.CameraCaptureDelegate, cameraOptions: AcuantiOSSDKV11.CameraOptions) -> AcuantiOSSDKV11.DocumentCameraController
+  @objc public func setAutoCapture(autoCapture: Swift.Bool)
+  @objc public func getAutoCapture() -> Swift.Bool
+  @objc override dynamic public func viewDidLoad()
+  @objc override dynamic public func viewDidAppear(_ animated: Swift.Bool)
+  @objc override dynamic public func viewWillAppear(_ animated: Swift.Bool)
+  @objc override dynamic public var prefersStatusBarHidden: Swift.Bool {
+    @objc get
+  }
+  @objc override dynamic public func viewWillDisappear(_ animated: Swift.Bool)
+  @objc override dynamic public func viewDidLayoutSubviews()
+  @objc override dynamic public func didReceiveMemoryWarning()
+  @objc public func documentCaptured(image: UIKit.UIImage, barcodeString: Swift.String?)
+  @objc public func rotateImage(image: UIKit.UIImage) -> UIKit.UIImage
+  @objc public func isDocumentMoved(newPoints: Swift.Array<CoreGraphics.CGPoint>) -> Swift.Bool
+  @objc public func onFrameAvailable(frameResult: AcuantiOSSDKV11.FrameResult, points: Swift.Array<CoreGraphics.CGPoint>?)
+  @objc public func readyToCapture()
+  @objc deinit
+  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @objc required dynamic public init?(coder: Foundation.NSCoder)
+}
+@objc public protocol DocumentCaptureDelegate {
+  @objc func readyToCapture()
+  @objc func documentCaptured(image: UIKit.UIImage, barcodeString: Swift.String?)
+}
+@objc @_inheritsConvenienceInitializers @objcMembers public class DocumentCaptureSession : AVFoundation.AVCaptureSession, AVFoundation.AVCaptureMetadataOutputObjectsDelegate, AVFoundation.AVCaptureVideoDataOutputSampleBufferDelegate, AVFoundation.AVCapturePhotoCaptureDelegate {
+  @objc override dynamic public init()
+  @objc public class func getDocumentCaptureSession(delegate: AcuantiOSSDKV11.DocumentCaptureDelegate?, frameDelegate: AcuantiOSSDKV11.FrameAnalysisDelegate, autoCaptureDelegate: AcuantiOSSDKV11.AutoCaptureDelegate, captureDevice: AVFoundation.AVCaptureDevice?) -> AcuantiOSSDKV11.DocumentCaptureSession
+  @objc public func enableCapture()
+  @objc public func start()
+  @objc public func captureOutput(_ output: AVFoundation.AVCaptureOutput, didOutput sampleBuffer: CoreMedia.CMSampleBuffer, from connection: AVFoundation.AVCaptureConnection)
+  @objc public func getFrameMatchThreshold(cropDuration: Swift.Double) -> Swift.Int
+  @objc public func metadataOutput(_ output: AVFoundation.AVCaptureMetadataOutput, didOutput metadataObjects: [AVFoundation.AVMetadataObject], from connection: AVFoundation.AVCaptureConnection)
+  @objc public func photoOutput(_ output: AVFoundation.AVCapturePhotoOutput, didFinishProcessingPhoto photo: AVFoundation.AVCapturePhoto, error: Swift.Error?)
+  @objc deinit
+}
+@objc @objcMembers public class FaceCameraOptions : ObjectiveC.NSObject {
+  @objc final public let totalCaptureTime: Swift.Int
+  @objc final public let bracketColorDefault: CoreGraphics.CGColor
+  @objc final public let bracketColorError: CoreGraphics.CGColor
+  @objc final public let bracketColorGood: CoreGraphics.CGColor
+  @objc final public let fontColorDefault: CoreGraphics.CGColor
+  @objc final public let fontColorError: CoreGraphics.CGColor
+  @objc final public let fontColorGood: CoreGraphics.CGColor
+  @objc final public let defaultImageUrl: Swift.String
+  @objc final public let showOval: Swift.Bool
+  @objc public init(totalCaptureTime: Swift.Int = 2, bracketColorDefault: CoreGraphics.CGColor = UIColor.black.cgColor, bracketColorError: CoreGraphics.CGColor = UIColor.red.cgColor, bracketColorGood: CoreGraphics.CGColor = UIColor.green.cgColor, fontColorDefault: CoreGraphics.CGColor = UIColor.white.cgColor, fontColorError: CoreGraphics.CGColor = UIColor.red.cgColor, fontColorGood: CoreGraphics.CGColor = UIColor.green.cgColor, defaultImageUrl: Swift.String = "acuant_default_face_image.png", showOval: Swift.Bool = false)
+  @objc deinit
+  @objc override dynamic public init()
+}
+@objc @_inheritsConvenienceInitializers public class FaceCaptureController : UIKit.UIViewController {
+  public var callback: ((UIKit.UIImage?) -> ())?
+  public var options: AcuantiOSSDKV11.FaceCameraOptions?
+  @objc override dynamic public func viewDidLoad()
+  @objc override dynamic public func viewWillAppear(_ animated: Swift.Bool)
+  @objc override dynamic public func viewDidAppear(_ animated: Swift.Bool)
+  @objc override dynamic public var prefersStatusBarHidden: Swift.Bool {
+    @objc get
+  }
+  @objc override dynamic public func viewWillDisappear(_ animated: Swift.Bool)
+  @objc override dynamic public func didReceiveMemoryWarning()
+  @objc override dynamic public func viewDidLayoutSubviews()
+  public func setLookFromState(state: AcuantiOSSDKV11.AcuantFaceState)
+  @objc deinit
+  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @objc required dynamic public init?(coder: Foundation.NSCoder)
+}
+@objc public protocol FrameAnalysisDelegate {
+  @objc func onFrameAvailable(frameResult: AcuantiOSSDKV11.FrameResult, points: Swift.Array<CoreGraphics.CGPoint>?)
+}
+@objc public enum FrameResult : Swift.Int {
+  case NO_DOCUMENT, SMALL_DOCUMENT, BAD_ASPECT_RATIO, GOOD_DOCUMENT, DOCUMENT_NOT_IN_FRAME
+  public typealias RawValue = Swift.Int
+  public init?(rawValue: Swift.Int)
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+extension AcuantiOSSDKV11.AcuantFaceState : Swift.Equatable {}
+extension AcuantiOSSDKV11.AcuantFaceState : Swift.Hashable {}
+extension AcuantiOSSDKV11.AcuantFaceState : Swift.RawRepresentable {}
+extension AcuantiOSSDKV11.DocumentCameraController.CameraState : Swift.Equatable {}
+extension AcuantiOSSDKV11.DocumentCameraController.CameraState : Swift.Hashable {}
+extension AcuantiOSSDKV11.DocumentCameraController.CameraState : Swift.RawRepresentable {}
+extension AcuantiOSSDKV11.FrameResult : Swift.Equatable {}
+extension AcuantiOSSDKV11.FrameResult : Swift.Hashable {}
+extension AcuantiOSSDKV11.FrameResult : Swift.RawRepresentable {}
