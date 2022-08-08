@@ -15,7 +15,7 @@ Pod::Spec.new do |s|
   s.platforms    = { :ios => "14.0" }
   s.source       = { :git => "https://github.com/signd-identity/signd-reactnative-sdk.git", :tag => "#{s.version}" }
   s.vendored_frameworks = 'ios/EmbeddedFrameworks/**'
-  s.source_files = "ios/SigndReactnativeSdk/**/*.{swift,h,m,c,cc,mm,cpp}"
+  s.source_files = "ios/*.{swift,h,m,c,cc,mm,cpp}"
   
   s.dependency "React-Core"
   s.dependency 'FaceSDK', '= 3.2.1078'

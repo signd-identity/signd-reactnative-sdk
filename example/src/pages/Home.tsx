@@ -8,7 +8,7 @@ import {
   TextInput,
   View,
 } from 'react-native';
-import SigndModule, {
+import SingdReactNativeSdk, {
   SigndResult,
   VerificationResult,
   ProgressBarStyle
@@ -19,13 +19,13 @@ const Home: React.FC = () => {
 
   async function launchSigndSdk(token: string) {
     // Change values according to your configuration
-    await SigndModule.initialize({
+    await SingdReactNativeSdk.initialize({
       scheme: 'signd',
       host: 'session',
       apiUrl: 'https://api.dev.signd.io',
       progressBarStyle: ProgressBarStyle.Linear,
     });
-    const { result, sessionToken }: SigndResult = await SigndModule.start(
+    const { result, sessionToken }: SigndResult = await SingdReactNativeSdk.start(
       token
     );
 

@@ -10,8 +10,8 @@
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		81409E66F87943C4DB9E8C98 /* libPods-SigndReactnativeSdkExample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 30886B19C4E2921DFD3CB4BF /* libPods-SigndReactnativeSdkExample.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
-		F45A13DFBDE43037F460F901 /* Pods_SigndReactnativeSdkExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1744C5229A428CE9DD4661A2 /* Pods_SigndReactnativeSdkExample.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,7 +21,7 @@
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = SigndReactnativeSdkExample/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = SigndReactnativeSdkExample/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = SigndReactnativeSdkExample/main.m; sourceTree = "<group>"; };
-		1744C5229A428CE9DD4661A2 /* Pods_SigndReactnativeSdkExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SigndReactnativeSdkExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		30886B19C4E2921DFD3CB4BF /* libPods-SigndReactnativeSdkExample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SigndReactnativeSdkExample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		65F4E9C84D5002B7D5CBC47C /* Pods-SigndReactnativeSdkExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SigndReactnativeSdkExample.release.xcconfig"; path = "Target Support Files/Pods-SigndReactnativeSdkExample/Pods-SigndReactnativeSdkExample.release.xcconfig"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = SigndReactnativeSdkExample/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8504F4F90A9D32EA3CEDC7A6 /* Pods-SigndReactnativeSdkExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SigndReactnativeSdkExample.debug.xcconfig"; path = "Target Support Files/Pods-SigndReactnativeSdkExample/Pods-SigndReactnativeSdkExample.debug.xcconfig"; sourceTree = "<group>"; };
@@ -33,7 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F45A13DFBDE43037F460F901 /* Pods_SigndReactnativeSdkExample.framework in Frameworks */,
+				81409E66F87943C4DB9E8C98 /* libPods-SigndReactnativeSdkExample.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,7 +57,7 @@
 			isa = PBXGroup;
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				1744C5229A428CE9DD4661A2 /* Pods_SigndReactnativeSdkExample.framework */,
+				30886B19C4E2921DFD3CB4BF /* libPods-SigndReactnativeSdkExample.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -361,7 +361,7 @@
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = i386;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -432,7 +432,7 @@
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = i386;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
