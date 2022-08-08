@@ -1,26 +1,6 @@
 PODS:
-  - AcuantiOSSDKV11/AcuantCommon (11.5.1)
-  - AcuantiOSSDKV11/AcuantDocumentProcessing (11.5.1):
-    - AcuantiOSSDKV11/AcuantCommon
-  - AcuantiOSSDKV11/AcuantFaceCapture (11.5.1):
-    - AcuantiOSSDKV11/AcuantCommon
-    - AcuantiOSSDKV11/AcuantImagePreparation
-  - AcuantiOSSDKV11/AcuantHGLiveness (11.5.1):
-    - AcuantiOSSDKV11/AcuantCommon
-  - AcuantiOSSDKV11/AcuantImagePreparation (11.5.1):
-    - AcuantiOSSDKV11/AcuantCommon
-  - AcuantiOSSDKV11/AcuantIPLiveness (11.5.1):
-    - AcuantiOSSDKV11/AcuantCommon
-    - iProov (~> 8.4.0)
-    - KeychainAccess (~> 4.2)
-    - SwiftyJSON (~> 5.0)
-  - AcuantiOSSDKV11/AcuantPassiveLiveness (11.5.1):
-    - AcuantiOSSDKV11/AcuantCommon
   - boost (1.76.0)
   - CocoaAsyncSocket (7.6.5)
-  - DocumentReader (6.2.2441):
-    - RegulaCommon (= 6.2.110)
-  - DocumentReaderFull (6.2.6012)
   - DoubleConversion (1.1.6)
   - FaceSDK (3.2.1078):
     - RegulaCommon (= 6.2.110)
@@ -94,9 +74,6 @@ PODS:
     - FlipperKit/FlipperKitNetworkPlugin
   - fmt (6.2.1)
   - glog (0.3.5)
-  - iProov (8.4.0):
-    - Socket.IO-Client-Swift (~> 15.2)
-  - KeychainAccess (4.2.2)
   - libevent (2.1.12)
   - OpenSSL-Universal (1.1.180)
   - RCT-Folly (2021.06.28.00-v2):
@@ -364,20 +341,8 @@ PODS:
     - React-perflogger (= 0.67.1)
   - RegulaCommon (6.2.110)
   - signd-reactnative-sdk (1.0.2):
-    - AcuantiOSSDKV11/AcuantDocumentProcessing (= 11.5.1)
-    - AcuantiOSSDKV11/AcuantFaceCapture (= 11.5.1)
-    - AcuantiOSSDKV11/AcuantHGLiveness (= 11.5.1)
-    - AcuantiOSSDKV11/AcuantImagePreparation (= 11.5.1)
-    - AcuantiOSSDKV11/AcuantIPLiveness (= 11.5.1)
-    - AcuantiOSSDKV11/AcuantPassiveLiveness (= 11.5.1)
-    - DocumentReader (= 6.2.2441)
-    - DocumentReaderFull (= 6.2.6012)
     - FaceSDK (= 3.2.1078)
     - React-Core
-  - Socket.IO-Client-Swift (15.2.0):
-    - Starscream (~> 3.1)
-  - Starscream (3.1.1)
-  - SwiftyJSON (5.0.1)
   - Yoga (1.14.0)
   - YogaKit (1.18.1):
     - Yoga (~> 1.14)
@@ -441,10 +406,7 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
-    - AcuantiOSSDKV11
     - CocoaAsyncSocket
-    - DocumentReader
-    - DocumentReaderFull
     - FaceSDK
     - Flipper
     - Flipper-Boost-iOSX
@@ -456,14 +418,9 @@ SPEC REPOS:
     - Flipper-RSocket
     - FlipperKit
     - fmt
-    - iProov
-    - KeychainAccess
     - libevent
     - OpenSSL-Universal
     - RegulaCommon
-    - Socket.IO-Client-Swift
-    - Starscream
-    - SwiftyJSON
     - YogaKit
 
 EXTERNAL SOURCES:
@@ -531,11 +488,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon/yoga"
 
 SPEC CHECKSUMS:
-  AcuantiOSSDKV11: e7d9b96346929d2a9566d3a50dd781a93a31bc8f
   boost: a7c83b31436843459a1961bfd74b96033dc77234
   CocoaAsyncSocket: 065fd1e645c7abab64f7a6a2007a48038fdc6a99
-  DocumentReader: 1257f49851a92b9e61d33f5389f6dee7071d6a2b
-  DocumentReaderFull: ac5bdacb4bae57d603b36e680f03889a4a77a5ad
   DoubleConversion: 831926d9b8bf8166fd87886c4abab286c2422662
   FaceSDK: 20845d343694efc72b63175396f870c8fad5b337
   FBLazyVector: cf409c74423d3507bda74bda1dc41e903ec2cd5b
@@ -551,8 +505,6 @@ SPEC CHECKSUMS:
   FlipperKit: d8d346844eca5d9120c17d441a2f38596e8ed2b9
   fmt: ff9d55029c625d3757ed641535fd4a75fedc7ce9
   glog: 85ecdd10ee8d8ec362ef519a6a45ff9aa27b2e85
-  iProov: 94dc03f2fa0e29426dd915fe33678ec7666d8505
-  KeychainAccess: c0c4f7f38f6fc7bbe58f5702e25f7bd2f65abf51
   libevent: 4049cae6c81cdb3654a443be001fb9bdceff7913
   OpenSSL-Universal: 1aa4f6a6ee7256b83db99ec1ccdaa80d10f9af9b
   RCT-Folly: 803a9cfd78114b2ec0f140cfa6fa2a6bafb2d685
@@ -580,13 +532,10 @@ SPEC CHECKSUMS:
   React-runtimeexecutor: 2c92a8bddd1a3e72c7513d1e74235c2d9c84875c
   ReactCommon: 2e816fad39f65f2a94a5999d5be463a6b620dcf6
   RegulaCommon: 79746fe0128f058bb8aad97cea81ea1eca9d6c41
-  signd-reactnative-sdk: b852abc68a8f8bf3f3feb1538f4aa8ca0727210b
-  Socket.IO-Client-Swift: 1e3e3a1f09f3312a167f0d781eb2f383d477357c
-  Starscream: 4bb2f9942274833f7b4d296a55504dcfc7edb7b0
-  SwiftyJSON: 2f33a42c6fbc52764d96f13368585094bfd8aa5e
+  signd-reactnative-sdk: 7caaa8ad5658c9940e387c64a253ef6fcc8c7e76
   Yoga: 5cbf25add73edb290e1067017690f7ebf56c5468
   YogaKit: f782866e155069a2cca2517aafea43200b01fd5a
 
-PODFILE CHECKSUM: a1cc8b462e1bc4e42c9de1e83e92051e6b35d640
+PODFILE CHECKSUM: 3cbf056eb1e0e0fa8fa846719d533d69c49cbe07
 
 COCOAPODS: 1.11.3
