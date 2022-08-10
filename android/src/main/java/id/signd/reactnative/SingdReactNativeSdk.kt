@@ -12,9 +12,9 @@ import id.signd.core.feature.signd.Signd
 import id.signd.core.feature.signd.VerificationFinishedListener
 import id.signd.core.feature.start.SigndActivity
 
-class SingdReactNativeSdk(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule(reactContext),
+class SigndReactnativeSdk(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule(reactContext),
   VerificationFinishedListener {
-  override fun getName() = "SingdReactNativeSdk"
+  override fun getName() = "SigndReactnativeSdk"
 
   private var signdPromise: Promise? = null
 

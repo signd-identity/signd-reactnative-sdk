@@ -8,24 +8,24 @@ import {
   TextInput,
   View,
 } from 'react-native';
-import SingdReactNativeSdk, {
+import SigndReactnativeSdk, {
   SigndResult,
   VerificationResult,
   ProgressBarStyle
 } from 'signd-reactnative-sdk';
 
 const Home: React.FC = () => {
-  const [sessionTokenText, onSessionTokenTextChange] = useState('');
+  const [sessionTokenText, onSessionTokenTextChange] = useState('2b10bm3XQ0nY.oFrWl.ucds5Ke2cb505da268846a59e923862b838f2dd');
 
   async function launchSigndSdk(token: string) {
     // Change values according to your configuration
-    await SingdReactNativeSdk.initialize({
+    await SigndReactnativeSdk.initialize({
       scheme: 'signd',
       host: 'session',
       apiUrl: 'https://api.dev.signd.io',
       progressBarStyle: ProgressBarStyle.Linear,
     });
-    const { result, sessionToken }: SigndResult = await SingdReactNativeSdk.start(
+    const { result, sessionToken }: SigndResult = await SigndReactnativeSdk.start(
       token
     );
 

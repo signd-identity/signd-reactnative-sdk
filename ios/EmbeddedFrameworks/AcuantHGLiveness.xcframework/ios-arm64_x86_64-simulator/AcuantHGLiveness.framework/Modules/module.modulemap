@@ -1,4 +1,0 @@
-framework module AcuantHGLiveness {
-  header "AcuantHGLiveness-Swift.h"
-  requires objc
-}

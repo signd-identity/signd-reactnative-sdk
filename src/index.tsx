@@ -5,13 +5,13 @@ import {
   SigndResult,
   VerificationResult,
 } from './types';
-const { SingdReactNativeSdk } = NativeModules;
+const { SigndReactnativeSdk } = NativeModules;
 
 export interface SigndInterface {
   initialize(config: SigndOptions): Promise<void>;
   start(sessionToken: string): Promise<SigndResult>;
 }
 
-export default SingdReactNativeSdk as SigndInterface;
+export default SigndReactnativeSdk as SigndInterface;
 
 export { VerificationResult, SigndResult, ProgressBarStyle };

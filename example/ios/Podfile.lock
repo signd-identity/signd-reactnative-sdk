@@ -1,6 +1,9 @@
 PODS:
   - boost (1.76.0)
   - CocoaAsyncSocket (7.6.5)
+  - DocumentReader (6.2.2441):
+    - RegulaCommon (= 6.2.110)
+  - DocumentReaderFull (6.2.6012)
   - DoubleConversion (1.1.6)
   - FaceSDK (3.2.1078):
     - RegulaCommon (= 6.2.110)
@@ -341,6 +344,8 @@ PODS:
     - React-perflogger (= 0.67.1)
   - RegulaCommon (6.2.110)
   - signd-reactnative-sdk (1.0.2):
+    - DocumentReader (= 6.2.2441)
+    - DocumentReaderFull (= 6.2.6012)
     - FaceSDK (= 3.2.1078)
     - React-Core
   - Yoga (1.14.0)
@@ -407,6 +412,8 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - CocoaAsyncSocket
+    - DocumentReader
+    - DocumentReaderFull
     - FaceSDK
     - Flipper
     - Flipper-Boost-iOSX
@@ -490,6 +497,8 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   boost: a7c83b31436843459a1961bfd74b96033dc77234
   CocoaAsyncSocket: 065fd1e645c7abab64f7a6a2007a48038fdc6a99
+  DocumentReader: 1257f49851a92b9e61d33f5389f6dee7071d6a2b
+  DocumentReaderFull: ac5bdacb4bae57d603b36e680f03889a4a77a5ad
   DoubleConversion: 831926d9b8bf8166fd87886c4abab286c2422662
   FaceSDK: 20845d343694efc72b63175396f870c8fad5b337
   FBLazyVector: cf409c74423d3507bda74bda1dc41e903ec2cd5b
@@ -532,10 +541,10 @@ SPEC CHECKSUMS:
   React-runtimeexecutor: 2c92a8bddd1a3e72c7513d1e74235c2d9c84875c
   ReactCommon: 2e816fad39f65f2a94a5999d5be463a6b620dcf6
   RegulaCommon: 79746fe0128f058bb8aad97cea81ea1eca9d6c41
-  signd-reactnative-sdk: 7caaa8ad5658c9940e387c64a253ef6fcc8c7e76
+  signd-reactnative-sdk: 547e9a233373f3bfc60be1341bc5c932d6a5b09c
   Yoga: 5cbf25add73edb290e1067017690f7ebf56c5468
   YogaKit: f782866e155069a2cca2517aafea43200b01fd5a
 
-PODFILE CHECKSUM: 3cbf056eb1e0e0fa8fa846719d533d69c49cbe07
+PODFILE CHECKSUM: 1029bd8ce68da717f4b21c3cc2a98e430411ddb7
 
 COCOAPODS: 1.11.3

@@ -109,7 +109,7 @@ npm install signd-reactnative-sdk
 1. Initialize the plugin and pass configuration attributes
 
     ```typescript
-    await SingdReactNativeSdk.initialize({
+    await SigndReactnativeSdk.initialize({
         scheme: 'signd',
         host: 'session',
         apiUrl: 'https://api.integration.signd.io',
@@ -126,7 +126,7 @@ npm install signd-reactnative-sdk
     Build *uri* using received session token.
 
     ```typescript
-    const { result, sessionToken }: SigndResult = await SingdReactNativeSdk.start(
+    const { result, sessionToken }: SigndResult = await SigndReactnativeSdk.start(
         token
     );
     switch (result) {
@@ -256,7 +256,7 @@ If you want to hide the footer
 
 call
 ```typescript
-await SingdReactNativeSdk.initialize({
+await SigndReactnativeSdk.initialize({
     scheme: 'signd',
     host: 'session',
     apiUrl: 'https://api.dev.signd.io',
@@ -278,7 +278,7 @@ to
 
 call
 ```typescript
-await SingdReactNativeSdk.initialize({
+await SigndReactnativeSdk.initialize({
     scheme: 'signd',
     host: 'session',
     apiUrl: 'https://api.dev.signd.io',
@@ -293,7 +293,7 @@ If you want to show back and close button in the progress bar area
 
 call
 ```typescript
-await SingdReactNativeSdk.initialize({
+await SigndReactnativeSdk.initialize({
     scheme: 'signd',
     host: 'session',
     apiUrl: 'https://api.dev.signd.io',
@@ -308,7 +308,7 @@ If you want to skip the start screen
 
 call
 ```typescript
-await SingdReactNativeSdk.initialize({
+await SigndReactnativeSdk.initialize({
     scheme: 'signd',
     host: 'session',
     apiUrl: 'https://api.dev.signd.io',
@@ -323,7 +323,7 @@ If you want to skip the last screen, and notify the user about the result yourse
 
 call
 ```typescript
-await SingdReactNativeSdk.initialize({
+await SigndReactnativeSdk.initialize({
     scheme: 'signd',
     host: 'session',
     apiUrl: 'https://api.dev.signd.io',

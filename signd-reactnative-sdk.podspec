@@ -19,4 +19,6 @@ Pod::Spec.new do |s|
   
   s.dependency "React-Core"
   s.dependency 'FaceSDK', '= 3.2.1078'
+  s.dependency 'DocumentReaderFull', '= 6.2.6012'
+  s.dependency 'DocumentReader', '= 6.2.2441'
 end
