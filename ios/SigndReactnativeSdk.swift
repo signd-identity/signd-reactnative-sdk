@@ -155,7 +155,7 @@ class SigndReactnativeSdk: NSObject, SigndDelegate {
         }
     }
 
-    public func onEvent(event: SGDEvent) {
+    func onEvent(event: SGDEvent) {
         switch event {
         case .processAborted:
             resolve?([
@@ -172,7 +172,7 @@ class SigndReactnativeSdk: NSObject, SigndDelegate {
         }
     }
 
-    public func onDone(results: [SGDPluginResultData], responseCode: ExecutionResponseCode?) {
+    func onDone(results: [SGDPluginResultData], responseCode: ExecutionResponseCode?) {
         guard let responseCode = responseCode else {
             return
         }
@@ -202,17 +202,17 @@ class SigndReactnativeSdk: NSObject, SigndDelegate {
         }
     }
 
-    public func onError(text: String, domain: String?, sessionToken: String?) {
+    func onError(text: String, domain: String?, sessionToken: String?) {
         reject?(text, domain, nil)
     }
 
-    public func onAuthFailed() {
+    func onAuthFailed() {
         reject?("Auth failed", "auth failed", nil)
     }
 
-    public func onSessionTokenChange(sessionToken: String?) {}
+    func onSessionTokenChange(sessionToken: String?) {}
 
-    public func onAuthSuccess(response: SGDLoginResponse?, sessionToken: String?) {}
+    func onAuthSuccess(response: SGDLoginResponse?, sessionToken: String?) {}
     
     @objc
     static func requiresMainQueueSetup() -> Bool {
