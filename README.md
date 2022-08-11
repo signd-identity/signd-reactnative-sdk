@@ -60,7 +60,15 @@ npm install signd-reactnative-sdk
     ```
     android:exported="true"
     ```
-6. As SignD uses [Trusted Web Activity](https://developers.google.com/web/updates/2019/02/using-twa "Trusted Web Activity") to display web content to the user, you also have to add the following string resource. You can skip this step if you don't want the web content to appear fullscreen.
+
+6. Add a **scheme** and a **host** string resources:
+
+    ```xml
+    <string name="signd_config_scheme" translatable="false">yourScheme</string>
+    <string name="signd_config_host" translatable="false">session</string>
+    ```
+
+7. As SignD uses [Trusted Web Activity](https://developers.google.com/web/updates/2019/02/using-twa "Trusted Web Activity") to display web content to the user, you also have to add the following string resource. You can skip this step if you don't want the web content to appear fullscreen.
 
     ```xml
     <string name="assetStatements" translatable="false">"""
@@ -75,7 +83,7 @@ npm install signd-reactnative-sdk
     </string>
     ```
   
-7. As part of the SignD Web SDK integration, you will be asked to provide SHA-256 fingerprint; you can extract this fingerprint from your keystore file using **keytool**.
+8. As part of the SignD Web SDK integration, you will be asked to provide SHA-256 fingerprint; you can extract this fingerprint from your keystore file using **keytool**.
 	
     ```bash
     keytool -list -v -keystore ./mykeystore.ks -alias test -storepass password -keypass password
