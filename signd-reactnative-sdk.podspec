@@ -20,10 +20,4 @@ Pod::Spec.new do |s|
   s.dependency 'FaceSDK', '= 3.2.1078'
   s.dependency 'DocumentReaderFull', '= 6.2.6012'
   s.dependency 'DocumentReader', '= 6.2.2441'
-  s.dependency 'AcuantiOSSDKV11/AcuantImagePreparation', '= 11.5.6'
-  s.dependency 'AcuantiOSSDKV11/AcuantFaceCapture', '= 11.5.6'
-  s.dependency 'AcuantiOSSDKV11/AcuantHGLiveness', '= 11.5.6'
-  s.dependency 'AcuantiOSSDKV11/AcuantIPLiveness', '= 11.5.6'
-  s.dependency 'AcuantiOSSDKV11/AcuantDocumentProcessing', '= 11.5.6'
-  s.dependency 'AcuantiOSSDKV11/AcuantPassiveLiveness', '= 11.5.6'
 end

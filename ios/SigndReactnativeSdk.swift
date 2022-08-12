@@ -16,10 +16,10 @@ class SigndReactnativeSdk: NSObject, SigndDelegate {
     var result: String?
 
     @objc(initialize:resolver:rejecter:)
-    func initialize(_ config:[String: String],
+    func initialize(_ config:[String: Any],
                 resolver: @escaping (RCTPromiseResolveBlock),
                 rejecter: @escaping (RCTPromiseRejectBlock)) {
-        guard let scheme = config["scheme"] else {
+        guard let scheme = config["scheme"] as? String else {
             rejecter("Initialize failed", "No scheme", nil)
             return
         }
@@ -28,13 +28,13 @@ class SigndReactnativeSdk: NSObject, SigndDelegate {
 
         var style:SGDStyle?
 
-        let primaryColor = config["primaryColor"]
-        let secondaryColor = config["secondaryColor"]
-        let textPrimary = config["textPrimary"]
-        let textSecondary = config["textSecondary"]
-        let textHint = config["textHint"]
-        let primaryBackgroundColor = config["primaryBackgroundColor"]
-        let secondaryBackgroundColor = config["secondaryBackgroundColor"]
+        let primaryColor = config["primaryColor"] as? String
+        let secondaryColor = config["secondaryColor"] as? String
+        let textPrimary = config["textPrimary"] as? String
+        let textSecondary = config["textSecondary"] as? String
+        let textHint = config["textHint"] as? String
+        let primaryBackgroundColor = config["primaryBackgroundColor"] as? String
+        let secondaryBackgroundColor = config["secondaryBackgroundColor"] as? String
 
         if let primaryColor = primaryColor,
             let secondaryColor = secondaryColor,
@@ -55,8 +55,8 @@ class SigndReactnativeSdk: NSObject, SigndDelegate {
             )
         }
 
-        let regularFontFileName = config["regularFontFileName"]
-        let boldFontFileName = config["boldFontFileName"]
+        let regularFontFileName = config["regularFontFileName"] as? String
+        let boldFontFileName = config["boldFontFileName"] as? String
 
         var fonts:SGDFontPack?
 
@@ -79,15 +79,15 @@ class SigndReactnativeSdk: NSObject, SigndDelegate {
                                                             bundle: Bundle.main))
         }
 
-        let showLastScreen = config["showLastScreen"] == "true"
-        let showFirstScreen = config["showFirstScreen"] == "true"
-        let showBackButton = config["showBackButton"] == "true"
-        let showCloseButton = config["showCloseButton"] == "true"
-        let showFooter = config["showFooter"] == "true"
-        let progressBarStyle = config["progressBarStyle"] ?? "Default"
-        let actionButtonStyle = config["actionButtonStyle"] ?? "Round"
+        let showLastScreen = config["showLastScreen"] as? Bool == true
+        let showFirstScreen = config["showFirstScreen"] as? Bool == true
+        let showBackButton = config["showBackButton"] as? Bool == true
+        let showCloseButton = config["showCloseButton"] as? Bool == true
+        let showFooter = config["showFooter"] as? Bool == true 
+        let progressBarStyle = config["progressBarStyle"] as? String ?? "Default"
+        let actionButtonStyle = config["actionButtonStyle"] as? String ?? "Round"
 
-        let scanExampleAnimationFileName = config["scanExampleAnimationFileName"]
+        let scanExampleAnimationFileName = config["scanExampleAnimationFileName"] as? String
         var scanExampleAnimationUrl:URL?
         if let scanExampleAnimationName = scanExampleAnimationFileName?.components(separatedBy: ".").first,
             let scanExampleAnimationExtension = scanExampleAnimationFileName?.components(separatedBy: ".").last
@@ -95,7 +95,7 @@ class SigndReactnativeSdk: NSObject, SigndDelegate {
             scanExampleAnimationUrl = Bundle.main.url(forResource: scanExampleAnimationName, withExtension: scanExampleAnimationExtension)
         }
 
-        let doneAnimationFileName = config["doneAnimationFileName"]
+        let doneAnimationFileName = config["doneAnimationFileName"] as? String
         var doneAnimationUrl:URL?
         if let doneAnimationName = doneAnimationFileName?.components(separatedBy: ".").first,
             let doneAnimationExtension = doneAnimationFileName?.components(separatedBy: ".").last
@@ -103,7 +103,7 @@ class SigndReactnativeSdk: NSObject, SigndDelegate {
             doneAnimationUrl = Bundle.main.url(forResource: doneAnimationName, withExtension: doneAnimationExtension)
         }
         
-        let buttonImageName = config["buttonImage"] ?? ""
+        let buttonImageName = config["buttonImage"] as? String ?? ""
         let buttonUIImage = UIImage(named: buttonImageName)
 
         let options =  SGDOptions(
@@ -130,7 +130,7 @@ class SigndReactnativeSdk: NSObject, SigndDelegate {
             )
             Signd.shared.setScheme(scheme: scheme)
 
-            if let apiUrl = config["apiUrl"] {
+            if let apiUrl = config["apiUrl"] as? String {
                 print(apiUrl)
                 Signd.shared.setApiUrl(url: apiUrl)
             }

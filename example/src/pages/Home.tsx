@@ -11,19 +11,19 @@ import {
 import SigndReactnativeSdk, {
   SigndResult,
   VerificationResult,
-  ProgressBarStyle
+  ProgressBarStyle,
+  ActionButtonStyle
 } from 'signd-reactnative-sdk';
 
 const Home: React.FC = () => {
-  const [sessionTokenText, onSessionTokenTextChange] = useState('2b10bm3XQ0nY.oFrWl.ucds5Ke2cb505da268846a59e923862b838f2dd');
+  const [sessionTokenText, onSessionTokenTextChange] = useState('');
 
   async function launchSigndSdk(token: string) {
     // Change values according to your configuration
     await SigndReactnativeSdk.initialize({
-      scheme: 'signd',
+      scheme: 'your_signd_scheme',
       host: 'session',
-      apiUrl: 'https://api.dev.signd.io',
-      progressBarStyle: ProgressBarStyle.Linear,
+      apiUrl: 'your_signd_api_url',
     });
     const { result, sessionToken }: SigndResult = await SigndReactnativeSdk.start(
       token
@@ -46,7 +46,6 @@ const Home: React.FC = () => {
 
     console.log('Verification process finished; sessionToken: ' + sessionToken);
     console.log('Result: ' + result);
-    Alert.alert('SignD SDK', 'Verification process finished: ' + result);
   }
 
   const startSignd = async () => {

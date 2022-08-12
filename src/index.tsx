@@ -4,6 +4,7 @@ import {
   SigndOptions,
   SigndResult,
   VerificationResult,
+  ActionButtonStyle
 } from './types';
 const { SigndReactnativeSdk } = NativeModules;
 
@@ -14,4 +15,4 @@ export interface SigndInterface {
 
 export default SigndReactnativeSdk as SigndInterface;
 
-export { VerificationResult, SigndResult, ProgressBarStyle };
+export { VerificationResult, SigndResult, ProgressBarStyle, ActionButtonStyle };
