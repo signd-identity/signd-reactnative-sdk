@@ -105,13 +105,9 @@ npm install signd-reactnative-sdk
 
 ### iOS configuration
 
-1. Add cocoapods to your project /ios/Podfile
-    ```pod
-    pod 'signd-reactnative-sdk', :path => '../node_modules/signd-reactnative-sdk'
-    ```
-2. Merge **Localizable.strings** files from */resources/*. with yours **Localizable.strings** files.
-3. Add NSCameraUsageDescription to your info.plist.
-4. Add strip-unused-architectures-from-target.sh from ios/Resources/ to "Run Script Phase" in your target’s "Build Phases" (optional but recommended)
+1. Merge **Localizable.strings** files from */resources/*. with yours **Localizable.strings** files.
+2. Add NSCameraUsageDescription to your info.plist.
+3. Add strip-unused-architectures-from-target.sh from ios/Resources/ to "Run Script Phase" in your target’s "Build Phases" (optional but recommended)
 
 ## How to use the plugin in project
 1. Initialize the plugin and pass configuration attributes
