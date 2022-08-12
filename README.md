@@ -219,7 +219,6 @@ await SigndPlugin.initialize({
     showFooter: false,
     showBackButton: true,
     progressBarStyle: ProgressBarStyle.Linear,
-    buttonImage: "Camera", // iOS only
     actionButtonStyle: ActionButtonStyle.Rounded, // iOS only
     regularFontFileName: "Roboto-Regular.ttf", // iOS only
     boldFontFileName: "Roboto-Bold.ttf", // iOS only
@@ -240,7 +239,6 @@ await SigndPlugin.initialize({
 | **showFooter** | boolean | Hide bottom footer with signd logo |
 | **showBackButton** | boolean | Enable top left back button |
 | **progressBarStyle** | ProgressBarStyle: .Linear .Default | Choose top progressbar style |
-| **buttonImage** | string | Name of image added to your iOS project (Assets folder). Image is located in main button (default it's white image of camera) |
 | **actionButtonStyle** | ActionButtonStyle: .round .rounded | Choose style of action buttons corners |
 | **regularFontFileName** | string | Regular font file name |
 | **boldFontFileName** | string | Bold font file name |
