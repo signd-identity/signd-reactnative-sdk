@@ -317,14 +317,24 @@ public struct SGDResultsErrors : Swift.Decodable {
 public struct SGDResultsError : Swift.Decodable {
   public init(from decoder: Swift.Decoder) throws
 }
+public enum SGDResultErrroCode : Swift.String, Swift.Codable {
+  case scoreTooLow
+  case documentExpired
+  case validationError
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class SGDFooterView : SigndCore.NibView {
   @_Concurrency.MainActor(unsafe) @objc override dynamic public func layoutSubviews()
   @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
   @objc deinit
 }
 public protocol SigndProcessDelegate : AnyObject {
-  func processFinished(results: [SigndCore.SGDResultItem], for process: SigndCore.SigndProcess, completion: ((Swift.Bool) -> Swift.Void)?)
-  func operationFinished(result: SigndCore.SGDResultItem, for process: SigndCore.SigndProcess, completion: ((Swift.Bool) -> Swift.Void)?)
+  func processFinished(results: [SigndCore.SGDResultItem], for process: SigndCore.SigndProcess, completion: ((Swift.Bool, Swift.String?) -> Swift.Void)?)
+  func operationFinished(result: SigndCore.SGDResultItem, for process: SigndCore.SigndProcess, completion: ((Swift.Bool, Swift.String?) -> Swift.Void)?)
   func onError(text: Swift.String, domain: Swift.String?, for process: SigndCore.SigndProcess)
   func restart()
 }
@@ -413,8 +423,8 @@ extension SigndCore.Signd : SigndCore.AnalyticsDelegate {
 }
 extension SigndCore.Signd : SigndCore.SigndProcessDelegate {
   public func restart()
-  public func operationFinished(result: SigndCore.SGDResultItem, for process: SigndCore.SigndProcess, completion: ((Swift.Bool) -> Swift.Void)?)
-  public func processFinished(results: [SigndCore.SGDResultItem], for process: SigndCore.SigndProcess, completion: ((Swift.Bool) -> Swift.Void)?)
+  public func operationFinished(result: SigndCore.SGDResultItem, for process: SigndCore.SigndProcess, completion: ((Swift.Bool, Swift.String?) -> Swift.Void)?)
+  public func processFinished(results: [SigndCore.SGDResultItem], for process: SigndCore.SigndProcess, completion: ((Swift.Bool, Swift.String?) -> Swift.Void)?)
   public func onError(text: Swift.String, domain: Swift.String?, for process: SigndCore.SigndProcess)
 }
 public protocol CaseIterableDefaultsLast : Swift.CaseIterable, Swift.Decodable, Swift.Encodable, Swift.RawRepresentable where Self.AllCases : Swift.BidirectionalCollection, Self.RawValue == Swift.String {
@@ -446,6 +456,9 @@ extension SigndCore.SGDExecuteVerificationConfigCustom.SGDLivenessImpl : Swift.E
 extension SigndCore.SGDExecuteVerificationConfigCustom.SGDLivenessImpl : Swift.Hashable {}
 extension SigndCore.SGDResultsOperation : Swift.Equatable {}
 extension SigndCore.SGDResultsOperation : Swift.Hashable {}
+extension SigndCore.SGDResultErrroCode : Swift.Equatable {}
+extension SigndCore.SGDResultErrroCode : Swift.Hashable {}
+extension SigndCore.SGDResultErrroCode : Swift.RawRepresentable {}
 extension SigndCore.SGDProgressBarStyle : Swift.Equatable {}
 extension SigndCore.SGDProgressBarStyle : Swift.Hashable {}
 extension SigndCore.SGDActionButtonStyle : Swift.Equatable {}

@@ -10,23 +10,6 @@ import UIKit
 import VideoToolbox
 import Vision
 import _Concurrency
-public struct RingBuffer<T> {
-  public init(count: Swift.Int)
-  @discardableResult
-  public mutating func write(_ element: T) -> Swift.Bool
-  public mutating func read() -> T?
-  public var isEmpty: Swift.Bool {
-    get
-  }
-  public var isFull: Swift.Bool {
-    get
-  }
-}
-extension SigndScanId.RingBuffer : Swift.Sequence {
-  public func makeIterator() -> Swift.AnyIterator<T>
-  public typealias Element = T
-  public typealias Iterator = Swift.AnyIterator<T>
-}
 public enum Side {
   case front, back
   public static func == (a: SigndScanId.Side, b: SigndScanId.Side) -> Swift.Bool
@@ -61,8 +44,8 @@ public protocol ProccessDelegate : AnyObject {
   func showScanExample(side: SigndScanId.Side, process: SigndScanId.ScanIdDelegate)
   func showFace(image: UIKit.UIImage?, isMatch: Swift.Bool, process: SigndScanId.SelfieDelegate)
   func showOperationFailed(process: SigndScanId.SelfieDelegate, canScanId: Swift.Bool, mode: SigndScanId.OperationFailedMode)
-  func proccessFinished(results: [SigndCore.SGDResultItem], process: SigndScanId.ScanIdProccess, completion: ((Swift.Bool) -> Swift.Void)?)
-  func operationFinished(result: SigndCore.SGDResultItem, process: SigndScanId.ScanIdProccess, completion: ((Swift.Bool) -> Swift.Void)?)
+  func proccessFinished(results: [SigndCore.SGDResultItem], process: SigndScanId.ScanIdProccess, completion: ((Swift.Bool, Swift.String?) -> Swift.Void)?)
+  func operationFinished(result: SigndCore.SGDResultItem, process: SigndScanId.ScanIdProccess, completion: ((Swift.Bool, Swift.String?) -> Swift.Void)?)
   func onError(text: Swift.String, domain: Swift.String?, process: SigndScanId.ScanIdProccess)
   func restart()
 }
@@ -88,21 +71,10 @@ public protocol ProccessDelegate : AnyObject {
   @objc deinit
 }
 extension SigndScanId.SigndScanIdProccess {
-  public func proccessFinished(results: [SigndCore.SGDResultItem], completion: ((Swift.Bool) -> Swift.Void)?)
-  public func operationFinished(result: SigndCore.SGDResultItem, completion: ((Swift.Bool) -> Swift.Void)?)
+  public func proccessFinished(results: [SigndCore.SGDResultItem], completion: ((Swift.Bool, Swift.String?) -> Swift.Void)?)
+  public func operationFinished(result: SigndCore.SGDResultItem, completion: ((Swift.Bool, Swift.String?) -> Swift.Void)?)
   public func onError(text: Swift.String, domain: Swift.String?)
   public func restart()
-}
-public protocol IdScanDelegate : AnyObject {
-  func idImageLoaded(image: UIKit.UIImage?, side: SigndScanId.Side)
-  func showError(title: Swift.String?, message: Swift.String)
-}
-public class IdScan {
-  weak public var delegate: SigndScanId.IdScanDelegate?
-  public init(controller: UIKit.UIViewController)
-  public func scanIdFrontSide()
-  public func scanIdBackSide()
-  @objc deinit
 }
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class NibView : UIKit.UIView {
   @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
@@ -115,6 +87,34 @@ public class FaceCapture {
 }
 extension SigndScanId.FaceCapture : SigndScanId.ImagePickerDelegate {
   public func didSelect(image: UIKit.UIImage?)
+}
+public struct RingBuffer<T> {
+  public init(count: Swift.Int)
+  @discardableResult
+  public mutating func write(_ element: T) -> Swift.Bool
+  public mutating func read() -> T?
+  public var isEmpty: Swift.Bool {
+    get
+  }
+  public var isFull: Swift.Bool {
+    get
+  }
+}
+extension SigndScanId.RingBuffer : Swift.Sequence {
+  public func makeIterator() -> Swift.AnyIterator<T>
+  public typealias Element = T
+  public typealias Iterator = Swift.AnyIterator<T>
+}
+public protocol IdScanDelegate : AnyObject {
+  func idImageLoaded(image: UIKit.UIImage?, side: SigndScanId.Side)
+  func showError(title: Swift.String?, message: Swift.String)
+}
+public class IdScan {
+  weak public var delegate: SigndScanId.IdScanDelegate?
+  public init(controller: UIKit.UIViewController)
+  public func scanIdFrontSide()
+  public func scanIdBackSide()
+  @objc deinit
 }
 public protocol ScanIdDelegate : AnyObject {
   func acceptImage(image: UIKit.UIImage?, side: SigndScanId.Side)
