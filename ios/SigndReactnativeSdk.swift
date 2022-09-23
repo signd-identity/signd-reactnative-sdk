@@ -3,7 +3,6 @@ import Foundation
 
 import SigndCore
 import SigndScanId
-import SigndScanIdRegula
 import SigndScanIdRegulaNative
 
 @objc(SigndReactnativeSdk)
