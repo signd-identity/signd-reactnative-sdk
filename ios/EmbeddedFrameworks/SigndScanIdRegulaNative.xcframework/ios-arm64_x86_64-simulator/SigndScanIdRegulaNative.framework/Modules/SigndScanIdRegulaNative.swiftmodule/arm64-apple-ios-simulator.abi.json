@@ -1,0 +1,1139 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "TopLevel",
+    "printedName": "TopLevel",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SigndScanIdRegulaNative",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SigndScanIdRegulaNative",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "SigndScanIdRegulaNative"
+      },
+      {
+        "kind": "Import",
+        "name": "FaceSDK",
+        "printedName": "FaceSDK",
+        "declKind": "Import",
+        "moduleName": "SigndScanIdRegulaNative"
+      },
+      {
+        "kind": "Import",
+        "name": "SigndCore",
+        "printedName": "SigndCore",
+        "declKind": "Import",
+        "moduleName": "SigndScanIdRegulaNative"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "SigndScanIdRegulaNative",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "RegulaScanIdImageData",
+        "printedName": "RegulaScanIdImageData",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(firstImage:secondImage:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "RegulaScanIdImageData",
+                "printedName": "SigndScanIdRegulaNative.RegulaScanIdImageData",
+                "usr": "s:23SigndScanIdRegulaNative0dbC9ImageDataV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UIImage?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIImage",
+                    "printedName": "UIKit.UIImage",
+                    "usr": "c:objc(cs)UIImage"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UIImage?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIImage",
+                    "printedName": "UIKit.UIImage",
+                    "usr": "c:objc(cs)UIImage"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:23SigndScanIdRegulaNative0dbC9ImageDataV05firstF006secondF0ACSo7UIImageCSg_AHtcfc",
+            "mangledName": "$s23SigndScanIdRegulaNative0dbC9ImageDataV05firstF006secondF0ACSo7UIImageCSg_AHtcfc",
+            "moduleName": "SigndScanIdRegulaNative",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "encode",
+            "printedName": "encode(to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Encoder",
+                "printedName": "Swift.Encoder",
+                "usr": "s:s7EncoderP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:23SigndScanIdRegulaNative0dbC9ImageDataV6encode2toys7Encoder_p_tKF",
+            "mangledName": "$s23SigndScanIdRegulaNative0dbC9ImageDataV6encode2toys7Encoder_p_tKF",
+            "moduleName": "SigndScanIdRegulaNative",
+            "implicit": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:23SigndScanIdRegulaNative0dbC9ImageDataV",
+        "mangledName": "$s23SigndScanIdRegulaNative0dbC9ImageDataV",
+        "moduleName": "SigndScanIdRegulaNative",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SigndScanIdRegulaNative",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SigndScanIdRegulaNative",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "SigndScanIdRegulaNative"
+      },
+      {
+        "kind": "Import",
+        "name": "AVFoundation",
+        "printedName": "AVFoundation",
+        "declKind": "Import",
+        "moduleName": "SigndScanIdRegulaNative"
+      },
+      {
+        "kind": "Import",
+        "name": "DocumentReader",
+        "printedName": "DocumentReader",
+        "declKind": "Import",
+        "moduleName": "SigndScanIdRegulaNative"
+      },
+      {
+        "kind": "Import",
+        "name": "SigndCore",
+        "printedName": "SigndCore",
+        "declKind": "Import",
+        "moduleName": "SigndScanIdRegulaNative"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "CameraCaptureDelegate",
+        "printedName": "CameraCaptureDelegate",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "setCapturedImage",
+            "printedName": "setCapturedImage(image:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UIImage",
+                "printedName": "UIKit.UIImage",
+                "usr": "c:objc(cs)UIImage"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@SigndScanIdRegulaNative@objc(pl)CameraCaptureDelegate(im)setCapturedImageWithImage:",
+            "mangledName": "$s23SigndScanIdRegulaNative21CameraCaptureDelegateP16setCapturedImage5imageySo7UIImageC_tF",
+            "moduleName": "SigndScanIdRegulaNative",
+            "genericSig": "<τ_0_0 where τ_0_0 : SigndScanIdRegulaNative.CameraCaptureDelegate>",
+            "sugared_genericSig": "<Self where Self : SigndScanIdRegulaNative.CameraCaptureDelegate>",
+            "protocolReq": true,
+            "declAttributes": [
+              "ObjC"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "liveFaceCaptured",
+            "printedName": "liveFaceCaptured(image:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UIImage?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIImage",
+                    "printedName": "UIKit.UIImage",
+                    "usr": "c:objc(cs)UIImage"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@SigndScanIdRegulaNative@objc(pl)CameraCaptureDelegate(im)liveFaceCapturedWithImage:",
+            "mangledName": "$s23SigndScanIdRegulaNative21CameraCaptureDelegateP16liveFaceCaptured5imageySo7UIImageCSg_tF",
+            "moduleName": "SigndScanIdRegulaNative",
+            "genericSig": "<τ_0_0 where τ_0_0 : SigndScanIdRegulaNative.CameraCaptureDelegate>",
+            "sugared_genericSig": "<Self where Self : SigndScanIdRegulaNative.CameraCaptureDelegate>",
+            "protocolReq": true,
+            "declAttributes": [
+              "ObjC"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "showScannerError",
+            "printedName": "showScannerError(errorMessage:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@SigndScanIdRegulaNative@objc(pl)CameraCaptureDelegate(im)showScannerErrorWithErrorMessage:",
+            "mangledName": "$s23SigndScanIdRegulaNative21CameraCaptureDelegateP16showScannerError12errorMessageySS_tF",
+            "moduleName": "SigndScanIdRegulaNative",
+            "genericSig": "<τ_0_0 where τ_0_0 : SigndScanIdRegulaNative.CameraCaptureDelegate>",
+            "sugared_genericSig": "<Self where Self : SigndScanIdRegulaNative.CameraCaptureDelegate>",
+            "protocolReq": true,
+            "declAttributes": [
+              "ObjC"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "c:@M@SigndScanIdRegulaNative@objc(pl)CameraCaptureDelegate",
+        "mangledName": "$s23SigndScanIdRegulaNative21CameraCaptureDelegateP",
+        "moduleName": "SigndScanIdRegulaNative",
+        "genericSig": "<τ_0_0 : AnyObject>",
+        "sugared_genericSig": "<Self : AnyObject>",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SigndScanIdRegulaNative",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SystemConfiguration",
+        "printedName": "SystemConfiguration",
+        "declKind": "Import",
+        "moduleName": "SigndScanIdRegulaNative"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "CheckConnection",
+        "printedName": "CheckConnection",
+        "declKind": "Class",
+        "usr": "s:23SigndScanIdRegulaNative15CheckConnectionC",
+        "mangledName": "$s23SigndScanIdRegulaNative15CheckConnectionC",
+        "moduleName": "SigndScanIdRegulaNative",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "hasMissingDesignatedInitializers": true
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SigndScanIdRegulaNative",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SigndCore",
+        "printedName": "SigndCore",
+        "declKind": "Import",
+        "moduleName": "SigndScanIdRegulaNative"
+      },
+      {
+        "kind": "Import",
+        "name": "SigndScanId",
+        "printedName": "SigndScanId",
+        "declKind": "Import",
+        "moduleName": "SigndScanIdRegulaNative"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "SigndScanIdRegulaNative"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "RegulaNativeProccess",
+        "printedName": "RegulaNativeProccess",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "plugin",
+            "printedName": "plugin",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "SGDThirdPartyName",
+                "printedName": "SigndCore.SGDThirdPartyName",
+                "usr": "s:9SigndCore17SGDThirdPartyNameO"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:23SigndScanIdRegulaNative0dE8ProccessC6plugin0A4Core17SGDThirdPartyNameOvp",
+            "mangledName": "$s23SigndScanIdRegulaNative0dE8ProccessC6plugin0A4Core17SGDThirdPartyNameOvp",
+            "moduleName": "SigndScanIdRegulaNative",
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SGDThirdPartyName",
+                    "printedName": "SigndCore.SGDThirdPartyName",
+                    "usr": "s:9SigndCore17SGDThirdPartyNameO"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:23SigndScanIdRegulaNative0dE8ProccessC6plugin0A4Core17SGDThirdPartyNameOvg",
+                "mangledName": "$s23SigndScanIdRegulaNative0dE8ProccessC6plugin0A4Core17SGDThirdPartyNameOvg",
+                "moduleName": "SigndScanIdRegulaNative",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "executeVerificationConfigCustom",
+            "printedName": "executeVerificationConfigCustom",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "SigndCore.SGDExecuteVerificationConfigCustom?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SGDExecuteVerificationConfigCustom",
+                    "printedName": "SigndCore.SGDExecuteVerificationConfigCustom",
+                    "usr": "s:9SigndCore34SGDExecuteVerificationConfigCustomV"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:23SigndScanIdRegulaNative0dE8ProccessC31executeVerificationConfigCustom0A4Core010SGDExecutehiJ0VSgvp",
+            "mangledName": "$s23SigndScanIdRegulaNative0dE8ProccessC31executeVerificationConfigCustom0A4Core010SGDExecutehiJ0VSgvp",
+            "moduleName": "SigndScanIdRegulaNative",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "SigndCore.SGDExecuteVerificationConfigCustom?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SGDExecuteVerificationConfigCustom",
+                        "printedName": "SigndCore.SGDExecuteVerificationConfigCustom",
+                        "usr": "s:9SigndCore34SGDExecuteVerificationConfigCustomV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:23SigndScanIdRegulaNative0dE8ProccessC31executeVerificationConfigCustom0A4Core010SGDExecutehiJ0VSgvg",
+                "mangledName": "$s23SigndScanIdRegulaNative0dE8ProccessC31executeVerificationConfigCustom0A4Core010SGDExecutehiJ0VSgvg",
+                "moduleName": "SigndScanIdRegulaNative",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "SigndCore.SGDExecuteVerificationConfigCustom?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SGDExecuteVerificationConfigCustom",
+                        "printedName": "SigndCore.SGDExecuteVerificationConfigCustom",
+                        "usr": "s:9SigndCore34SGDExecuteVerificationConfigCustomV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:23SigndScanIdRegulaNative0dE8ProccessC31executeVerificationConfigCustom0A4Core010SGDExecutehiJ0VSgvs",
+                "mangledName": "$s23SigndScanIdRegulaNative0dE8ProccessC31executeVerificationConfigCustom0A4Core010SGDExecutehiJ0VSgvs",
+                "moduleName": "SigndScanIdRegulaNative",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:23SigndScanIdRegulaNative0dE8ProccessC31executeVerificationConfigCustom0A4Core010SGDExecutehiJ0VSgvM",
+                "mangledName": "$s23SigndScanIdRegulaNative0dE8ProccessC31executeVerificationConfigCustom0A4Core010SGDExecutehiJ0VSgvM",
+                "moduleName": "SigndScanIdRegulaNative",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "RegulaNativeProccess",
+                "printedName": "SigndScanIdRegulaNative.RegulaNativeProccess",
+                "usr": "s:23SigndScanIdRegulaNative0dE8ProccessC"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:23SigndScanIdRegulaNative0dE8ProccessCACycfc",
+            "mangledName": "$s23SigndScanIdRegulaNative0dE8ProccessCACycfc",
+            "moduleName": "SigndScanIdRegulaNative",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "initialize",
+            "printedName": "initialize(network:navigationDelegate:delegate:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "SGDNetwork",
+                "printedName": "SigndCore.SGDNetwork",
+                "usr": "s:9SigndCore10SGDNetworkP"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "SigndNavigationDelegate",
+                "printedName": "SigndCore.SigndNavigationDelegate",
+                "usr": "s:9SigndCore0A18NavigationDelegateP"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ProccessDelegate",
+                "printedName": "SigndScanId.ProccessDelegate",
+                "usr": "s:11SigndScanId16ProccessDelegateP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:23SigndScanIdRegulaNative0dE8ProccessC10initialize7network18navigationDelegate8delegatey0A4Core10SGDNetwork_p_AH0a10NavigationJ0_p0abC00fJ0_ptF",
+            "mangledName": "$s23SigndScanIdRegulaNative0dE8ProccessC10initialize7network18navigationDelegate8delegatey0A4Core10SGDNetwork_p_AH0a10NavigationJ0_p0abC00fJ0_ptF",
+            "moduleName": "SigndScanIdRegulaNative",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "scanId",
+            "printedName": "scanId()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:23SigndScanIdRegulaNative0dE8ProccessC04scanC0yyF",
+            "mangledName": "$s23SigndScanIdRegulaNative0dE8ProccessC04scanC0yyF",
+            "moduleName": "SigndScanIdRegulaNative",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "scanFace",
+            "printedName": "scanFace(redo:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:23SigndScanIdRegulaNative0dE8ProccessC8scanFace4redoySb_tF",
+            "mangledName": "$s23SigndScanIdRegulaNative0dE8ProccessC8scanFace4redoySb_tF",
+            "moduleName": "SigndScanIdRegulaNative",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "resetData",
+            "printedName": "resetData()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:23SigndScanIdRegulaNative0dE8ProccessC9resetDatayyF",
+            "mangledName": "$s23SigndScanIdRegulaNative0dE8ProccessC9resetDatayyF",
+            "moduleName": "SigndScanIdRegulaNative",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "showOperationFailed",
+            "printedName": "showOperationFailed(mode:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "OperationFailedMode",
+                "printedName": "SigndScanId.OperationFailedMode",
+                "usr": "s:11SigndScanId19OperationFailedModeO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:23SigndScanIdRegulaNative0dE8ProccessC19showOperationFailed4modey0abC00hI4ModeO_tF",
+            "mangledName": "$s23SigndScanIdRegulaNative0dE8ProccessC19showOperationFailed4modey0abC00hI4ModeO_tF",
+            "moduleName": "SigndScanIdRegulaNative",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "acceptImage",
+            "printedName": "acceptImage(image:side:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UIImage?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIImage",
+                    "printedName": "UIKit.UIImage",
+                    "usr": "c:objc(cs)UIImage"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Side",
+                "printedName": "SigndScanId.Side",
+                "usr": "s:11SigndScanId4SideO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:23SigndScanIdRegulaNative0dE8ProccessC11acceptImage5image4sideySo7UIImageCSg_0abC04SideOtF",
+            "mangledName": "$s23SigndScanIdRegulaNative0dE8ProccessC11acceptImage5image4sideySo7UIImageCSg_0abC04SideOtF",
+            "moduleName": "SigndScanIdRegulaNative",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "scanIdFrontSide",
+            "printedName": "scanIdFrontSide(retake:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:23SigndScanIdRegulaNative0dE8ProccessC04scanC9FrontSide6retakeySb_tF",
+            "mangledName": "$s23SigndScanIdRegulaNative0dE8ProccessC04scanC9FrontSide6retakeySb_tF",
+            "moduleName": "SigndScanIdRegulaNative",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "scanSecondSide",
+            "printedName": "scanSecondSide(retake:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:23SigndScanIdRegulaNative0dE8ProccessC14scanSecondSide6retakeySb_tF",
+            "mangledName": "$s23SigndScanIdRegulaNative0dE8ProccessC14scanSecondSide6retakeySb_tF",
+            "moduleName": "SigndScanIdRegulaNative",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "acceptSelfie",
+            "printedName": "acceptSelfie()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:23SigndScanIdRegulaNative0dE8ProccessC12acceptSelfieyyF",
+            "mangledName": "$s23SigndScanIdRegulaNative0dE8ProccessC12acceptSelfieyyF",
+            "moduleName": "SigndScanIdRegulaNative",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "scanFace",
+            "printedName": "scanFace()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:23SigndScanIdRegulaNative0dE8ProccessC8scanFaceyyF",
+            "mangledName": "$s23SigndScanIdRegulaNative0dE8ProccessC8scanFaceyyF",
+            "moduleName": "SigndScanIdRegulaNative",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "restart",
+            "printedName": "restart()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:23SigndScanIdRegulaNative0dE8ProccessC7restartyyF",
+            "mangledName": "$s23SigndScanIdRegulaNative0dE8ProccessC7restartyyF",
+            "moduleName": "SigndScanIdRegulaNative",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:23SigndScanIdRegulaNative0dE8ProccessC",
+        "mangledName": "$s23SigndScanIdRegulaNative0dE8ProccessC",
+        "moduleName": "SigndScanIdRegulaNative",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "ScanIdProccess",
+            "printedName": "ScanIdProccess",
+            "usr": "s:11SigndScanId0bC8ProccessP",
+            "mangledName": "$s11SigndScanId0bC8ProccessP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "ScanIdDelegate",
+            "printedName": "ScanIdDelegate",
+            "usr": "s:11SigndScanId0bC8DelegateP",
+            "mangledName": "$s11SigndScanId0bC8DelegateP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SelfieDelegate",
+            "printedName": "SelfieDelegate",
+            "usr": "s:11SigndScanId14SelfieDelegateP",
+            "mangledName": "$s11SigndScanId14SelfieDelegateP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SigndScanIdRegulaNative",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SigndScanIdRegulaNative",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SigndScanIdRegulaNative",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "SigndScanIdRegulaNative"
+      },
+      {
+        "kind": "Import",
+        "name": "SigndCore",
+        "printedName": "SigndCore",
+        "declKind": "Import",
+        "moduleName": "SigndScanIdRegulaNative"
+      },
+      {
+        "kind": "Import",
+        "name": "SigndScanId",
+        "printedName": "SigndScanId",
+        "declKind": "Import",
+        "moduleName": "SigndScanIdRegulaNative"
+      },
+      {
+        "kind": "Import",
+        "name": "AVFoundation",
+        "printedName": "AVFoundation",
+        "declKind": "Import",
+        "moduleName": "SigndScanIdRegulaNative"
+      },
+      {
+        "kind": "Import",
+        "name": "DocumentReader",
+        "printedName": "DocumentReader",
+        "declKind": "Import",
+        "moduleName": "SigndScanIdRegulaNative"
+      },
+      {
+        "kind": "Import",
+        "name": "FaceSDK",
+        "printedName": "FaceSDK",
+        "declKind": "Import",
+        "moduleName": "SigndScanIdRegulaNative"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SigndScanIdRegulaNative",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "SigndScanIdRegulaNative"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SigndScanIdRegulaNative",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SigndCore",
+        "printedName": "SigndCore",
+        "declKind": "Import",
+        "moduleName": "SigndScanIdRegulaNative"
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": [
+    {
+      "filePath": "\/Users\/tomaszwojtyniak\/signd-ios\/SigndScanIdRegulaNative\/SigndScanIdRegulaNative\/Network\/Models\/RegulaScanIdImageData.swift",
+      "kind": "FloatLiteral",
+      "offset": 312,
+      "length": 3,
+      "value": "0.5"
+    },
+    {
+      "filePath": "\/Users\/tomaszwojtyniak\/signd-ios\/SigndScanIdRegulaNative\/SigndScanIdRegulaNative\/Network\/Models\/FaceMatchResponse.swift",
+      "kind": "StringLiteral",
+      "offset": 316,
+      "length": 9,
+      "value": "\"IsMatch\""
+    },
+    {
+      "filePath": "\/Users\/tomaszwojtyniak\/signd-ios\/SigndScanIdRegulaNative\/SigndScanIdRegulaNative\/Network\/Models\/FaceMatchResponse.swift",
+      "kind": "StringLiteral",
+      "offset": 347,
+      "length": 7,
+      "value": "\"Score\""
+    },
+    {
+      "filePath": "\/Users\/tomaszwojtyniak\/signd-ios\/SigndScanIdRegulaNative\/SigndScanIdRegulaNative\/Network\/Models\/FaceMatchResponse.swift",
+      "kind": "StringLiteral",
+      "offset": 384,
+      "length": 15,
+      "value": "\"TransactionId\""
+    },
+    {
+      "filePath": "\/Users\/tomaszwojtyniak\/signd-ios\/SigndScanIdRegulaNative\/SigndScanIdRegulaNative\/Network\/Models\/FaceMatchResponse.swift",
+      "kind": "StringLiteral",
+      "offset": 316,
+      "length": 9,
+      "value": "\"IsMatch\""
+    },
+    {
+      "filePath": "\/Users\/tomaszwojtyniak\/signd-ios\/SigndScanIdRegulaNative\/SigndScanIdRegulaNative\/Network\/Models\/FaceMatchResponse.swift",
+      "kind": "StringLiteral",
+      "offset": 347,
+      "length": 7,
+      "value": "\"Score\""
+    },
+    {
+      "filePath": "\/Users\/tomaszwojtyniak\/signd-ios\/SigndScanIdRegulaNative\/SigndScanIdRegulaNative\/Network\/Models\/FaceMatchResponse.swift",
+      "kind": "StringLiteral",
+      "offset": 384,
+      "length": 15,
+      "value": "\"TransactionId\""
+    },
+    {
+      "filePath": "\/Users\/tomaszwojtyniak\/signd-ios\/SigndScanIdRegulaNative\/SigndScanIdRegulaNative\/Extensions\/CheckConnection.swift",
+      "kind": "StringLiteral",
+      "offset": 241,
+      "length": 80,
+      "value": "\"Internet connection appears to be offline. Please check your network settings.\""
+    },
+    {
+      "filePath": "\/Users\/tomaszwojtyniak\/signd-ios\/SigndScanIdRegulaNative\/SigndScanIdRegulaNative\/RegulaNativeProccess.swift",
+      "kind": "BooleanLiteral",
+      "offset": 631,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/tomaszwojtyniak\/signd-ios\/SigndScanIdRegulaNative\/SigndScanIdRegulaNative\/RegulaNativeProccess.swift",
+      "kind": "BooleanLiteral",
+      "offset": 668,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/tomaszwojtyniak\/signd-ios\/SigndScanIdRegulaNative\/SigndScanIdRegulaNative\/RegulaNativeProccess.swift",
+      "kind": "BooleanLiteral",
+      "offset": 936,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/tomaszwojtyniak\/signd-ios\/SigndScanIdRegulaNative\/SigndScanIdRegulaNative\/RegulaNativeProccess.swift",
+      "kind": "IntegerLiteral",
+      "offset": 981,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/tomaszwojtyniak\/signd-ios\/SigndScanIdRegulaNative\/SigndScanIdRegulaNative\/RegulaNativeProccess.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1018,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/tomaszwojtyniak\/signd-ios\/SigndScanIdRegulaNative\/SigndScanIdRegulaNative\/Network\/Models\/RegulaDocumentTypeResponse.swift",
+      "kind": "StringLiteral",
+      "offset": 423,
+      "length": 14,
+      "value": "\"DocumentPage\""
+    },
+    {
+      "filePath": "\/Users\/tomaszwojtyniak\/signd-ios\/SigndScanIdRegulaNative\/SigndScanIdRegulaNative\/Network\/Models\/RegulaDocumentTypeResponse.swift",
+      "kind": "StringLiteral",
+      "offset": 476,
+      "length": 20,
+      "value": "\"DocumentPagesCount\""
+    },
+    {
+      "filePath": "\/Users\/tomaszwojtyniak\/signd-ios\/SigndScanIdRegulaNative\/SigndScanIdRegulaNative\/Network\/Models\/RegulaDocumentTypeResponse.swift",
+      "kind": "StringLiteral",
+      "offset": 423,
+      "length": 14,
+      "value": "\"DocumentPage\""
+    },
+    {
+      "filePath": "\/Users\/tomaszwojtyniak\/signd-ios\/SigndScanIdRegulaNative\/SigndScanIdRegulaNative\/Network\/Models\/RegulaDocumentTypeResponse.swift",
+      "kind": "StringLiteral",
+      "offset": 476,
+      "length": 20,
+      "value": "\"DocumentPagesCount\""
+    },
+    {
+      "filePath": "\/Users\/tomaszwojtyniak\/signd-ios\/SigndScanIdRegulaNative\/SigndScanIdRegulaNative\/RegulaNative\/RegulaNative.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1931,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/tomaszwojtyniak\/signd-ios\/SigndScanIdRegulaNative\/SigndScanIdRegulaNative\/Extensions\/UIImage.swift",
+      "kind": "IntegerLiteral",
+      "offset": 201,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/tomaszwojtyniak\/signd-ios\/SigndScanIdRegulaNative\/SigndScanIdRegulaNative\/Extensions\/UIImage.swift",
+      "kind": "IntegerLiteral",
+      "offset": 413,
+      "length": 1,
+      "value": "1"
+    }
+  ]
+}

@@ -6,6 +6,6 @@ framework module SigndScanIdRegulaNative {
 }
 
 module SigndScanIdRegulaNative.Swift {
-    header "SigndScanIdRegulaNative-Swift.h"
-    requires objc
+  header "SigndScanIdRegulaNative-Swift.h"
+  requires objc
 }
