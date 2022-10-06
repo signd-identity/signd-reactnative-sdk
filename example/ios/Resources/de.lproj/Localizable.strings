@@ -147,8 +147,7 @@
 "signd_idscan_take_new_photo" = "Erneut Foto machen
 ";
 "signd_idscan_take_the_photo" = "Machen Sie das Foto";
-"signd_idscan_yes_continue" = "Ja, weiter
-";
+"signd_idscan_yes_continue" = "Ja, weiter";
 "signd_liveness_error_something_went_wrong_try_again" = "Etwas ist schiefgangen, aber keine Sorge. Sie können neu starten.";
 "signd_liveness_result" = "Resultat:";
 "signd_liveness_result_great" = "Das schaut gut aus!";
