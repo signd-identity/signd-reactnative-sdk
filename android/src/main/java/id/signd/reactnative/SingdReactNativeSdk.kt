@@ -72,7 +72,7 @@ class SigndReactnativeSdk(reactContext: ReactApplicationContext) : ReactContextB
     Signd.setApiUrl(url)
       .setHost(host)
       .setScheme(scheme)
-      .addPlugins(id.signd.scanid.ScanIdPlugin)
+      .addPlugins(id.signd.scanid.ScanIdPlugin, id.signd.scanidregula.ScanIdRegulaPlugin)
       .setVerificationFinishedListener(this)
       .withUiSettings {
         this.showFooter = readableMap.getOptionalBoolean(ARG_SHOW_FOOTER, true)

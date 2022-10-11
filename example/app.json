@@ -1,4 +1,10 @@
 {
-  "name": "SigndReactnativeSdkExample",
-  "displayName": "SigndReactnativeSdk Example"
+  "expo": {
+    "name": "signdreactnative",
+    "slug": "signdreactnative",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
 }

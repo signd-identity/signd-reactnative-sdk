@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">SigndReactnativeSdk Example</string>
+    <string name="app_name">SignD RN example</string>
+    <string name="signd_config_scheme" translatable="false">admiralpay</string>
+    <string name="signd_config_host" translatable="false">hostsigndintegration</string>
 </resources>
