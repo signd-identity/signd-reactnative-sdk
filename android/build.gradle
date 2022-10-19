@@ -141,6 +141,8 @@ dependencies {
 
   // Core part of the library.
   api "com.github.signd-identity.signd-android:core:$signdSdkVersion"
-  // If you want to use OnlineScanId plugin
+  // If you want to use OnlineScanId plugin with Accent implementation
   api "com.github.signd-identity.signd-android:scanid:$signdSdkVersion"
+  // If you want to use OnlineScanId plugin with Regula Native implementation 
+  api "com.github.signd-identity.signd-android:scanid-regula:$signdSdkVersion"
 }
