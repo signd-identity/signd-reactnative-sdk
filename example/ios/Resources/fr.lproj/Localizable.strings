@@ -123,13 +123,14 @@
 "signd_abort_process_dialog_positive_text" = "Annuler";
 "signd_abort_process_dialog_title" = "Voulez-vous annuler la vérification?";
 "signd_company_name" = "SignD";
+"acuant_camera_back" = "Retour";
 "signd_continue" = "Continuez";
 "signd_error_network_error" = "Erreur de réseau, êtes-vous connecté à internet?";
 "signd_error_server_error_message" = "Problème de serveur. Réessayez plus tard 😔";
 "signd_error_something_went_wrong" = "Erreur inconnue, réessayez.";
 "signd_error_unknown" = "Erreur inconnue.";
 "signd_idscan_error_no_back_side" = "Vous n'avez pas téléchargé le verso.";
-"signd_idscan_error_no_front_side" = "Veuillez prendre le recto en premier.";
+"signd_idscan_error_no_front_side" = "Veuillez télécharger à nouveau le document";
 "signd_idscan_id_placement_back" = "Regardez l'exemple pour positionner le verso du document";
 "signd_idscan_id_placement_intro" = "Regardez l'exemple pour positionner le document";
 "signd_idscan_image_metrics_error_blurry" = "L'image n'est pas assez nette";

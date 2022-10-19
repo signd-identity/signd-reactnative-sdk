@@ -12,6 +12,7 @@
 "acuant_face_camera_face_too_close" = "Too Close! Move Away";
 "acuant_face_camera_face_too_far" = "Move Closer";
 "acuant_face_camera_initial" = "Align face to start capture";
+"acuant_camera_back" = "Back";
 "back_side" = "Back Side?";
 "hg_align_face_and_blink" = "Align face to begin";
 "hg_blink" = "Blink!";
@@ -129,7 +130,8 @@
 "signd_error_something_went_wrong" = "Something went wrong, try again.";
 "signd_error_unknown" = "Unknown error.";
 "signd_idscan_error_no_back_side" = "You didn't upload the back side!";
-"signd_idscan_error_no_front_side" = "Please upload the front side first!";
+"signd_idscan_error_missing_data" = "Unfortunately we weren't able to extract the data completely. Please repeat the scan and make sure the card is evenly illuminated (eg. no shadows or reflections)";
+"signd_idscan_error_no_front_side" = "Please re-upload the document!";
 "signd_idscan_id_placement_back" = "Check out the example how to place the back of the ID.";
 "signd_idscan_id_placement_intro" = "Check out the example how to place the ID.";
 "signd_idscan_image_metrics_error_blurry" = "This image is not sharp enough!";

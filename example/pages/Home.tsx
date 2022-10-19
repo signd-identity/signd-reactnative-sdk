@@ -11,8 +11,9 @@ import {
 import SigndModule, {
   SigndResult,
   VerificationResult,
+  ProgressBarStyle
 } from 'signd-reactnative-sdk';
-import { ProgressBarStyle } from './src';
+
 
 const Home: React.FC = () => {
   const [sessionTokenText, onSessionTokenTextChange] = useState('');
@@ -22,8 +23,7 @@ const Home: React.FC = () => {
     await SigndModule.initialize({
                 scheme: 'admiralpay',
                 host: 'hostsigndintegration://test',
-                apiUrl: 'https://api.integration.signd.io',
-                progressBarStyle:'Linear',
+                apiUrl: 'https://api.integration.signd.io'
               });
     const { result, sessionToken }: SigndResult = await SigndModule.start(
       token

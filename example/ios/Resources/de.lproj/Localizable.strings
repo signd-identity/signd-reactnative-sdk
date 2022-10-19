@@ -17,7 +17,7 @@
 "hg_blink" = "Zwinkern Sie!";
 "hg_hold_steady" = "Stabil halten";
 "hg_move_in_frame" = "Bewegen Sie sich in den Rahmen";
-"hg_too_close" = "Zu nahe! Ziehen Sie sich zurück";
+"hg_too_close" = "Zu nahe! Ziehen Sie\nsich zurück";
 "hg_too_far_away" = "Kommen Sie näher";
 "IProov_AppName" = "iProov";
 "IProov_Authenticate" = "Authentisieren";
@@ -123,13 +123,14 @@
 "signd_abort_process_dialog_positive_text" = "Abbrechen";
 "signd_abort_process_dialog_title" = "Wollen Sie die Verifikation abbrechen?";
 "signd_company_name" = "SignD";
+"acuant_camera_back" = "Zurück";
 "signd_continue" = "Speichern";
 "signd_error_network_error" = "Netzwerkfehler, sind sie mit dem Internet verbunden?";
 "signd_error_server_error_message" = "Unser Server hat Probleme. Bitte versuchen Sie es später nochmal. 😔";
 "signd_error_something_went_wrong" = "Etwas ist schiefgangen, versuchen Sie es nochmals.";
 "signd_error_unknown" = "Unbekannter Fehler";
 "signd_idscan_error_no_back_side" = "Sie haben die Rückseite nicht hochgeladen!";
-"signd_idscan_error_no_front_side" = "Bitte laden Sie zuerst die Vorderseite hoch!";
+"signd_idscan_error_no_front_side" = "Laden Sie bitte das Dokument erneut hoch!";
 "signd_idscan_id_placement_back" = "Überprüfen Sie das Beispiel für die Platzierung der Dokumentenrückseite";
 "signd_idscan_id_placement_intro" = "Überprüfen Sie das Beispiel für die Platzierung des Dokuments";
 "signd_idscan_image_metrics_error_blurry" = "Dieses Bild ist nicht scharf genug!";
@@ -147,8 +148,7 @@
 "signd_idscan_take_new_photo" = "Erneut Foto machen
 ";
 "signd_idscan_take_the_photo" = "Machen Sie das Foto";
-"signd_idscan_yes_continue" = "Ja, weiter
-";
+"signd_idscan_yes_continue" = "Ja, weiter";
 "signd_liveness_error_something_went_wrong_try_again" = "Etwas ist schiefgangen, aber keine Sorge. Sie können neu starten.";
 "signd_liveness_result" = "Resultat:";
 "signd_liveness_result_great" = "Das schaut gut aus!";
