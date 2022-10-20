@@ -130,7 +130,6 @@ class SigndReactnativeSdk: NSObject, SigndDelegate {
             Signd.shared.setScheme(scheme: scheme)
 
             if let apiUrl = config["apiUrl"] as? String {
-                print(apiUrl)
                 Signd.shared.setApiUrl(url: apiUrl)
             }
 
@@ -148,6 +147,7 @@ class SigndReactnativeSdk: NSObject, SigndDelegate {
         self.resolve = resolver
         self.reject = rejecter
         self.result = nil
+        self.sessionToken = sessionToken
 
         DispatchQueue.main.async {
             Signd.shared.start(sessionToken: sessionToken)
@@ -155,19 +155,21 @@ class SigndReactnativeSdk: NSObject, SigndDelegate {
     }
 
     func onEvent(event: SGDEvent) {
-        switch event {
-        case .processAborted:
-            resolve?([
-                "result": "ProcessCanceled",
-                "sessionToken": self.sessionToken ?? "undefined"
-            ])
-        case .processEnded:
-            resolve?([
-                "result": self.result ?? "undefined" ,
-                "sessionToken": self.sessionToken ?? "undefined"
-            ])
-        default:
-            break
+        if let resolve = self.resolve {
+            switch event {
+            case .processAborted:
+                resolve([
+                    "result": "ProcessCanceled",
+                    "sessionToken": self.sessionToken ?? "undefined"
+                ])
+            case .processEnded:
+                resolve([
+                    "result": self.result ?? "undefined" ,
+                    "sessionToken": self.sessionToken ?? "undefined"
+                ])
+            default:
+                break
+            }
         }
     }
 
@@ -203,10 +205,14 @@ class SigndReactnativeSdk: NSObject, SigndDelegate {
 
     func onError(text: String, domain: String?, sessionToken: String?) {
         reject?(text, domain, nil)
+        self.reject = nil
+        self.resolve = nil
     }
 
     func onAuthFailed() {
         reject?("Auth failed", "auth failed", nil)
+        self.reject = nil
+        self.resolve = nil
     }
 
     func onSessionTokenChange(sessionToken: String?) {}
