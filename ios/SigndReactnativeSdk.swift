@@ -4,6 +4,7 @@ import Foundation
 import SigndCore
 import SigndScanId
 import SigndScanIdRegulaNative
+import SigndScanIdAcuant
 
 @objc(SigndReactnativeSdk)
 class SigndReactnativeSdk: NSObject, SigndDelegate {
@@ -123,7 +124,7 @@ class SigndReactnativeSdk: NSObject, SigndDelegate {
         DispatchQueue.main.async {
             Signd.shared.initialize(
                 processes: [
-                    SigndScanIdProccess(processes: [RegulaNativeProccess()])
+                    SigndScanIdProccess(processes: [RegulaNativeProccess(), AcuantProccess()])
                 ],
                 options:options
             )
