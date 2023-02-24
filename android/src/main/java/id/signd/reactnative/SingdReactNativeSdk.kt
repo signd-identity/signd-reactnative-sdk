@@ -74,6 +74,7 @@ class SigndReactnativeSdk(reactContext: ReactApplicationContext) : ReactContextB
       .setScheme(scheme)
       .addPlugins(id.signd.scanid.ScanIdPlugin, id.signd.scanidregula.ScanIdRegulaPlugin)
       .setVerificationFinishedListener(this)
+      .isQesProcess(readableMap.getOptionalBoolean(ARG_QES_PROCESS, true))
       .withUiSettings {
         this.showFooter = readableMap.getOptionalBoolean(ARG_SHOW_FOOTER, true)
         this.showLastScreen = readableMap.getOptionalBoolean(ARG_SHOW_LAST_SCREEN, true)
@@ -144,6 +145,7 @@ class SigndReactnativeSdk(reactContext: ReactApplicationContext) : ReactContextB
     private const val ARG_HOST = "host"
     private const val ARG_API_URL = "apiUrl"
 
+    private const val ARG_QES_PROCESS = "qesProcess"
     private const val ARG_SHOW_FOOTER = "showFooter"
     private const val ARG_SHOW_LAST_SCREEN = "showLastScreen"
     private const val ARG_SHOW_START_SCREEN = "showFirstScreen"
