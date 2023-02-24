@@ -14,15 +14,15 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/signd-identity/signd-reactnative-sdk.git", :tag => "#{s.version}" }
   s.vendored_frameworks = 'ios/EmbeddedFrameworks/**'
   s.source_files = "ios/*.{swift,h,m,c,cc,mm,cpp}"
-  s.ios.deployment_target  = '12.0'
+  s.ios.deployment_target  = '13.0'
   
   s.dependency "React-Core"
   s.dependency 'FaceSDK', '= 3.2.1078'
   s.dependency 'DocumentReaderFull', '= 6.2.6012'
   s.dependency 'DocumentReader', '= 6.2.2441'
-  s.dependency 'AcuantiOSSDKV11/AcuantImagePreparation', '= 11.5.6'
-  s.dependency 'AcuantiOSSDKV11/AcuantFaceMatch', '= 11.5.6'
-  s.dependency 'AcuantiOSSDKV11/AcuantHGLiveness', '= 11.5.6'
-  s.dependency 'AcuantiOSSDKV11/AcuantDocumentProcessing', '= 11.5.6'
-  s.dependency 'AcuantiOSSDKV11/AcuantPassiveLiveness', '= 11.5.6'
+  s.dependency 'AcuantiOSSDKV11/AcuantImagePreparation', '= 11.5.7'
+  s.dependency 'AcuantiOSSDKV11/AcuantFaceMatch', '= 11.5.7'
+  s.dependency 'AcuantiOSSDKV11/AcuantHGLiveness', '= 11.5.7'
+  s.dependency 'AcuantiOSSDKV11/AcuantDocumentProcessing', '= 11.5.7'
+  s.dependency 'AcuantiOSSDKV11/AcuantPassiveLiveness', '= 11.5.7'
 end

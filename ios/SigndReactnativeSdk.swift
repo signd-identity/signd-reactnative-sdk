@@ -78,7 +78,7 @@ class SigndReactnativeSdk: NSObject, SigndDelegate {
                                                             fileName: boldFontFileName,
                                                             bundle: Bundle.main))
         }
-
+        let qesProcess = config["qesProcess"] as? Bool ?? false
         let showLastScreen = config["showLastScreen"] as? Bool == true
         let showFirstScreen = config["showFirstScreen"] as? Bool == true
         let showBackButton = config["showBackButton"] as? Bool == true
@@ -129,6 +129,7 @@ class SigndReactnativeSdk: NSObject, SigndDelegate {
                 options:options
             )
             Signd.shared.setScheme(scheme: scheme)
+            Signd.shared.qesProcess = qesProcess
 
             if let apiUrl = config["apiUrl"] as? String {
                 Signd.shared.setApiUrl(url: apiUrl)

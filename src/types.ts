@@ -25,6 +25,7 @@ export interface SigndOptions {
   showCloseButton?: boolean;
   showFooter?: boolean;
   progressBarStyle?: ProgressBarStyle;
+  qesProcess?: boolean;
   actionButtonStyle?: ActionButtonStyle; // iOS only
   regularFontFileName?: string; // iOS only
   boldFontFileName?: string; // iOS only
