@@ -231,6 +231,7 @@ await SigndPlugin.initialize({
 ```
 | Property  | Parameter | Description 			|
 | ------------- | ------------- | ------------- |
+| **qesProcess** | boolean | Switch to qes process |
 | **showLastScreen** | boolean | Hide last screen with thank you image/animation |
 | **showFooter** | boolean | Hide bottom footer with signd logo |
 | **showBackButton** | boolean | Enable top left back button |
