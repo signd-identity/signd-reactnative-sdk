@@ -2991,6 +2991,171 @@
       },
       {
         "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "SigndScanIdAcuant",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Combine",
+        "printedName": "Combine",
+        "declKind": "Import",
+        "moduleName": "SigndScanIdAcuant"
+      },
+      {
+        "kind": "Import",
+        "name": "SigndCore",
+        "printedName": "SigndCore",
+        "declKind": "Import",
+        "moduleName": "SigndScanIdAcuant"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "AcuantRepositoryProtocol",
+        "printedName": "AcuantRepositoryProtocol",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "sendDocument",
+            "printedName": "sendDocument(image:documentSide:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "AnyPublisher",
+                "printedName": "Combine.AnyPublisher<SigndCore.DocumentResponse, SigndCore.APIError>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DocumentResponse",
+                    "printedName": "SigndCore.DocumentResponse",
+                    "usr": "s:9SigndCore16DocumentResponseV"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "APIError",
+                    "printedName": "SigndCore.APIError",
+                    "usr": "s:9SigndCore8APIErrorO"
+                  }
+                ],
+                "usr": "s:7Combine12AnyPublisherV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UIImage",
+                "printedName": "UIKit.UIImage",
+                "usr": "c:objc(cs)UIImage"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "DocumentSide",
+                "printedName": "SigndCore.DocumentSide",
+                "usr": "s:9SigndCore12DocumentSideO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17SigndScanIdAcuant0D18RepositoryProtocolP12sendDocument5image12documentSide7Combine12AnyPublisherVy0A4Core0H8ResponseVAJ8APIErrorOGSo7UIImageC_AJ0hK0OtF",
+            "mangledName": "$s17SigndScanIdAcuant0D18RepositoryProtocolP12sendDocument5image12documentSide7Combine12AnyPublisherVy0A4Core0H8ResponseVAJ8APIErrorOGSo7UIImageC_AJ0hK0OtF",
+            "moduleName": "SigndScanIdAcuant",
+            "genericSig": "<τ_0_0 where τ_0_0 : SigndScanIdAcuant.AcuantRepositoryProtocol>",
+            "sugared_genericSig": "<Self where Self : SigndScanIdAcuant.AcuantRepositoryProtocol>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "processDocument",
+            "printedName": "processDocument()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "AnyPublisher",
+                "printedName": "Combine.AnyPublisher<Any, SigndCore.APIError>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ProtocolComposition",
+                    "printedName": "Any"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "APIError",
+                    "printedName": "SigndCore.APIError",
+                    "usr": "s:9SigndCore8APIErrorO"
+                  }
+                ],
+                "usr": "s:7Combine12AnyPublisherV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17SigndScanIdAcuant0D18RepositoryProtocolP15processDocument7Combine12AnyPublisherVyyp0A4Core8APIErrorOGyF",
+            "mangledName": "$s17SigndScanIdAcuant0D18RepositoryProtocolP15processDocument7Combine12AnyPublisherVyyp0A4Core8APIErrorOGyF",
+            "moduleName": "SigndScanIdAcuant",
+            "genericSig": "<τ_0_0 where τ_0_0 : SigndScanIdAcuant.AcuantRepositoryProtocol>",
+            "sugared_genericSig": "<Self where Self : SigndScanIdAcuant.AcuantRepositoryProtocol>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "sendSelfie",
+            "printedName": "sendSelfie(image:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "AnyPublisher",
+                "printedName": "Combine.AnyPublisher<SigndCore.SelfieResponse, SigndCore.APIError>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SelfieResponse",
+                    "printedName": "SigndCore.SelfieResponse",
+                    "usr": "s:9SigndCore14SelfieResponseV"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "APIError",
+                    "printedName": "SigndCore.APIError",
+                    "usr": "s:9SigndCore8APIErrorO"
+                  }
+                ],
+                "usr": "s:7Combine12AnyPublisherV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UIImage",
+                "printedName": "UIKit.UIImage",
+                "usr": "c:objc(cs)UIImage"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17SigndScanIdAcuant0D18RepositoryProtocolP10sendSelfie5image7Combine12AnyPublisherVy0A4Core0H8ResponseVAI8APIErrorOGSo7UIImageC_tF",
+            "mangledName": "$s17SigndScanIdAcuant0D18RepositoryProtocolP10sendSelfie5image7Combine12AnyPublisherVy0A4Core0H8ResponseVAI8APIErrorOGSo7UIImageC_tF",
+            "moduleName": "SigndScanIdAcuant",
+            "genericSig": "<τ_0_0 where τ_0_0 : SigndScanIdAcuant.AcuantRepositoryProtocol>",
+            "sugared_genericSig": "<Self where Self : SigndScanIdAcuant.AcuantRepositoryProtocol>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:17SigndScanIdAcuant0D18RepositoryProtocolP",
+        "mangledName": "$s17SigndScanIdAcuant0D18RepositoryProtocolP",
+        "moduleName": "SigndScanIdAcuant",
+        "genericSig": "<τ_0_0 : AnyObject>",
+        "sugared_genericSig": "<Self : AnyObject>",
+        "declAttributes": [
+          "AccessControl"
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
@@ -3206,6 +3371,13 @@
       },
       {
         "kind": "Import",
+        "name": "Combine",
+        "printedName": "Combine",
+        "declKind": "Import",
+        "moduleName": "SigndScanIdAcuant"
+      },
+      {
+        "kind": "Import",
         "name": "AcuantImagePreparation",
         "printedName": "AcuantImagePreparation",
         "declKind": "Import",
@@ -3244,10 +3416,7 @@
         "name": "SigndScanId",
         "printedName": "SigndScanId",
         "declKind": "Import",
-        "moduleName": "SigndScanIdAcuant",
-        "declAttributes": [
-          "RawDocComment"
-        ]
+        "moduleName": "SigndScanIdAcuant"
       },
       {
         "kind": "Import",
@@ -3879,6 +4048,37 @@
           "AccessControl"
         ],
         "hasMissingDesignatedInitializers": true
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "SigndScanIdAcuant",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SigndCore",
+        "printedName": "SigndCore",
+        "declKind": "Import",
+        "moduleName": "SigndScanIdAcuant"
+      },
+      {
+        "kind": "Import",
+        "name": "Combine",
+        "printedName": "Combine",
+        "declKind": "Import",
+        "moduleName": "SigndScanIdAcuant"
+      },
+      {
+        "kind": "Import",
+        "name": "AcuantDocumentProcessing",
+        "printedName": "AcuantDocumentProcessing",
+        "declKind": "Import",
+        "moduleName": "SigndScanIdAcuant"
       },
       {
         "kind": "Import",
@@ -7513,35 +7713,35 @@
     {
       "filePath": "\/Users\/tomaszwojtyniak\/signd-ios\/signd-scan-id-acuant\/SigndScanIdAcuant\/Acuant\/Acuant.swift",
       "kind": "BooleanLiteral",
-      "offset": 1902,
+      "offset": 1906,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/tomaszwojtyniak\/signd-ios\/signd-scan-id-acuant\/SigndScanIdAcuant\/Acuant\/Acuant.swift",
       "kind": "BooleanLiteral",
-      "offset": 1930,
+      "offset": 1934,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/tomaszwojtyniak\/signd-ios\/signd-scan-id-acuant\/SigndScanIdAcuant\/Acuant\/Acuant.swift",
       "kind": "IntegerLiteral",
-      "offset": 2018,
+      "offset": 2022,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/tomaszwojtyniak\/signd-ios\/signd-scan-id-acuant\/SigndScanIdAcuant\/Acuant\/Acuant.swift",
       "kind": "IntegerLiteral",
-      "offset": 2325,
+      "offset": 2424,
       "length": 2,
       "value": "50"
     },
     {
       "filePath": "\/Users\/tomaszwojtyniak\/signd-ios\/signd-scan-id-acuant\/SigndScanIdAcuant\/Acuant\/Acuant.swift",
       "kind": "IntegerLiteral",
-      "offset": 2363,
+      "offset": 2462,
       "length": 2,
       "value": "50"
     },

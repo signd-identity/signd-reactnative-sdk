@@ -6,6 +6,6 @@ framework module SigndScanId {
 }
 
 module SigndScanId.Swift {
-    header "SigndScanId-Swift.h"
-    requires objc
+  header "SigndScanId-Swift.h"
+  requires objc
 }

@@ -6,6 +6,6 @@ framework module SigndCore {
 }
 
 module SigndCore.Swift {
-    header "SigndCore-Swift.h"
-    requires objc
+  header "SigndCore-Swift.h"
+  requires objc
 }

@@ -288,22 +288,36 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-signdreactnative/Pods-signdreactnative-frameworks.sh",
+				"${PODS_XCFRAMEWORKS_BUILD_DIR}/AcuantiOSSDKV11/AcuantCommon/AcuantCommon.framework/AcuantCommon",
+				"${PODS_XCFRAMEWORKS_BUILD_DIR}/AcuantiOSSDKV11/AcuantDocumentProcessing/AcuantDocumentProcessing.framework/AcuantDocumentProcessing",
+				"${PODS_XCFRAMEWORKS_BUILD_DIR}/AcuantiOSSDKV11/AcuantFaceMatch/AcuantFaceMatch.framework/AcuantFaceMatch",
+				"${PODS_XCFRAMEWORKS_BUILD_DIR}/AcuantiOSSDKV11/AcuantHGLiveness/AcuantHGLiveness.framework/AcuantHGLiveness",
+				"${PODS_XCFRAMEWORKS_BUILD_DIR}/AcuantiOSSDKV11/AcuantImagePreparation/AcuantImagePreparation.framework/AcuantImagePreparation",
+				"${PODS_XCFRAMEWORKS_BUILD_DIR}/AcuantiOSSDKV11/AcuantPassiveLiveness/AcuantPassiveLiveness.framework/AcuantPassiveLiveness",
 				"${PODS_XCFRAMEWORKS_BUILD_DIR}/DocumentReader/DocumentReader.framework/DocumentReader",
 				"${PODS_XCFRAMEWORKS_BUILD_DIR}/DocumentReaderFull/DocumentReaderCore.framework/DocumentReaderCore",
 				"${PODS_XCFRAMEWORKS_BUILD_DIR}/FaceSDK/FaceSDK.framework/FaceSDK",
 				"${PODS_XCFRAMEWORKS_BUILD_DIR}/RegulaCommon/RegulaCommon.framework/RegulaCommon",
 				"${PODS_XCFRAMEWORKS_BUILD_DIR}/signd-reactnative-sdk/SigndCore.framework/SigndCore",
 				"${PODS_XCFRAMEWORKS_BUILD_DIR}/signd-reactnative-sdk/SigndScanId.framework/SigndScanId",
+				"${PODS_XCFRAMEWORKS_BUILD_DIR}/signd-reactnative-sdk/SigndScanIdAcuant.framework/SigndScanIdAcuant",
 				"${PODS_XCFRAMEWORKS_BUILD_DIR}/signd-reactnative-sdk/SigndScanIdRegulaNative.framework/SigndScanIdRegulaNative",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AcuantCommon.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AcuantDocumentProcessing.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AcuantFaceMatch.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AcuantHGLiveness.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AcuantImagePreparation.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AcuantPassiveLiveness.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DocumentReader.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DocumentReaderCore.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FaceSDK.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RegulaCommon.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SigndCore.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SigndScanId.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SigndScanIdAcuant.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SigndScanIdRegulaNative.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
