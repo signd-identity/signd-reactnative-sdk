@@ -3644,6 +3644,838 @@
             "mangledName": "$ss28CustomDebugStringConvertibleP"
           }
         ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "UIView",
+        "printedName": "UIView",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "addStandardShadow",
+            "printedName": "addStandardShadow()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:So6UIViewC11SigndScanIdE17addStandardShadowyyF",
+            "mangledName": "$sSo6UIViewC11SigndScanIdE17addStandardShadowyyF",
+            "moduleName": "SigndScanId",
+            "declAttributes": [
+              "Custom"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "loadNib",
+            "printedName": "loadNib()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UIView",
+                "printedName": "UIKit.UIView",
+                "usr": "c:objc(cs)UIView"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:So6UIViewC11SigndScanIdE7loadNibAByF",
+            "mangledName": "$sSo6UIViewC11SigndScanIdE7loadNibAByF",
+            "moduleName": "SigndScanId",
+            "declAttributes": [
+              "Custom"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "addSubviews",
+            "printedName": "addSubviews(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[UIKit.UIView]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIView",
+                    "printedName": "UIKit.UIView",
+                    "usr": "c:objc(cs)UIView"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:So6UIViewC11SigndScanIdE11addSubviewsyyABd_tF",
+            "mangledName": "$sSo6UIViewC11SigndScanIdE11addSubviewsyyABd_tF",
+            "moduleName": "SigndScanId",
+            "declAttributes": [
+              "Custom"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "safeTopAnchor",
+            "printedName": "safeTopAnchor",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "NSLayoutYAxisAnchor",
+                "printedName": "UIKit.NSLayoutYAxisAnchor",
+                "usr": "c:objc(cs)NSLayoutYAxisAnchor"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:So6UIViewC11SigndScanIdE13safeTopAnchorSo013NSLayoutYAxisG0Cvp",
+            "mangledName": "$sSo6UIViewC11SigndScanIdE13safeTopAnchorSo013NSLayoutYAxisG0Cvp",
+            "moduleName": "SigndScanId",
+            "declAttributes": [
+              "Custom"
+            ],
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NSLayoutYAxisAnchor",
+                    "printedName": "UIKit.NSLayoutYAxisAnchor",
+                    "usr": "c:objc(cs)NSLayoutYAxisAnchor"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:So6UIViewC11SigndScanIdE13safeTopAnchorSo013NSLayoutYAxisG0Cvg",
+                "mangledName": "$sSo6UIViewC11SigndScanIdE13safeTopAnchorSo013NSLayoutYAxisG0Cvg",
+                "moduleName": "SigndScanId",
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "safeLeftAnchor",
+            "printedName": "safeLeftAnchor",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "NSLayoutXAxisAnchor",
+                "printedName": "UIKit.NSLayoutXAxisAnchor",
+                "usr": "c:objc(cs)NSLayoutXAxisAnchor"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:So6UIViewC11SigndScanIdE14safeLeftAnchorSo013NSLayoutXAxisG0Cvp",
+            "mangledName": "$sSo6UIViewC11SigndScanIdE14safeLeftAnchorSo013NSLayoutXAxisG0Cvp",
+            "moduleName": "SigndScanId",
+            "declAttributes": [
+              "Custom"
+            ],
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NSLayoutXAxisAnchor",
+                    "printedName": "UIKit.NSLayoutXAxisAnchor",
+                    "usr": "c:objc(cs)NSLayoutXAxisAnchor"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:So6UIViewC11SigndScanIdE14safeLeftAnchorSo013NSLayoutXAxisG0Cvg",
+                "mangledName": "$sSo6UIViewC11SigndScanIdE14safeLeftAnchorSo013NSLayoutXAxisG0Cvg",
+                "moduleName": "SigndScanId",
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "safeBottomAnchor",
+            "printedName": "safeBottomAnchor",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "NSLayoutYAxisAnchor",
+                "printedName": "UIKit.NSLayoutYAxisAnchor",
+                "usr": "c:objc(cs)NSLayoutYAxisAnchor"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:So6UIViewC11SigndScanIdE16safeBottomAnchorSo013NSLayoutYAxisG0Cvp",
+            "mangledName": "$sSo6UIViewC11SigndScanIdE16safeBottomAnchorSo013NSLayoutYAxisG0Cvp",
+            "moduleName": "SigndScanId",
+            "declAttributes": [
+              "Custom"
+            ],
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NSLayoutYAxisAnchor",
+                    "printedName": "UIKit.NSLayoutYAxisAnchor",
+                    "usr": "c:objc(cs)NSLayoutYAxisAnchor"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:So6UIViewC11SigndScanIdE16safeBottomAnchorSo013NSLayoutYAxisG0Cvg",
+                "mangledName": "$sSo6UIViewC11SigndScanIdE16safeBottomAnchorSo013NSLayoutYAxisG0Cvg",
+                "moduleName": "SigndScanId",
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "safeRightAnchor",
+            "printedName": "safeRightAnchor",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "NSLayoutXAxisAnchor",
+                "printedName": "UIKit.NSLayoutXAxisAnchor",
+                "usr": "c:objc(cs)NSLayoutXAxisAnchor"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:So6UIViewC11SigndScanIdE15safeRightAnchorSo013NSLayoutXAxisG0Cvp",
+            "mangledName": "$sSo6UIViewC11SigndScanIdE15safeRightAnchorSo013NSLayoutXAxisG0Cvp",
+            "moduleName": "SigndScanId",
+            "declAttributes": [
+              "Custom"
+            ],
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NSLayoutXAxisAnchor",
+                    "printedName": "UIKit.NSLayoutXAxisAnchor",
+                    "usr": "c:objc(cs)NSLayoutXAxisAnchor"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:So6UIViewC11SigndScanIdE15safeRightAnchorSo013NSLayoutXAxisG0Cvg",
+                "mangledName": "$sSo6UIViewC11SigndScanIdE15safeRightAnchorSo013NSLayoutXAxisG0Cvg",
+                "moduleName": "SigndScanId",
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "anchor",
+            "printedName": "anchor(top:left:bottom:right:paddingTop:paddingLeft:paddingBottom:paddingRight:width:height:widthAnchor:heightAnchor:widthAnchorMultiplier:heightAnchorMultiplier:enableInsets:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.NSLayoutYAxisAnchor?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NSLayoutYAxisAnchor",
+                    "printedName": "UIKit.NSLayoutYAxisAnchor",
+                    "usr": "c:objc(cs)NSLayoutYAxisAnchor"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.NSLayoutXAxisAnchor?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NSLayoutXAxisAnchor",
+                    "printedName": "UIKit.NSLayoutXAxisAnchor",
+                    "usr": "c:objc(cs)NSLayoutXAxisAnchor"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.NSLayoutYAxisAnchor?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NSLayoutYAxisAnchor",
+                    "printedName": "UIKit.NSLayoutYAxisAnchor",
+                    "usr": "c:objc(cs)NSLayoutYAxisAnchor"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.NSLayoutXAxisAnchor?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NSLayoutXAxisAnchor",
+                    "printedName": "UIKit.NSLayoutXAxisAnchor",
+                    "usr": "c:objc(cs)NSLayoutXAxisAnchor"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "hasDefaultArg": true,
+                "usr": "s:14CoreFoundation7CGFloatV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "hasDefaultArg": true,
+                "usr": "s:14CoreFoundation7CGFloatV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "hasDefaultArg": true,
+                "usr": "s:14CoreFoundation7CGFloatV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "hasDefaultArg": true,
+                "usr": "s:14CoreFoundation7CGFloatV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "hasDefaultArg": true,
+                "usr": "s:14CoreFoundation7CGFloatV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "hasDefaultArg": true,
+                "usr": "s:14CoreFoundation7CGFloatV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.NSLayoutDimension?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NSLayoutDimension",
+                    "printedName": "UIKit.NSLayoutDimension",
+                    "usr": "c:objc(cs)NSLayoutDimension"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.NSLayoutDimension?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NSLayoutDimension",
+                    "printedName": "UIKit.NSLayoutDimension",
+                    "usr": "c:objc(cs)NSLayoutDimension"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "hasDefaultArg": true,
+                "usr": "s:14CoreFoundation7CGFloatV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "hasDefaultArg": true,
+                "usr": "s:14CoreFoundation7CGFloatV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "hasDefaultArg": true,
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:So6UIViewC11SigndScanIdE6anchor3top4left6bottom5right10paddingTop0J4Left0J6Bottom0J5Right5width6height0O6Anchor0pQ00oQ10Multiplier0pqR012enableInsetsySo013NSLayoutYAxisQ0CSg_So0u5XAxisQ0CSgAvY14CoreFoundation7CGFloatVA0_A0_A0_A0_A0_So0U9DimensionCSgA3_A0_A0_SbtF",
+            "mangledName": "$sSo6UIViewC11SigndScanIdE6anchor3top4left6bottom5right10paddingTop0J4Left0J6Bottom0J5Right5width6height0O6Anchor0pQ00oQ10Multiplier0pqR012enableInsetsySo013NSLayoutYAxisQ0CSg_So0u5XAxisQ0CSgAvY12CoreGraphics7CGFloatVA0_A0_A0_A0_A0_So0U9DimensionCSgA3_A0_A0_SbtF",
+            "moduleName": "SigndScanId",
+            "declAttributes": [
+              "Custom"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "center",
+            "printedName": "center(inView:yConcstant:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UIView",
+                "printedName": "UIKit.UIView",
+                "usr": "c:objc(cs)UIView"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "CoreGraphics.CGFloat?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CGFloat",
+                    "printedName": "CoreGraphics.CGFloat",
+                    "usr": "s:14CoreFoundation7CGFloatV"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:So6UIViewC11SigndScanIdE6center6inView10yConcstantyAB_14CoreFoundation7CGFloatVSgtF",
+            "mangledName": "$sSo6UIViewC11SigndScanIdE6center6inView10yConcstantyAB_12CoreGraphics7CGFloatVSgtF",
+            "moduleName": "SigndScanId",
+            "declAttributes": [
+              "Custom"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "centerX",
+            "printedName": "centerX(inView:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UIView",
+                "printedName": "UIKit.UIView",
+                "usr": "c:objc(cs)UIView"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:So6UIViewC11SigndScanIdE7centerX6inViewyAB_tF",
+            "mangledName": "$sSo6UIViewC11SigndScanIdE7centerX6inViewyAB_tF",
+            "moduleName": "SigndScanId",
+            "declAttributes": [
+              "Custom"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "centerY",
+            "printedName": "centerY(inView:leftAnchor:paddingLeft:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UIView",
+                "printedName": "UIKit.UIView",
+                "usr": "c:objc(cs)UIView"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.NSLayoutXAxisAnchor?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NSLayoutXAxisAnchor",
+                    "printedName": "UIKit.NSLayoutXAxisAnchor",
+                    "usr": "c:objc(cs)NSLayoutXAxisAnchor"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "hasDefaultArg": true,
+                "usr": "s:14CoreFoundation7CGFloatV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:So6UIViewC11SigndScanIdE7centerY6inView10leftAnchor11paddingLeftyAB_So013NSLayoutXAxisI0CSg14CoreFoundation7CGFloatVtF",
+            "mangledName": "$sSo6UIViewC11SigndScanIdE7centerY6inView10leftAnchor11paddingLeftyAB_So013NSLayoutXAxisI0CSg12CoreGraphics7CGFloatVtF",
+            "moduleName": "SigndScanId",
+            "declAttributes": [
+              "Custom"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setDimensions",
+            "printedName": "setDimensions(height:width:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "usr": "s:14CoreFoundation7CGFloatV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "usr": "s:14CoreFoundation7CGFloatV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:So6UIViewC11SigndScanIdE13setDimensions6height5widthy14CoreFoundation7CGFloatV_AItF",
+            "mangledName": "$sSo6UIViewC11SigndScanIdE13setDimensions6height5widthy12CoreGraphics7CGFloatV_AItF",
+            "moduleName": "SigndScanId",
+            "declAttributes": [
+              "Custom"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setHeight",
+            "printedName": "setHeight(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "usr": "s:14CoreFoundation7CGFloatV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:So6UIViewC11SigndScanIdE9setHeightyy14CoreFoundation7CGFloatVF",
+            "mangledName": "$sSo6UIViewC11SigndScanIdE9setHeightyy12CoreGraphics7CGFloatVF",
+            "moduleName": "SigndScanId",
+            "declAttributes": [
+              "Custom"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setWidth",
+            "printedName": "setWidth(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "usr": "s:14CoreFoundation7CGFloatV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:So6UIViewC11SigndScanIdE8setWidthyy14CoreFoundation7CGFloatVF",
+            "mangledName": "$sSo6UIViewC11SigndScanIdE8setWidthyy12CoreGraphics7CGFloatVF",
+            "moduleName": "SigndScanId",
+            "declAttributes": [
+              "Custom"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "fillSuperView",
+            "printedName": "fillSuperView()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:So6UIViewC11SigndScanIdE13fillSuperViewyyF",
+            "mangledName": "$sSo6UIViewC11SigndScanIdE13fillSuperViewyyF",
+            "moduleName": "SigndScanId",
+            "declAttributes": [
+              "Custom"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "fillSafeAreaSuperView",
+            "printedName": "fillSafeAreaSuperView()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:So6UIViewC11SigndScanIdE21fillSafeAreaSuperViewyyF",
+            "mangledName": "$sSo6UIViewC11SigndScanIdE21fillSafeAreaSuperViewyyF",
+            "moduleName": "SigndScanId",
+            "declAttributes": [
+              "Custom"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "edgeTo",
+            "printedName": "edgeTo(_:top:constant:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UIView",
+                "printedName": "UIKit.UIView",
+                "usr": "c:objc(cs)UIView"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.NSLayoutYAxisAnchor?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NSLayoutYAxisAnchor",
+                    "printedName": "UIKit.NSLayoutYAxisAnchor",
+                    "usr": "c:objc(cs)NSLayoutYAxisAnchor"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "usr": "s:14CoreFoundation7CGFloatV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:So6UIViewC11SigndScanIdE6edgeTo_3top8constantyAB_So19NSLayoutYAxisAnchorCSg14CoreFoundation7CGFloatVtF",
+            "mangledName": "$sSo6UIViewC11SigndScanIdE6edgeTo_3top8constantyAB_So19NSLayoutYAxisAnchorCSg12CoreGraphics7CGFloatVtF",
+            "moduleName": "SigndScanId",
+            "declAttributes": [
+              "Custom"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "pinMapTo",
+            "printedName": "pinMapTo(_:with:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UIView",
+                "printedName": "UIKit.UIView",
+                "usr": "c:objc(cs)UIView"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "usr": "s:14CoreFoundation7CGFloatV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:So6UIViewC11SigndScanIdE8pinMapTo_4withyAB_14CoreFoundation7CGFloatVtF",
+            "mangledName": "$sSo6UIViewC11SigndScanIdE8pinMapTo_4withyAB_12CoreGraphics7CGFloatVtF",
+            "moduleName": "SigndScanId",
+            "declAttributes": [
+              "Custom"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:objc(cs)UIView",
+        "moduleName": "UIKit",
+        "isOpen": true,
+        "intro_iOS": "2.0",
+        "objc_name": "UIView",
+        "declAttributes": [
+          "Available",
+          "ObjC",
+          "NonSendable",
+          "Custom",
+          "Dynamic"
+        ],
+        "superclassUsr": "c:objc(cs)UIResponder",
+        "isExternal": true,
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "UIKit.UIResponder",
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "__DefaultCustomPlaygroundQuickLookable",
+            "printedName": "__DefaultCustomPlaygroundQuickLookable",
+            "usr": "s:s38__DefaultCustomPlaygroundQuickLookableP",
+            "mangledName": "$ss38__DefaultCustomPlaygroundQuickLookableP"
+          }
+        ]
       }
     ],
     "json_format_version": 8
@@ -3858,6 +4690,83 @@
       "offset": 839,
       "length": 32,
       "value": "\"UIInterfaceOrientationPortrait\""
+    },
+    {
+      "filePath": "\/Users\/tomaszwojtyniak\/signd-ios\/signd-core\/SigndCore\/Extensions\/UIView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1514,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/tomaszwojtyniak\/signd-ios\/signd-core\/SigndCore\/Extensions\/UIView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1563,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/tomaszwojtyniak\/signd-ios\/signd-core\/SigndCore\/Extensions\/UIView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1615,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/tomaszwojtyniak\/signd-ios\/signd-core\/SigndCore\/Extensions\/UIView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1665,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/tomaszwojtyniak\/signd-ios\/signd-core\/SigndCore\/Extensions\/UIView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1708,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/tomaszwojtyniak\/signd-ios\/signd-core\/SigndCore\/Extensions\/UIView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1752,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/tomaszwojtyniak\/signd-ios\/signd-core\/SigndCore\/Extensions\/UIView.swift",
+      "kind": "FloatLiteral",
+      "offset": 1936,
+      "length": 3,
+      "value": "1.0"
+    },
+    {
+      "filePath": "\/Users\/tomaszwojtyniak\/signd-ios\/signd-core\/SigndCore\/Extensions\/UIView.swift",
+      "kind": "FloatLiteral",
+      "offset": 1998,
+      "length": 3,
+      "value": "1.0"
+    },
+    {
+      "filePath": "\/Users\/tomaszwojtyniak\/signd-ios\/signd-core\/SigndCore\/Extensions\/UIView.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2047,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/tomaszwojtyniak\/signd-ios\/signd-core\/SigndCore\/Extensions\/UIView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3580,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/tomaszwojtyniak\/signd-ios\/signd-core\/SigndCore\/Extensions\/UIView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 4121,
+      "length": 1,
+      "value": "0"
     },
     {
       "filePath": "\/Users\/tomaszwojtyniak\/signd-ios\/signd-scan-id\/SigndScanId\/UI\/AcuantOperationFailedViewController.swift",

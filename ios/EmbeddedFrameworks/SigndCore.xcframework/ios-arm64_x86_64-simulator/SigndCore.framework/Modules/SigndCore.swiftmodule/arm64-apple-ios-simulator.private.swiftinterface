@@ -3,6 +3,8 @@
 // swift-module-flags: -target arm64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name SigndCore
 // swift-module-flags-ignorable: -enable-bare-slash-regex
 import AVFoundation
+import AVKit
+import Combine
 import Foundation
 @_exported import SigndCore
 import Swift
@@ -11,6 +13,40 @@ import UIKit
 import WebKit
 import _Concurrency
 import _StringProcessing
+public struct SelfieResponse : Swift.Codable {
+  public let liveness: SigndCore.Liveness
+  public let facematch: SigndCore.Facematch
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public enum Liveness : Swift.String, Swift.Codable, Swift.CodingKey {
+  case live
+  case notLive
+  case poorQuality
+  case error
+  public init?(rawValue: Swift.String)
+  public init?(stringValue: Swift.String)
+  public init?(intValue: Swift.Int)
+  public typealias RawValue = Swift.String
+  public var intValue: Swift.Int? {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+  public var stringValue: Swift.String {
+    get
+  }
+}
+public enum Facematch : Swift.String, Swift.Codable {
+  case pass
+  case fail
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
 public enum SGDEvent {
   case processStarted
   case processEnded
@@ -84,6 +120,29 @@ open class BaseApiService {
   public func parse<T>(response: Foundation.URLResponse?, error: Swift.Error?, data: Foundation.Data?, completion: (T?, Swift.String?) -> Swift.Void) where T : Swift.Decodable
   public func getErrorMessage(response: Foundation.URLResponse?, error: Swift.Error?, data: Foundation.Data?) -> Swift.String?
   @objc deinit
+}
+public struct CertificateErrorResponse : Swift.Codable {
+  public let error: SigndCore.CertificateError
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public enum CertificateError : Swift.String, Swift.Codable, Swift.CodingKey {
+  case identificationScoreTooLow
+  case phoneNumberNotUnique
+  case unknownError
+  public init?(rawValue: Swift.String)
+  public init?(stringValue: Swift.String)
+  public init?(intValue: Swift.Int)
+  public typealias RawValue = Swift.String
+  public var intValue: Swift.Int? {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+  public var stringValue: Swift.String {
+    get
+  }
 }
 public enum SGDThirdPartyName : Swift.String, SigndCore.CaseIterableDefaultsLast {
   case acuant
@@ -175,6 +234,26 @@ extension UIKit.UIView {
   @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
   @objc deinit
 }
+public struct InitiateQESModel : Swift.Codable {
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public enum Paths : Swift.String {
+  case baseAPIHost
+  case baseDocumentAPIHost
+  case initiate
+  case fingerprint
+  case documentFront
+  case documentBack
+  case processDocument
+  case selfie
+  case certificate
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
 public typealias SGDNetworkCompletion = (Foundation.Data?, Foundation.URLResponse?, Swift.Error?) -> Swift.Void
 public protocol SGDNetwork {
   func authorizedGet(url: Foundation.URL, params: Swift.Encodable?, headers: [Swift.String : Swift.String]?, customAuthToken: Swift.String?, completionHandler: @escaping SigndCore.SGDNetworkCompletion)
@@ -185,10 +264,70 @@ public protocol SGDNetwork {
   func get(url: Foundation.URL, params: Swift.Encodable?, headers: [Swift.String : Swift.String]?, retryCounter: Swift.Int, completionHandler: @escaping SigndCore.SGDNetworkCompletion)
   func authorizedUploadImage(url: Foundation.URL, paramName: Swift.String, fileName: Swift.String, imageData: Foundation.Data, completionHandler: @escaping SigndCore.SGDNetworkCompletion)
 }
+public struct ProcessErrorResponse : Swift.Codable {
+  public let error: Swift.String
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public class APIClient {
+  public init(host: SigndCore.Paths, configuration: Foundation.URLSessionConfiguration = .default)
+  @objc deinit
+}
+extension SigndCore.APIClient {
+  public func send<T>(_ request: SigndCore.Request) -> Combine.AnyPublisher<T, SigndCore.APIError> where T : Swift.Decodable, T : Swift.Encodable
+  public func sendAnyResponse(_ request: SigndCore.Request) -> Combine.AnyPublisher<Any, SigndCore.APIError>
+}
+public enum APIError : Swift.Error, Foundation.LocalizedError {
+  case statusCodeError
+  case mapError(Swift.Error)
+  case requestError
+  case urlResponseError
+  case noImage
+  case returnErrorObject(Foundation.Data)
+  case parsingError
+  public var errorDescription: Swift.String? {
+    get
+  }
+}
 public struct SGDPersonalizationResponse : Swift.Codable, Swift.Equatable {
   public static func == (a: SigndCore.SGDPersonalizationResponse, b: SigndCore.SGDPersonalizationResponse) -> Swift.Bool
   public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
+}
+public struct Request {
+  public var method: Swift.String
+  public var path: Swift.String
+  public var headers: [[Swift.String : Swift.String]]?
+  public var body: SigndCore.AnyEncodable?
+  public var image: Foundation.Data?
+}
+public enum RequestMethod : Swift.String {
+  case post
+  case get
+  case patch
+  case delete
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+extension SigndCore.Request {
+  public static func get(_ path: SigndCore.Paths, headers: [[Swift.String : Swift.String]]? = nil) -> SigndCore.Request
+  public static func post<U>(_ path: SigndCore.Paths, headers: [[Swift.String : Swift.String]]? = nil, body: U) -> SigndCore.Request where U : Swift.Encodable
+  public static func post(_ path: SigndCore.Paths, headers: [[Swift.String : Swift.String]]? = nil) -> SigndCore.Request
+  public static func post(_ path: SigndCore.Paths, headers: [[Swift.String : Swift.String]]? = nil, image: Foundation.Data) -> SigndCore.Request
+  public static func patch(_ path: SigndCore.Paths, headers: [[Swift.String : Swift.String]]? = nil) -> SigndCore.Request
+  public static func delete(_ path: SigndCore.Paths, headers: [[Swift.String : Swift.String]]? = nil) -> SigndCore.Request
+}
+public struct AnyEncodable : Swift.Encodable {
+  public init(_ value: Swift.Encodable)
+  public func encode(to encoder: Swift.Encoder) throws
+}
+public struct Serializer {
+  public init()
+  public func encode<T>(_ entity: T) throws -> Foundation.Data where T : Swift.Encodable
+  public func decode<T>(_ data: Foundation.Data) throws -> T where T : Swift.Decodable
 }
 public class SGDResultItem : Swift.Encodable {
   public enum ResultOperation : Swift.String, Swift.Encodable {
@@ -231,6 +370,10 @@ public struct SGDPluginResultData : Swift.Encodable {
     set
   }
   @objc deinit
+}
+extension Swift.String {
+  public func createImageMultipartBody(image: UIKit.UIImage) -> Foundation.Data
+  public func createTextMultipartBody(data: Swift.String, name: Swift.String) -> Foundation.Data
 }
 public enum ExecutionResponseCode : Swift.String, Swift.Decodable {
   case OK
@@ -281,6 +424,33 @@ public protocol AnalyticsDelegate : AnyObject {
   public static let shared: SigndCore.Analytics
   public func trackEvent(event: SigndCore.SGDEvent)
   @objc deinit
+}
+public struct SelfieResponseError : Swift.Codable {
+  public let error: SigndCore.SelfieError
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public enum SelfieError : Swift.String, Swift.Codable, Swift.CodingKey {
+  case unknown
+  case fasceTooClosev
+  case faceNotFound
+  case faceTooSmall
+  case faceAngleTooLarge
+  case faceCropped
+  case tooManyFaces
+  public init?(rawValue: Swift.String)
+  public init?(stringValue: Swift.String)
+  public init?(intValue: Swift.Int)
+  public typealias RawValue = Swift.String
+  public var intValue: Swift.Int? {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+  public var stringValue: Swift.String {
+    get
+  }
 }
 @objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class MainNavigatViewController : UIKit.UINavigationController {
   @_Concurrency.MainActor(unsafe) public var options: SigndCore.SGDOptions?
@@ -361,10 +531,59 @@ public enum SGDResultErrroCode : Swift.String, Swift.Codable {
     get
   }
 }
+public struct DocumentResponse : Swift.Codable {
+  public let glare: SigndCore.Glare
+  public let sharpness: SigndCore.Sharpness
+  public let hasBackSide: Swift.Bool?
+  public let url: Swift.String
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public enum Glare : Swift.String, Swift.Codable {
+  case pass
+  case fail
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum Sharpness : Swift.String, Swift.Codable {
+  case pass
+  case fail
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum ClassificationOptions : Swift.String, Swift.Codable {
+  case unsupported
+  case unknown
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public struct Classification : Swift.Codable {
+  public let classification: SigndCore.ClassificationOptions
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class SGDFooterView : SigndCore.NibView {
   @_Concurrency.MainActor(unsafe) @objc override dynamic public func layoutSubviews()
   @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
   @objc deinit
+}
+public enum DocumentSide {
+  case front
+  case back
+  public static func == (a: SigndCore.DocumentSide, b: SigndCore.DocumentSide) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
 }
 public protocol SigndProcessDelegate : AnyObject {
   func processFinished(results: [SigndCore.SGDResultItem], for process: SigndCore.SigndProcess, completion: ((Swift.Bool, Swift.String?) -> Swift.Void)?)
@@ -440,6 +659,7 @@ public struct SGDOptions {
     get
   }
   public var qesProcess: Swift.Bool
+  public var sessionToken: Swift.String?
   public func initialize(processes: [SigndCore.SigndProcess], style: SigndCore.SGDStyle? = nil, fontPack: SigndCore.SGDFontPack? = nil)
   public func initialize(processes: [SigndCore.SigndProcess], options: SigndCore.SGDOptions? = nil)
   public func setCredentials(login: Swift.String, token: Swift.String)
@@ -462,18 +682,38 @@ extension SigndCore.Signd : SigndCore.SigndProcessDelegate {
   public func processFinished(results: [SigndCore.SGDResultItem], for process: SigndCore.SigndProcess, completion: ((Swift.Bool, Swift.String?) -> Swift.Void)?)
   public func onError(text: Swift.String, domain: Swift.String?, for process: SigndCore.SigndProcess)
 }
+public struct CountryCode : Swift.Codable {
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
 public protocol CaseIterableDefaultsLast : Swift.CaseIterable, Swift.Decodable, Swift.Encodable, Swift.RawRepresentable where Self.AllCases : Swift.BidirectionalCollection, Self.RawValue == Swift.String {
 }
 extension SigndCore.CaseIterableDefaultsLast {
+  public init(from decoder: Swift.Decoder) throws
+}
+extension UIKit.UIDevice {
+  @_Concurrency.MainActor(unsafe) public static let modelName: Swift.String
+}
+public struct CertificateSignatureResponse : Swift.Codable {
+  public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
 }
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class NibView : UIKit.UIView {
   @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
   @objc deinit
 }
+extension SigndCore.Liveness : Swift.Equatable {}
+extension SigndCore.Liveness : Swift.Hashable {}
+extension SigndCore.Liveness : Swift.RawRepresentable {}
+extension SigndCore.Facematch : Swift.Equatable {}
+extension SigndCore.Facematch : Swift.Hashable {}
+extension SigndCore.Facematch : Swift.RawRepresentable {}
 extension SigndCore.BaseApiService.Paths : Swift.Equatable {}
 extension SigndCore.BaseApiService.Paths : Swift.Hashable {}
 extension SigndCore.BaseApiService.Paths : Swift.RawRepresentable {}
+extension SigndCore.CertificateError : Swift.Equatable {}
+extension SigndCore.CertificateError : Swift.Hashable {}
+extension SigndCore.CertificateError : Swift.RawRepresentable {}
 extension SigndCore.SGDThirdPartyName : Swift.Equatable {}
 extension SigndCore.SGDThirdPartyName : Swift.Hashable {}
 extension SigndCore.SGDPlugins : Swift.Equatable {}
@@ -481,6 +721,12 @@ extension SigndCore.SGDPlugins : Swift.Hashable {}
 extension SigndCore.SGDPluginState : Swift.Equatable {}
 extension SigndCore.SGDPluginState : Swift.Hashable {}
 extension SigndCore.SGDPluginState : Swift.RawRepresentable {}
+extension SigndCore.Paths : Swift.Equatable {}
+extension SigndCore.Paths : Swift.Hashable {}
+extension SigndCore.Paths : Swift.RawRepresentable {}
+extension SigndCore.RequestMethod : Swift.Equatable {}
+extension SigndCore.RequestMethod : Swift.Hashable {}
+extension SigndCore.RequestMethod : Swift.RawRepresentable {}
 extension SigndCore.SGDResultItem.ResultOperation : Swift.Equatable {}
 extension SigndCore.SGDResultItem.ResultOperation : Swift.Hashable {}
 extension SigndCore.SGDResultItem.ResultOperation : Swift.RawRepresentable {}
@@ -489,11 +735,25 @@ extension SigndCore.ExecutionResponseCode : Swift.Hashable {}
 extension SigndCore.ExecutionResponseCode : Swift.RawRepresentable {}
 extension SigndCore.SGDExecuteVerificationConfigCustom.SGDLivenessImpl : Swift.Equatable {}
 extension SigndCore.SGDExecuteVerificationConfigCustom.SGDLivenessImpl : Swift.Hashable {}
+extension SigndCore.SelfieError : Swift.Equatable {}
+extension SigndCore.SelfieError : Swift.Hashable {}
+extension SigndCore.SelfieError : Swift.RawRepresentable {}
 extension SigndCore.SGDResultsOperation : Swift.Equatable {}
 extension SigndCore.SGDResultsOperation : Swift.Hashable {}
 extension SigndCore.SGDResultErrroCode : Swift.Equatable {}
 extension SigndCore.SGDResultErrroCode : Swift.Hashable {}
 extension SigndCore.SGDResultErrroCode : Swift.RawRepresentable {}
+extension SigndCore.Glare : Swift.Equatable {}
+extension SigndCore.Glare : Swift.Hashable {}
+extension SigndCore.Glare : Swift.RawRepresentable {}
+extension SigndCore.Sharpness : Swift.Equatable {}
+extension SigndCore.Sharpness : Swift.Hashable {}
+extension SigndCore.Sharpness : Swift.RawRepresentable {}
+extension SigndCore.ClassificationOptions : Swift.Equatable {}
+extension SigndCore.ClassificationOptions : Swift.Hashable {}
+extension SigndCore.ClassificationOptions : Swift.RawRepresentable {}
+extension SigndCore.DocumentSide : Swift.Equatable {}
+extension SigndCore.DocumentSide : Swift.Hashable {}
 extension SigndCore.SGDProgressBarStyle : Swift.Equatable {}
 extension SigndCore.SGDProgressBarStyle : Swift.Hashable {}
 extension SigndCore.SGDActionButtonStyle : Swift.Equatable {}

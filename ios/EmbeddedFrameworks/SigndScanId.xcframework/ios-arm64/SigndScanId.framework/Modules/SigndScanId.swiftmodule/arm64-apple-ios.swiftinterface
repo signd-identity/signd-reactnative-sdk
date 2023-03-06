@@ -110,6 +110,34 @@ public class IdScan {
   @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
   @objc deinit
 }
+extension UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) public func addStandardShadow()
+  @_Concurrency.MainActor(unsafe) public func loadNib() -> UIKit.UIView
+  @_Concurrency.MainActor(unsafe) public func addSubviews(_ views: UIKit.UIView...)
+  @_Concurrency.MainActor(unsafe) public var safeTopAnchor: UIKit.NSLayoutYAxisAnchor {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) public var safeLeftAnchor: UIKit.NSLayoutXAxisAnchor {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) public var safeBottomAnchor: UIKit.NSLayoutYAxisAnchor {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) public var safeRightAnchor: UIKit.NSLayoutXAxisAnchor {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) public func anchor(top: UIKit.NSLayoutYAxisAnchor? = nil, left: UIKit.NSLayoutXAxisAnchor? = nil, bottom: UIKit.NSLayoutYAxisAnchor? = nil, right: UIKit.NSLayoutXAxisAnchor? = nil, paddingTop: CoreFoundation.CGFloat = 0, paddingLeft: CoreFoundation.CGFloat = 0, paddingBottom: CoreFoundation.CGFloat = 0, paddingRight: CoreFoundation.CGFloat = 0, width: CoreFoundation.CGFloat = 0, height: CoreFoundation.CGFloat = 0, widthAnchor: UIKit.NSLayoutDimension? = nil, heightAnchor: UIKit.NSLayoutDimension? = nil, widthAnchorMultiplier: CoreFoundation.CGFloat = 1.0, heightAnchorMultiplier: CoreFoundation.CGFloat = 1.0, enableInsets: Swift.Bool = false)
+  @_Concurrency.MainActor(unsafe) public func center(inView view: UIKit.UIView, yConcstant: CoreFoundation.CGFloat? = 0)
+  @_Concurrency.MainActor(unsafe) public func centerX(inView view: UIKit.UIView)
+  @_Concurrency.MainActor(unsafe) public func centerY(inView view: UIKit.UIView, leftAnchor: UIKit.NSLayoutXAxisAnchor? = nil, paddingLeft: CoreFoundation.CGFloat = 0)
+  @_Concurrency.MainActor(unsafe) public func setDimensions(height: CoreFoundation.CGFloat, width: CoreFoundation.CGFloat)
+  @_Concurrency.MainActor(unsafe) public func setHeight(_ height: CoreFoundation.CGFloat)
+  @_Concurrency.MainActor(unsafe) public func setWidth(_ width: CoreFoundation.CGFloat)
+  @_Concurrency.MainActor(unsafe) public func fillSuperView()
+  @_Concurrency.MainActor(unsafe) public func fillSafeAreaSuperView()
+  @_Concurrency.MainActor(unsafe) public func edgeTo(_ view: UIKit.UIView, top: UIKit.NSLayoutYAxisAnchor?, constant: CoreFoundation.CGFloat)
+  @_Concurrency.MainActor(unsafe) public func pinMapTo(_ view: UIKit.UIView, with constant: CoreFoundation.CGFloat)
+}
 public class FaceCapture {
   public init(controller: UIKit.UIViewController)
   public func getSelfie(completion: @escaping (UIKit.UIImage?) -> Swift.Void)

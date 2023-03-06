@@ -321,6 +321,7 @@ SWIFT_CLASS("_TtC9SigndCore13SGDFooterView")
 
 
 
+
 #endif
 #if defined(__cplusplus)
 #endif
@@ -644,6 +645,7 @@ SWIFT_CLASS("_TtC9SigndCore13SGDFooterView")
 - (void)layoutSubviews;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
+
 
 
 

@@ -321,6 +321,7 @@ SWIFT_CLASS("_TtC9SigndCore13SGDFooterView")
 
 
 
+
 #endif
 #if defined(__cplusplus)
 #endif

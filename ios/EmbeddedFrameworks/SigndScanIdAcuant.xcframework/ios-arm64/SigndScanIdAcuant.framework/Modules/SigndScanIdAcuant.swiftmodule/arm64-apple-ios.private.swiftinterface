@@ -7,6 +7,7 @@ import AcuantCommon
 import AcuantDocumentProcessing
 import AcuantHGLiveness
 import AcuantImagePreparation
+import Combine
 import Foundation
 import SigndCore
 import SigndScanId
@@ -89,6 +90,11 @@ extension SigndScanIdAcuant.AcuantProccess : SigndScanId.SelfieDelegate {
   public func restart()
   public func scanFace()
   public func acceptSelfie()
+}
+public protocol AcuantRepositoryProtocol : AnyObject {
+  func sendDocument(image: UIKit.UIImage, documentSide: SigndCore.DocumentSide) -> Combine.AnyPublisher<SigndCore.DocumentResponse, SigndCore.APIError>
+  func processDocument() -> Combine.AnyPublisher<Any, SigndCore.APIError>
+  func sendSelfie(image: UIKit.UIImage) -> Combine.AnyPublisher<SigndCore.SelfieResponse, SigndCore.APIError>
 }
 @objc public protocol AutoCaptureDelegate {
   @objc func getAutoCapture() -> Swift.Bool
