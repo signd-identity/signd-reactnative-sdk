@@ -23,7 +23,8 @@ const Home: React.FC = () => {
     await SigndModule.initialize({
                 scheme: 'admiralpay',
                 host: 'hostsigndintegration://test',
-                apiUrl: 'https://api.integration.signd.io'
+                apiUrl: 'https://api.integration.signd.io',
+                qesProcess: true
               });
     const { result, sessionToken }: SigndResult = await SigndModule.start(
       token

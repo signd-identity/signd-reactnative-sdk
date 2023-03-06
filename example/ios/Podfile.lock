@@ -1,14 +1,14 @@
 PODS:
-  - AcuantiOSSDKV11/AcuantCommon (11.5.6)
-  - AcuantiOSSDKV11/AcuantDocumentProcessing (11.5.6):
+  - AcuantiOSSDKV11/AcuantCommon (11.5.7)
+  - AcuantiOSSDKV11/AcuantDocumentProcessing (11.5.7):
     - AcuantiOSSDKV11/AcuantCommon
-  - AcuantiOSSDKV11/AcuantFaceMatch (11.5.6):
+  - AcuantiOSSDKV11/AcuantFaceMatch (11.5.7):
     - AcuantiOSSDKV11/AcuantCommon
-  - AcuantiOSSDKV11/AcuantHGLiveness (11.5.6):
+  - AcuantiOSSDKV11/AcuantHGLiveness (11.5.7):
     - AcuantiOSSDKV11/AcuantCommon
-  - AcuantiOSSDKV11/AcuantImagePreparation (11.5.6):
+  - AcuantiOSSDKV11/AcuantImagePreparation (11.5.7):
     - AcuantiOSSDKV11/AcuantCommon
-  - AcuantiOSSDKV11/AcuantPassiveLiveness (11.5.6):
+  - AcuantiOSSDKV11/AcuantPassiveLiveness (11.5.7):
     - AcuantiOSSDKV11/AcuantCommon
   - boost (1.76.0)
   - DocumentReader (6.2.2441):
@@ -318,12 +318,12 @@ PODS:
     - React-logger (= 0.68.2)
     - React-perflogger (= 0.68.2)
   - RegulaCommon (6.2.110)
-  - signd-reactnative-sdk (1.0.8):
-    - AcuantiOSSDKV11/AcuantDocumentProcessing (= 11.5.6)
-    - AcuantiOSSDKV11/AcuantFaceMatch (= 11.5.6)
-    - AcuantiOSSDKV11/AcuantHGLiveness (= 11.5.6)
-    - AcuantiOSSDKV11/AcuantImagePreparation (= 11.5.6)
-    - AcuantiOSSDKV11/AcuantPassiveLiveness (= 11.5.6)
+  - signd-reactnative-sdk (1.1.0):
+    - AcuantiOSSDKV11/AcuantDocumentProcessing (= 11.5.7)
+    - AcuantiOSSDKV11/AcuantFaceMatch (= 11.5.7)
+    - AcuantiOSSDKV11/AcuantHGLiveness (= 11.5.7)
+    - AcuantiOSSDKV11/AcuantImagePreparation (= 11.5.7)
+    - AcuantiOSSDKV11/AcuantPassiveLiveness (= 11.5.7)
     - DocumentReader (= 6.2.2441)
     - DocumentReaderFull (= 6.2.6012)
     - FaceSDK (= 3.2.1078)
@@ -466,7 +466,7 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon/yoga"
 
 SPEC CHECKSUMS:
-  AcuantiOSSDKV11: 0cd93022033f7b7990b15896e55b9051159186b6
+  AcuantiOSSDKV11: d3149e9cb48b49b842a08715783c5a2eba613be6
   boost: a7c83b31436843459a1961bfd74b96033dc77234
   DocumentReader: 1257f49851a92b9e61d33f5389f6dee7071d6a2b
   DocumentReaderFull: ac5bdacb4bae57d603b36e680f03889a4a77a5ad
@@ -510,9 +510,9 @@ SPEC CHECKSUMS:
   React-runtimeexecutor: b960b687d2dfef0d3761fbb187e01812ebab8b23
   ReactCommon: 095366164a276d91ea704ce53cb03825c487a3f2
   RegulaCommon: 79746fe0128f058bb8aad97cea81ea1eca9d6c41
-  signd-reactnative-sdk: abbd1d2e73e64e551853b89f79b45060edfc8d88
+  signd-reactnative-sdk: 740b449d41f772e1f3c0bd3fe9fe3479328f1b6d
   Yoga: 99652481fcd320aefa4a7ef90095b95acd181952
 
-PODFILE CHECKSUM: e717ca8a3c82e55ff8dc479b32cb17878bb1fb1f
+PODFILE CHECKSUM: bb81c6475104e3f902af29fd37a70a11332023c0
 
 COCOAPODS: 1.11.3
