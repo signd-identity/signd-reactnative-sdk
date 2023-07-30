@@ -116,7 +116,7 @@ npm install signd-reactnative-sdk
     await SigndReactnativeSdk.initialize({
         scheme: 'signd',
         host: 'session',
-        apiUrl: 'https://api.integration.signd.io',
+        apiUrl: 'https://st-api.signd.id',
     });
     ```		
 
@@ -124,7 +124,7 @@ npm install signd-reactnative-sdk
     Do a *POST* request to generate session token.
 
     ```bash
-    curl -d '{"login":"value1", "token":"value2"}' -H "Content-Type: application/json" -X POST API_BASE_URL/internal/handshake
+    curl -d '{"login":"value1", "token":"value2"}' -H "Content-Type: application/json" -X POST API_BASE_URL/v1/ident/handshake
     ```
 
     Build *uri* using received session token.
@@ -210,7 +210,7 @@ Tweak the UI by changing the following flags:
 await SigndPlugin.initialize({
     scheme: "signdintegration",
     host: "session",
-    apiUrl: "https://api.integration.signd.io",
+    apiUrl: "https://st-api.signd.id/",
     showLastScreen: false,
     showFooter: false,
     showBackButton: true,
